@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,600,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <title>Le petit kiosque</title>
+</head>
+<body>
+
+  <header>
+    <!-- header et navbar -->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper white">
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="Billetterie.html">Billetterie</a></li>
+            <li><a id="buttonNav"class="waves-effect waves-light btn orange accent-3">Compte client <i class="material-icons right">account_circle</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--Fin du header et navbar -->
+
+    <div class="container">
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel transparent z-depth-3">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/logo.png" alt="logo" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s12 m8 offset-m2 l6 offset-l3">
+              <h1 id="logoH1"><mark>Un événement, une Billetterie !</mark></h1><p id="logoP"><h1></h1> <br />En quelques clicks, vous pouvez créer votre Billetterie.<br />
+                Pour cela, il vous suffit de créer un compte gratuitement.</p>
+
+                <div id="buttonCard"class="card-panel transparent z-depth-3"">
+                  <span class="grey-text text-darken-2">Votre Billetterie :</span> <br><br>
+                  <a id="ticketDo"class="waves-effect waves-light btn"><i class="large material-icons left">local_activity</i>Acheter</a>
+                  <a id="ticketBy"class="waves-effect waves-light btn"><i class="large material-icons right">local_play</i>créer</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+  </body>
+  </html>
