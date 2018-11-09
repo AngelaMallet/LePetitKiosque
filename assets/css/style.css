@@ -1,0 +1,8 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  /* background: -webkit-linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44));
+  background: linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44)); */
+}
+blockquote{
+  border-left: 15px solid #ff9100;
+}
