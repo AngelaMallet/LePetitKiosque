@@ -3,6 +3,9 @@
     font-weight: 100;
     font-size: 3em;
 }
+h2.h2account{
+    font-size: 1.5em;
+}
 #accountBackground{
     background-color: lightyellow;
 }
