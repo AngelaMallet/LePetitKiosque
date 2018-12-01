@@ -17,8 +17,8 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <h1 class="formTitle">Formulaire d'inscription</h1>
-        <div class="container">
+        <h1 class="formTitle center-align">Formulaire d'inscription</h1>
+        <div class="container center-align">
             <div class="row">
                 <form id="form" method="POST" class="col s12 l12" action="account.php" >
                     <div class="row input-field col s12 l6">
