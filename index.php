@@ -38,10 +38,12 @@
                             <img src="assets/colibriB.png" alt="logo"id="logoHead">
                             <h1 id="h1title">Caux<i>libri</i></h1>
                             <div id="presentation" class="col s12 m12 center-align hide-on-small-only">
-                                <p>“Nous sommes heureux de vous rencontrer. Vous êtes ici chez vous. Pour acheter un billet ou pour ouvrir une billetterie, rien de plus simple. Il vous suffit de créer gratuitement un compte.”</p>
+                                <p>“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</p>
+                                <p class="center-align">Et le colibri lui répondit :« Je le sais, mais je fais ma part. »”</p>
                             </div>
                             <div id="presentationMini" class="col s12 m12 right-align hide-on-large-only">
-                                <p>“Nous sommes heureux de vous rencontrer. Vous êtes ici chez vous. Pour acheter un billet ou pour ouvrir une billetterie, rien de plus simple. Il vous suffit de créer gratuitement un compte.”</p>
+                                <p>“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</p> 
+                                <p class="center-align">Et le colibri lui répondit :« Je le sais, mais je fais ma part. »”</p>
                             </div>
                             <!-- Modal Trigger -->
                             <a href="#modal1" class="modal-close waves-effect waves-light btn-large red darken-1 modal-trigger">Inscription</a>
@@ -59,8 +61,6 @@
             </div>
         </div>
     </div>
-    m
-
     <div class="row">
         <div class="container center-align">
             <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
