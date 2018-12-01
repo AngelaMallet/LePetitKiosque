@@ -1,43 +1,53 @@
 #h1title{
-  text-transform: uppercase;
-  font-weight: 100;
-  font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 3em;
 }
-.formTitle {
-    font-size: 1em;
+#accountBackground{
+    background-color: lightyellow;
 }
+.modal h1 {
+    font-size: 1.5em;
+    color: orange
+}
+
 #logoCard{
-  max-width: 250px;
+    max-width: 250px;
 }
 #presentation{
-  font-size: 1.5em;
-  font-weight: 200;
-  text-align: justify;
+    font-size: 1.5em;
+    font-weight: 200;
+    text-align: justify;
 }
 #presentationMini{
-  font-size: 0.5;
-  font-weight: 200;
-  text-align: justify;
+    font-size: 0.5;
+    font-weight: 200;
+    text-align: justify;
 }
 #presentationText{
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
-#imageTop{
-  z-index: 1;
+
+#logoHead {
+    width: 15%;
 }
-#waves{
-  margin-top: 30px;
+#logoHead2{
+    width: 10%;
+}
+aves{
+    margin-top: 30px;
 }
 #orangeSpace{
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
+
 body{
-  font-family: 'Montserrat', sans-serif;
-  /* background: -webkit-linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44));
-  background: linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44)); */
+    font-family: 'Montserrat', sans-serif;
+    /* background: -webkit-linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44));
+    background: linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44)); */
 }
 .parallax-container{
-  height: 800px;
+    height: 800px;
 }
 /* * Comme la dite marge est exprimée en pourcentage,
 * on l'augmente sur les devices moins larges.

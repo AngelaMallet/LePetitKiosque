@@ -12,7 +12,7 @@ if (isset($_POST['name'])) {
         $formError['name'] = 'Saisie non valide';
     }
     if (empty($_POST['name'])) {
-        $formError['name'] = 'Saisie atvide';
+        $formError['name'] = 'Saisie vide';
     }
 }
 
