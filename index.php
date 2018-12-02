@@ -21,12 +21,14 @@
                         <ul class="right">
                             <li><a href="#home"class="orange-text text-orange accent-3">Accueil</a></li>
                             <li><a href="Billetterie.html"class="orange-text text-orange accent-3">Le projet</a></li>
-                            <li><a class="waves-effect waves-light btn orange accent-3 hide-on-small-only">Compte client<i class="material-icons right">account_circle</i></a></li>
-                            <li><a id="smallIconCount"class="btn-floating btn-large waves-effect waves-light orange accent-3 show-on-small hide-on-large-only"><i class="material-icons right small">account_circle</i></a></li>
+
+                            <!-- Modal Trigger -->
+                            <li><a href="#modal2" class="modal-close waves-effect waves-light btn orange accent-3 modal-trigger">Votre compte<i class="material-icons right">account_circle</i></a></li>
                         </ul>
                     </div>
                 </nav>
-            </div>
+                <div>
+                </div>
         </header>
         <!--Fin du header et navbar -->
         <div class="parallax-container valign-wrapper">
@@ -53,6 +55,12 @@
                         <div id="modal1" class="modal modal-fixed-footer">
                             <div class="modal-content center-align">
                                 <?php include ('form.php'); ?>
+                            </div>
+                        </div>
+
+                        <div id="modal2" class="modal modal-fixed-footer">
+                            <div class="modal-content center-align">
+                                <?php include ('user.php'); ?>
                             </div>
                         </div>
 

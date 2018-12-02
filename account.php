@@ -23,7 +23,7 @@ session_start(); // On démarre la session AVANT toute chose
                             <span class="card-title center-align">Espace abonné</span>
                             <p>
                             <h2 class="h2account">Bonjour !</h2><br />
-                                Votre nom :  <?php echo $_POST['name']; ?> <br />Votre prénom :  <?php echo $_POST['lastName']; ?>
+                                <?php echo $_POST['name'] . ' ' . $_POST['lastName']; ?>
                             </p>
                         </div>
                     </div>
