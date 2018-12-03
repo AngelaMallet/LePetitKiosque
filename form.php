@@ -7,7 +7,7 @@
                         <input name="name" value = "" id = "name" type="text" class = "active" />
                         <label for="name">Prénom</label>
                         <p class="css" id="firstNameField"><?= isset($formError['name']) ? $formError['name'] : '' ?></p>
-                    </div>    
+                    </div>
                     <div class="row input-field col s12 l6">
                         <input name="lastName" value = "" id = "lastName" type="text" class = "active" />
                         <label for="lastName">Nom</label>
@@ -37,5 +37,3 @@
                 </form>
             </div>
         </div>
-
-

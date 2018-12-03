@@ -27,7 +27,8 @@
                         </ul>
                     </div>
                 </nav>
-            </div>
+                <div>
+                </div>
         </header>
         <!--Fin du header et navbar -->
         <div class="parallax-container valign-wrapper">
@@ -43,7 +44,7 @@
                                 <p class="center-align">Et le colibri lui répondit :« Je le sais, mais je fais ma part. »”</p>
                             </div>
                             <div id="presentationMini" class="col s12 m12 right-align hide-on-large-only">
-                                <p>“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</p> 
+                                <p>“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</p>
                                 <p class="center-align">Et le colibri lui répondit :« Je le sais, mais je fais ma part. »”</p>
                             </div>
                             <!-- Modal Trigger -->
@@ -60,6 +61,7 @@
                                 <?php include 'user.php'; ?>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -72,38 +74,39 @@
                 <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
             </div>
         </div>
+    </div>
 
 
 
 
-        <!-- debut du footer -->
-        <footer class="page-footer orange darken-1">
+    <!-- debut du footer -->
+    <footer class="page-footer orange darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Le Petit Kiosque</h5>
+                    <p class="grey-text text-lighten-4">Vous pouvez nous suivre sur les réseaux sociaux.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Informations</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">À propos</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Compte client</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Billetterie</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Le Petit Kiosque</h5>
-                        <p class="grey-text text-lighten-4">Vous pouvez nous suivre sur les réseaux sociaux.</p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Informations</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">À propos</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Compte client</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Billetterie</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <p>© 2018 Copyright Le Petit Kiosque</p>
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    <p>© 2018 Copyright Le Petit Kiosque</p>
-                </div>
-            </div>
-        </footer>
-        <!-- fin du footer -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="assets/js/materialize.js"></script>
-        <script src="assets/js/js.js"></script>
-    </body>
+        </div>
+    </footer>
+    <!-- fin du footer -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/js.js"></script>
+</body>
 </html>
