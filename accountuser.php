@@ -3,7 +3,7 @@ session_start(); // On démarre la session AVANT toute chose
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,600,700,800" rel="stylesheet" />
@@ -22,7 +22,8 @@ session_start(); // On démarre la session AVANT toute chose
                         <div class="card-content center-align">
                             <span class="card-title center-align">Espace abonné</span>
                             <h2 class="h2account">Vos informations :</h2><br />
-                            <p><?= 'Bonjour : ' . $_POST['login'] . ' votre mot de passe est : ' . $_POST['password']; ?></p>
+                            <p><?= 'Login : ' . $_POST['login'];?></p>
+                            <p><?= 'Mot de passe : ' . $_POST['password']; ?></p>
                         </div>
                     </div>
                     <div class="modal-footer center-align">

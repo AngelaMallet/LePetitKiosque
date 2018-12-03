@@ -1,7 +1,8 @@
 <?php
+
 // Déclaration des regeX
 $regexText = '/^[A-zÂ-ÿ -]+$/';
-
+$regexEmail = '/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/';
 // Déclaration d'un tableau d'erreurs
 $formError = [];
 
@@ -52,13 +53,21 @@ if (isset($_POST['password'])) {
 //password    Attention il faut modifier la regex
 if (isset($_POST['email'])) {
     $email = htmlspecialchars($_POST['email']);
-    if (!preg_match($regexText, $email)) {
+    if (!preg_match($regexEmail, $email)) {
         $formError ['email'] = 'Saisie non valide';
     }
     if (empty($_POST['email'])) {
         $formError ['email'] = 'Saisie vide';
     }
 }
+
+//gender choix   
+if (isset($_POST['choix'])) {
+    $choix = ($_POST['choix']);
+}
+if (empty($_POST['choix'])) {
+        $formError ['choix'] = 'Saisie vide';
+    }
 
 ?>
    

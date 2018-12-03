@@ -84,7 +84,7 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Le Petit Kiosque</h5>
+                    <h5 class="white-text">CAUX<i>libri</i></h5>
                     <p class="grey-text text-lighten-4">Vous pouvez nous suivre sur les réseaux sociaux.</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
@@ -100,7 +100,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <p>© 2018 Copyright Le Petit Kiosque</p>
+                <p>© 2018 Copyright CAUX<i>libri</i></p>
             </div>
         </div>
     </footer>

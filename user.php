@@ -16,7 +16,7 @@
                             </div>
                         </div>
 
-                    <div class="row input-field col s12 l6">
+                    <div class="row input-field col s12 l12">
                         <button class="modal-close waves-effect waves-light btn orange darken-1" type="submit" name="action">Envoyer
                             <i class="material-icons right">send</i>
                         </button>
