@@ -12,7 +12,7 @@ if (isset($_POST['name'])) {
         $formError['name'] = 'Saisie non valide';
     }
     if (empty($_POST['name'])) {
-        $formError['name'] = 'Saisie atvide';
+        $formError['name'] = 'Saisie vide';
     }
 }
 
@@ -27,6 +27,38 @@ if (isset($_POST['lastName'])) {
     }
 }
 
+//login      Attention il faut modifier la regex
+if (isset($_POST['login'])) {
+    $login = htmlspecialchars($_POST['login']);
+    if (!preg_match($regexText, $login)) {
+        $formError ['login'] = 'Saisie non valide';
+    }
+    if (empty($_POST['login'])) {
+        $formError ['login'] = 'Saisie vide';
+    }
+}
+
+//password    Attention il faut modifier la regex
+if (isset($_POST['password'])) {
+    $password = htmlspecialchars($_POST['password']);
+    if (!preg_match($regexText, $password)) {
+        $formError ['password'] = 'Saisie non valide';
+    }
+    if (empty($_POST['password'])) {
+        $formError ['password'] = 'Saisie vide';
+    }
+}
+
+//password    Attention il faut modifier la regex
+if (isset($_POST['email'])) {
+    $email = htmlspecialchars($_POST['email']);
+    if (!preg_match($regexText, $email)) {
+        $formError ['email'] = 'Saisie non valide';
+    }
+    if (empty($_POST['email'])) {
+        $formError ['email'] = 'Saisie vide';
+    }
+}
 
 ?>
    

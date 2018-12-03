@@ -1,4 +1,4 @@
-<?php include 'formController.php';?>
+<?php include 'formController.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="assets/css/style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <title>Le petit kiosque</title>
+        <title>CauxLibri</title>
     </head>
     <body>
 
@@ -19,10 +19,11 @@
                 <nav>
                     <div class="nav-wrapper white">
                         <ul class="right">
-                            <li><a href="#home"class="orange-text text-orange accent-3">Accueil</a></li>
-                            <li><a href="Billetterie.html"class="orange-text text-orange accent-3">Billetterie</a></li>
-                            <li><a class="waves-effect waves-light btn orange accent-3 hide-on-small-only">Compte client<i class="material-icons right">account_circle</i></a></li>
-                            <li><a class="btn-floating btn-large waves-effect waves-light orange accent-3 show-on-small hide-on-large-only"><i class="material-icons right">account_circle</i></a></li>
+                            <li><a href="#home" class="orange-text text-orange accent-3">Accueil</a></li>
+                            <li><a href="Billetterie.html" class="orange-text text-orange accent-3">Le projet</a></li>
+
+                            <!-- Modal Trigger -->
+                            <li><a href="#modal2" class="modal-close waves-effect waves-light btn orange accent-3 modal-trigger">Votre compte<i class="material-icons right">account_circle</i></a></li>
                         </ul>
                     </div>
                 </nav>
@@ -30,71 +31,39 @@
         </header>
         <!--Fin du header et navbar -->
         <div class="parallax-container valign-wrapper">
-            <div class="parallax"><img id="imageTop"src="assets/color.jpg"></div>
+            <div class="parallax"><img id="imageTop" src="assets/color.jpg"></div>
             <div class="row">
                 <div class="container">
                     <div class="row  center-align">
-                        <div class="col s12 m12  white-text center-align">
-                            <h1 id="h1title">TutTut</h1>
-                        </div>
-                        <div id="presentation" class="col s12 m12  white-text center-align hide-on-small-only">
-                            <p>Nous sommes heureux de vous rencontrer. Vous êtes ici chez vous. Pour acheter un billet ou pour ouvrir une billetterie, rien de plus simple. Il vous suffit de créer gratuitement un compte.</p>
-                        </div>
-                        <div id="presentationMini" class="col s12 m12  white-text center-align hide-on-large-only">
-                            <p>Nous sommes heureux de vous rencontrer. Vous êtes ici chez vous. Pour acheter un billet ou pour ouvrir une billetterie, rien de plus simple. Il vous suffit de créer gratuitement un compte.</p>
-                        </div>
-                        <!-- Modal Trigger -->
-                        <a href="#modal1" class="waves-effect waves-light btn-large red darken-1 modal-trigger">Billetterie</a>
-                    </div>
-                    <!-- Modal Structure -->
-                    <div id="modal1" class="modal modal-fixed-footer">
-                        <div class="modal-content center-align">
-                            <div class="col s12 m6">
-                                <img src="assets" alt="logo" class="circle responsive-img .hide-on-small-only"> <!-- notice the "circle" class -->
+                        <div class="col s12 m12 center-align amber-text text-lighten-5">
+                            <img src="assets/colibriB.png" alt="logo" id="logoHead">
+                            <h1 id="h1title">Caux<i>libri</i></h1>
+                            <div id="presentation" class="col s12 m12 center-align hide-on-small-only">
+                                <p>“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</p>
+                                <p class="center-align">Et le colibri lui répondit :« Je le sais, mais je fais ma part. »”</p>
                             </div>
-                            <h1 class="formTitle">Formulaire d'inscription</h1>
-                            <div class="container">
-                                <div class="row">
-                                    <i class="material-icons prefix">account_circle</i>
-                                    <form id="form" method="POST" class="col s12 l12" action="" >
-                                        <div class="row input-field col s12 l6">
-                                            <input name="name" value = "" id = "name" type="text" class = "active" />
-                                            <label for="name">Prénom</label>
-                                            <p class="css" id="firstNameField"><?= isset($formError['name']) ? $formError['name'] : '' ?></p>
-                                        </div>    
-                                        <div class="row input-field col s12 l6">
-                                            <input name="lastName" value = "" id = "lastName" type="text" class = "active" />
-                                            <label for="lastName">Nom</label>
-                                            <p class="css" id="lastNameField"><?= isset($formError['lastName']) ? $formError['lastName'] : '' ?></p>
-                                        </div>
-                                        <div id="birthday" class="row input-field col s12 l6">
-                                            <div class="col s12 l6">
-                                                <label>Date de naissance</label>              
-                                                <input name="birthday" type="date" class="datepicker" />  
-                                            </div>            
-                                        </div>
-
-                                        <div class="row input-field col s12 l6">
-                                            <!--<input class="btn waves-effect waves-light amber lighten-5-text" type="submit" name="action" >-->
-                                            <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer
-                                                <i class="material-icons right">send</i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
+                            <div id="presentationMini" class="col s12 m12 right-align hide-on-large-only">
+                                <p>“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</p> 
+                                <p class="center-align">Et le colibri lui répondit :« Je le sais, mais je fais ma part. »”</p>
                             </div>
-
+                            <!-- Modal Trigger -->
+                            <a href="#modal1" class="modal-close waves-effect waves-light btn-large red darken-1 modal-trigger">Inscription</a>
                         </div>
-                        <div class="modal-footer center-align">
-                            <a href="#!" class="modal-close waves-effect waves-light btn orange darken-1">Acheter</a>
-                            <a href="#!" class="modal-close waves-effect waves-light btn orange darken-1">Créer</a>
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal modal-fixed-footer">
+                            <div class="modal-content center-align">
+                                <?php include 'form.php'; ?>
+                            </div>
+                        </div>
+                        <div id="modal2" class="modal modal-fixed-footer">
+                            <div class="modal-content center-align">
+                                <?php include 'user.php'; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
         <div class="row">
             <div class="container center-align">
                 <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
@@ -128,8 +97,7 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    © 2018 Copyright Le Petit Kiosque
-                    <a class="white-text text-orange darken-1"</a>
+                    <p>© 2018 Copyright Le Petit Kiosque</p>
                 </div>
             </div>
         </footer>
