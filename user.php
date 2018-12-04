@@ -1,8 +1,7 @@
-<?php include 'formController.php'; ?>
-        <h1 class="formTitle center-align">Votre compte</h1>
+<h1 class="formTitle center-align">Votre compte</h1>
         <div class="container center-align">
             <div class="row">
-                <form id="formUser" method="POST" class="col s12 l12" action="accountuser.php" >
+                <form id="formUser" method="POST" class="col s12 l12" action="index.php" >
                     <div class="row input-field col s12 l6">
                         <input name="login" value = "" id = "name" type="text" class = "active" />
                         <label for="login">Login</label>

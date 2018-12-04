@@ -22,8 +22,8 @@ session_start(); // On démarre la session AVANT toute chose
                         <div class="card-content center-align">
                             <span class="card-title center-align">Espace abonné</span>
                             <h2 class="h2account">Vos informations :</h2><br />
-                            <p><?= 'Login : ' . $_POST['login'];?></p>
-                            <p><?= 'Mot de passe : ' . $_POST['password']; ?></p>
+                            <p><?= ($_SESSION['login']); ?></p>
+                            <p><?= ($_SESSION['password']); ?></p>
                         </div>
                     </div>
                     <div class="modal-footer center-align">

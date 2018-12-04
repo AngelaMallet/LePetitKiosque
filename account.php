@@ -1,5 +1,5 @@
 <?php
-session_start(); // On démarre la session AVANT toute chose
+    session_start(); // On démarre la session AVANT toute chose
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +22,8 @@ session_start(); // On démarre la session AVANT toute chose
                         <div class="card-content center-align">
                             <span class="card-title center-align">Espace abonné</span>
                             <h2 class="h2account">Bonjour !</h2><br />
-                            <p><?= ($_POST['choix']) . ' ' . $_POST['name'] . ' ' . $_POST['lastName']; ?></p>
-                            <p><?= $_POST['email']; ?></p>
+                            <p><?= ($_SESSION['choix']) . ' ' . $_SESSION['name'] . ' ' . $_SESSION['lastName']; ?></p>
+                            <p><?= ($_SESSION['email']); ?></p>
                         </div>
                    </div>
                     <div class="modal-footer center-align">

@@ -1,4 +1,17 @@
-<?php include 'formController.php'; ?>
+<?php
+session_start(); // On démarre la session AVANT toute chose
+include ('indexController.php');
+// header qui change en fonction d'une variable
+if ((count($formError) == 0) && isset($_POST['submit'])) {
+    header('Location:account.php');
+}
+
+if ((count($formError) != 0) && isset($_POST['submit'])) {
+    $modalError = true;
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -50,13 +63,14 @@
                             <!-- Modal Trigger -->
                             <a href="#modal1" class="modal-close waves-effect waves-light btn-large red darken-1 modal-trigger">Inscription</a>
                         </div>
-                        <!-- Modal Structure -->
-                        <div id="modal1" class="modal modal-fixed-footer">
+                        <!-- Modal Structure inscription-->
+                        <div id="modal1" class="modal <?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
                             <div class="modal-content center-align">
                                 <?php include 'form.php'; ?>
                             </div>
                         </div>
-                        <div id="modal2" class="modal modal-fixed-footer">
+                        <!-- Modal Structure connection-->
+                        <div id="modal2" class="modal<?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
                             <div class="modal-content center-align">
                                 <?php include 'user.php'; ?>
                             </div>
@@ -105,7 +119,7 @@
         </div>
     </footer>
     <!-- fin du footer -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="assets/js/materialize.js"></script>
     <script src="assets/js/js.js"></script>
 </body>
