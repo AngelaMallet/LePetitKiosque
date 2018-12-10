@@ -1,5 +1,24 @@
+#headerBackground{
+    background-image: url("../color.jpg");
+	background-repeat:round;
+	padding: 30px;
+
+}
+.image-full {
+    background: url("../chat.png") no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#projetFrame{
+	padding: 80px;
+	height: 800px;
+}
+
 radio{
     background-color: orange;
+}
+#icone{
+    margin-top: -12px;
 }
 
 #h1title{
@@ -8,12 +27,15 @@ radio{
     font-size: 3em;
 }
 h2.h2account{
-    font-size: 1.5em;
+ 	font-size: 1.5em;
 }
 #accountBackground{
 
 background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
 
+}
+#accountContainer{
+	padding: 50px;
 }
 .modal h1 {
     font-size: 1.5em;
@@ -23,8 +45,9 @@ background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
 #logoCard{
     max-width: 250px;
 }
+
 #presentation{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 200;
     text-align: justify;
 }

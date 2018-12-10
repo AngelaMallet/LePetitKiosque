@@ -3,6 +3,7 @@
 // Déclaration des regeX
 $regexText = '/^[A-zÂ-ÿ -]+$/';
 $regexEmail = '/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/';
+$regexPassword = '/^[A-zÄ-ÿ0-9 -@_?!#$*€]+$/';
 
 // Déclaration d'un tableau d'erreurs
 $formError = [];
@@ -50,7 +51,7 @@ if (isset($_POST['login'])) {
 ////password    Attention il faut modifier la regex
 if (isset($_POST['password'])) {
     $password = htmlspecialchars($_POST['password']);
-    if (!preg_match($regexText, $password)) {
+    if (!preg_match($regexPassword, $password)) {
         $formError ['password'] = 'Saisie non valide';
     }
     if (empty($_POST['password'])) {
@@ -59,7 +60,7 @@ if (isset($_POST['password'])) {
     $_SESSION['password'] = $password;
 }
 
-//password    Attention il faut modifier la regex
+//email  Attention il faut modifier la regex
 if (isset($_POST['email'])) {
     $email = htmlspecialchars($_POST['email']);
     if (!preg_match($regexEmail, $email)) {
