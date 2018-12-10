@@ -20,7 +20,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
 		<!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
-		<link rel="stylesheet" href="assets/css/materialize.css" />
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 		<meta charset="utf-8" />
@@ -48,7 +48,6 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 		<div id="headerBackground"class="container">
 			<div class="row">
 				<div class="col s12 m12 center-align amber-text text-lighten-5">
-					<img src="assets/colibriB.png" alt="logo" id="logoHead">
 					<h1 id="h1title">Caux<i>libri</i></h1>
 					<div class="col s12 m12 center-align amber-text text-lighten-5">
 						<p>Nous pouvons tous rendre service d'une manière ou d'une autre.</p>
@@ -135,16 +134,5 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
 		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
 		   <script type="text/javascript" src="assets/js/js.js"></script>
-		<!--<script>
-			$(document).ready(function () {
-				// on initialise toutes les modals
-				$('.modal').modal();
-
-				// seul les modals error restent/vont s'ouvrir
-				$('.modalError').modal('open');
-
-				$('.fixed-action-btn').floatingActionButton();
-			});
-		</script>-->
 	</body>
 </html>

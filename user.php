@@ -3,15 +3,15 @@
             <div class="row">
                 <form id="formUser" method="POST" class="col s12 l12" action="index.php" >
                     <div class="row input-field col s12 l6">
-                        <input name="login" value = "" id = "name" type="text" class = "active" />
-                        <label for="login">Login</label>
-                        <p class="css" id="loginField"><?= isset($formError['login']) ? $formError['login'] : '' ?></p>
+                        <input name="confimLogin" value = "" id = "confimLogin" type="text" class = "active" />
+                        <label for="confimLogin">Login</label>
+                        <p class="css" id="confimLoginField"><?= isset($formError['confimLogin']) ? $formError['confimLogin'] : '' ?></p>
                     </div>
                      <div class="row">
                             <div class="input-field col s12 l6">
-                                <input name="password" value="" id="password" type="password" class="active">
-                                <label for="password">Mot de passe</label>
-                               <p class="css" id="passwordField"><?= isset($formError['password']) ? $formError['password'] : '' ?></p>
+                                <input name="confirmPassword" value="" id="confirmPassword" type="password" class="active">
+                                <label for="confirmPassword">Mot de passe</label>
+                               <p class="css" id="confirmPasswordField"><?= isset($formError['confirmPassword']) ? $formError['confirmPassword'] : '' ?></p>
                             </div>
                         </div>
 

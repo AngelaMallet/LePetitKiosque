@@ -1,6 +1,7 @@
 #headerBackground{
-    background-image: url("../color.jpg");
-	background-repeat:round;
+     background: url("../navigation.png") no-repeat;
+    background-size: cover;
+    background-position: center center;
 	padding: 30px;
 
 }
@@ -24,7 +25,7 @@ radio{
 #h1title{
     text-transform: uppercase;
     font-weight: 100;
-    font-size: 3em;
+    font-size: 2em;
 }
 h2.h2account{
  	font-size: 1.5em;

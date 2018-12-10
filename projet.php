@@ -41,7 +41,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 </div>
 				<div class="hide-on-small-only">
 				<div class="col s12 m6 center-align">
-					<img c width="500" height="400" src="../LePetitKiosque/assets/chat.png">
+					<img  width="500" height="400" src="../LePetitKiosque/assets/chat.png">
 					</div>
 				</div>
 				
