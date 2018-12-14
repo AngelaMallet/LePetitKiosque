@@ -15,7 +15,7 @@ radio{
     background-color: corail;
 }
 
-#h1title{
+h1{
     text-transform: uppercase;
     font-weight: 100;
     font-size: 2em;
@@ -35,7 +35,15 @@ background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
     font-size: 1.5em;
     color: orange;
 }
-
+#projetH1{
+	font-size: 1.3em;
+}
+#registrationBtn{
+	font-size: 0.8em;
+}
+#accountBtn{
+	font-size: 0.8em;
+}
 #logoCard{
     max-width: 250px;
 }
@@ -47,7 +55,12 @@ background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
 	max-width: 900px;
 	color: coral;
 }
-
+#navLogo{
+	margin-left: 25px;
+	margin-top: 10px;
+	height: 40px;
+	width: 50px;
+}
 #logoHead {
     width: 15%;
 }

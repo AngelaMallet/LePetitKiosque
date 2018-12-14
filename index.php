@@ -29,20 +29,8 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 	<body>
 
 		<header>
-			<!-- header et navbar -->
-			<div class="navbar-fixed grid-example row s12">
-				<nav>
-					<div class="nav-wrapper white">
-						<ul class="right">
-							<li><a href="#home" class="red-text text-red accent-1">Accueil</a></li>
-							<li><a href="projet.php" class="red-text text-red accent-1">Le projet</a></li>
-
-							<!-- Modal Trigger -->
-							<li><a href="#modal2" id="btnModal2" class="modal-close waves-effect waves-light btn red accent-1 modal-trigger animated bounceOutLeft">Votre compte<i id="icone" class="material-icons right">account_circle</i></a></li>
-						</ul>
-					</div>
-				</nav>
-			</div>
+				<!-- header et navbar -->
+		<?php include 'nav.html'; ?>
 		</header>
 		<!--Fin du header et navbar -->
 		<div class="container">
@@ -58,7 +46,9 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 						Et pourquoi ne pas prendre une personne agée avec nous pour nous rendre dans le village voisin faire ses courses?<br/>
 						<strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
 					<!-- Modal Trigger -->
-					<a href="#modal1" class="modal-close waves-effect waves-light btn red accent-1 modal-trigger">Inscription</a>
+					<a href="#modal1" id="registrationBtn" class="modal-close waves-effect waves-light btn-large red accent-1 modal-trigger s12 m6">Inscription</a>
+					<!-- Modal Trigger -->
+					<a href="#modal2" id="accountBtn" class="modal-close waves-effect waves-light btn-large red accent-1 modal-trigger animated bounceOutLeft s12 m6">Votre compte</a>
 				</div>
 			</div>
 

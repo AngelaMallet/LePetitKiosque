@@ -14,6 +14,19 @@ session_start(); // On démarre la session AVANT toute chose
         <title>Compte client</title>
     </head>
     <body>
+				<!-- header et navbar -->
+			<div class="navbar-fixed">
+				<nav>
+					<div class="nav-wrapper white">
+						<ul class="right">
+							<li><a href="#home" class="red-text text-red accent-1">Accueil</a></li>
+							<li><a href="projet.php" class="red-text text-red accent-1">Le projet</a></li>
+
+							
+						</ul>
+					</div>
+				</nav>
+			</div> 
         <div id="accountBackground" class="parallax-container valign-wrapper">
             <div class="row">
                 <div class="container center-align">

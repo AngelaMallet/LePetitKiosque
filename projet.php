@@ -28,28 +28,30 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 		<title>CauxLibri</title>
 	</head>
 	<body>
+		<!-- header et navbar -->
+		<?php include 'nav.html'; ?>
 
 
 		<div id="projetFrame" class="container center-align">
 			<div class="row">
 				<div class="col s12 m6 left-align">
-					<h1>Comment devenir un CAUX<i>libri</i> ?</h1>
+					<h1 id="projetH1">Comment devenir un CAUX<i>libri</i> ?</h1>
 					<div class="col s12 m8 left-align">
 						<p>“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</p>
 						<p class="center-align">Et le colibri lui répondit :« <i>Je le sais, mais je fais ma part.</i> »”</p>
 					</div>
-</div>
+				</div>
 				<div class="hide-on-small-only">
-				<div class="col s12 m6 center-align">
-					<img  width="500" height="400" src="../LePetitKiosque/assets/chat.png">
+					<div class="col s12 m6 center-align">
+						<img  width="500" height="400" src="../LePetitKiosque/assets/chat.png">
 					</div>
 				</div>
-				
+
 			</div>
 
 			<div class="modal-footer center-align">
-				<a href="#modal1" class="modal-close waves-effect waves-light btn orange darken-1">Inscription</a>
-				<a href="index.php " class="modal-close waves-effect waves-light btn orange darken-1">Retour</a>
+				<a href="#modal1" class="modal-close waves-effect waves-light btn-large red accent-1">Inscription</a>
+				<a href="index.php" class="modal-close waves-effect waves-light btn-large red accent-1">Retour</a>
 			</div>
 		</div>
 
