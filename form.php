@@ -1,4 +1,4 @@
-<h1 class="formTitle center-align">Formulaire d'inscription</h1>
+<h1 class="formTitle center-align red-text text-red accent-1">Formulaire d'inscription</h1>
 <div class="container center-align">
 	<div class="row">
 		<form id="form" method="POST" class="col s12 l12" action="index.php">
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="row input-field col s12 l12">
-				<button class="modal-close waves-effect waves-light btn orange darken-1" type="submit" name="submit">M'inscrire
+				<button class="modal-close waves-effect waves-light btn red accent-1 modal-trigger" type="submit" name="submit">M'inscrire
 					<i class="material-icons right">account_circle</i>
 				</button>
 			</div>

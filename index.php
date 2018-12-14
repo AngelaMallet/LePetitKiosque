@@ -20,7 +20,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
 		<!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
-		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 		<meta charset="utf-8" />
@@ -34,58 +34,48 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 				<nav>
 					<div class="nav-wrapper white">
 						<ul class="right">
-							<li><a href="#home" class="orange-text text-orange accent-3">Accueil</a></li>
-							<li><a href="projet.php" class="orange-text text-orange accent-3">Le projet</a></li>
+							<li><a href="#home" class="red-text text-red accent-1">Accueil</a></li>
+							<li><a href="projet.php" class="red-text text-red accent-1">Le projet</a></li>
 
 							<!-- Modal Trigger -->
-							<li><a href="#modal2" id="btnModal2" class="modal-close waves-effect waves-light btn orange accent-3 modal-trigger animated bounceOutLeft">Votre compte<i id="icone" class="material-icons right">account_circle</i></a></li>
+							<li><a href="#modal2" id="btnModal2" class="modal-close waves-effect waves-light btn red accent-1 modal-trigger animated bounceOutLeft">Votre compte<i id="icone" class="material-icons right">account_circle</i></a></li>
 						</ul>
 					</div>
 				</nav>
 			</div>
 		</header>
 		<!--Fin du header et navbar -->
-		<div id="headerBackground"class="container">
+		<div class="container">
 			<div class="row">
-				<div class="col s12 m12 center-align amber-text text-lighten-5">
-					<h1 id="h1title">Caux<i>libri</i></h1>
-					<div class="col s12 m12 center-align amber-text text-lighten-5">
-						<p>Nous pouvons tous rendre service d'une manière ou d'une autre.</p>
-						<p>CAUX<i>libri</i> souhaite mettre les personnes en contact pour mutualiser les déplacements et<br>
-							rompre l'isolement des personnes non motorisées.</p>
-						<p>Il est possible par exemple de prendre des voisins dans sa voiture lors des trajets quotidiens. <br>
-							D'accompagner d'autres enfants du même village quand nous allons chercher notre enfant au collège ou lycée.</p>
-						<p>Et pourquoi ne pas prendre une personne agée avec nous pour nous rendre dans le village voisin faire ses courses?</p>
-						<p><strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
-
-
-
-						<!--                            <h1 id="h1title">Caux<i>libri</i></h1>
-<div id="presentation" class="col s12 m12 center-align hide-on-small-only">
-<p>“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</p>
-<p class="center-align">Et le colibri lui répondit :« Je le sais, mais je fais ma part. »”</p>
-</div>
-<div id="presentationMini" class="col s12 m12 right-align hide-on-large-only">
-<p>“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</p>
-<p class="center-align">Et le colibri lui répondit :« Je le sais, mais je fais ma part. »”</p>
-</div>-->
-						<!-- Modal Trigger -->
-					</div>
-					<a href="#modal1" class="modal-close waves-effect waves-light btn-large red light-1 modal-trigger">Inscription</a>
-				</div>
-				<!-- Modal Structure inscription-->
-				<div id="modal1" class="modal <?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
-					<div class="modal-content center-align">
-						<?php include 'form.php'; ?>
-					</div>
-				</div>
-				<!-- Modal Structure connection-->
-				<div id="modal2" class="modal <?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
-					<div class="modal-content center-align">
-						<?php include 'user.php'; ?>
-					</div>
+				<div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3">
+					<h1>CAUX<i>libri</i></h1>
+					<img id="imgHead" src="assets/navigationBis.png" alt="image haut de page" />
+					<p>Nous pouvons tous rendre service d'une manière ou d'une autre.
+						CAUX<i>libri</i> souhaite mettre les personnes en contact pour mutualiser les déplacements et
+						rompre l'isolement des personnes non motorisées.
+						Il est possible par exemple de prendre des voisins dans sa voiture lors des trajets quotidiens.
+						D'accompagner d'autres enfants du même village quand nous allons chercher notre enfant au collège ou lycée.
+						Et pourquoi ne pas prendre une personne agée avec nous pour nous rendre dans le village voisin faire ses courses?<br/>
+						<strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
+					<!-- Modal Trigger -->
+					<a href="#modal1" class="modal-close waves-effect waves-light btn red accent-1 modal-trigger">Inscription</a>
 				</div>
 			</div>
+
+
+			<!-- Modal Structure inscription-->
+			<div id="modal1" class="modal <?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
+				<div class="modal-content center-align">
+					<?php include 'form.php'; ?>
+				</div>
+			</div>
+			<!-- Modal Structure connection-->
+			<div id="modal2" class="modal <?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
+				<div class="modal-content center-align">
+					<?php include 'user.php'; ?>
+				</div>
+			</div>
+
 		</div>
 
 
@@ -103,7 +93,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 
 
 		<!-- debut du footer -->
-		<footer class="page-footer orange darken-1">
+		<footer class="page-footer red accent-1">
 			<div class="container">
 				<div class="row">
 					<div class="col l6 s12">
@@ -133,6 +123,6 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 		<!-- fin du footer -->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
 		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
-		   <script type="text/javascript" src="assets/js/js.js"></script>
+		<script type="text/javascript" src="assets/js/js.js"></script>
 	</body>
 </html>

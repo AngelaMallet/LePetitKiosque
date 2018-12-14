@@ -32,8 +32,8 @@
                         </div>
                    </div>
                     <div class="modal-footer center-align">
-                        <a href="#modal3" class="modal-close waves-effect waves-light btn orange darken-1 modal-trigger">Modifier</a>
-                        <a href="index.php " class="modal-close waves-effect waves-light btn orange darken-1">Retour</a>
+                        <a href="#modal3" class="modal-close waves-effect waves-light btn red accent-1 modal-trigger modal-trigger">Modifier</a>
+                        <a href="index.php " class="modal-close waves-effect waves-light btn red accent-1 modal-trigger">Retour</a>
                     </div>
                     <!-- Modal Structure -->
                     <div id="modal3" class="modal modal-fixed-footer">

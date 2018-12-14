@@ -1,9 +1,5 @@
-#headerBackground{
-     background: url("../navigation.png") no-repeat;
-    background-size: cover;
-    background-position: center center;
-	padding: 30px;
-
+#imgHead{
+	height: 419px;
 }
 .image-full {
     background: url("../chat.png") no-repeat;
@@ -16,10 +12,7 @@
 }
 
 radio{
-    background-color: orange;
-}
-#icone{
-    margin-top: -12px;
+    background-color: corail;
 }
 
 #h1title{
@@ -40,25 +33,19 @@ background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
 }
 .modal h1 {
     font-size: 1.5em;
-    color: orange
+    color: orange;
 }
 
 #logoCard{
     max-width: 250px;
 }
 
-#presentation{
+#presentationText{
     font-size: 1em;
     font-weight: 200;
-    text-align: justify;
-}
-#presentationMini{
-    font-size: 0.5;
-    font-weight: 200;
-    text-align: justify;
-}
-#presentationText{
-    font-size: 1.2em;
+	text-align: center;
+	max-width: 900px;
+	color: coral;
 }
 
 #logoHead {
@@ -77,10 +64,7 @@ body{
     /* background: -webkit-linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44));
     background: linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44)); */
 }
-.parallax-container{
-    height: 600px;
-    margin-top: -20px;
-}
+
 /* * Comme la dite marge est exprimée en pourcentage,
 * on l'augmente sur les devices moins larges.
 */

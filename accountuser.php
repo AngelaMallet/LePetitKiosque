@@ -27,8 +27,8 @@ session_start(); // On démarre la session AVANT toute chose
                         </div>
                     </div>
                     <div class="modal-footer center-align">
-                        <a href="user.php" class="modal-close waves-effect waves-light btn orange darken-1">Modifier</a>
-                        <a href="index.php" class="modal-close waves-effect waves-light btn orange darken-1">Retour</a>
+                        <a href="user.php" class="modal-close waves-effect waves-light btn red accent-1 modal-trigger">Modifier</a>
+                        <a href="index.php" class="modal-close waves-effect waves-light btn red accent-1 modal-trigger">Retour</a>
                     </div>
                 </div>
             </div>
