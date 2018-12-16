@@ -29,8 +29,8 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 	<body>
 
 		<header>
-				<!-- header et navbar -->
-		<?php include 'nav.html'; ?>
+			<!-- header et navbar -->
+			<?php include 'nav.html'; ?>
 		</header>
 		<!--Fin du header et navbar -->
 		<div class="container">
@@ -45,13 +45,17 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 						D'accompagner d'autres enfants du même village quand nous allons chercher notre enfant au collège ou lycée.
 						Et pourquoi ne pas prendre une personne agée avec nous pour nous rendre dans le village voisin faire ses courses?<br/>
 						<strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
+					<div class="whiteSapce50"></div>
 					<!-- Modal Trigger -->
 					<a href="#modal1" id="registrationBtn" class="modal-close waves-effect waves-light btn-large red accent-1 modal-trigger s12 m6">Inscription</a>
 					<!-- Modal Trigger -->
 					<a href="#modal2" id="accountBtn" class="modal-close waves-effect waves-light btn-large red accent-1 modal-trigger animated bounceOutLeft s12 m6">Votre compte</a>
 				</div>
 			</div>
-
+			<div class="whiteSapce100"></div>
+			<div class="modal-content center-align">
+				<?php include 'cards.php'; ?>
+			</div>
 
 			<!-- Modal Structure inscription-->
 			<div id="modal1" class="modal <?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
@@ -65,23 +69,10 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 					<?php include 'user.php'; ?>
 				</div>
 			</div>
-
 		</div>
+				<?php include 'actionBtn.html'; ?>
 
-
-		<div class="fixed-action-btn">
-			<a class="btn-floating btn-large red light-1">
-				<i class="large material-icons">mode_edit</i>
-			</a>
-			<ul>
-				<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-				<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-				<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-				<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-			</ul>
-		</div>
-
-
+		<div class="whiteSapce200"></div>
 		<!-- debut du footer -->
 		<footer class="page-footer red accent-1">
 			<div class="container">

@@ -1,4 +1,4 @@
-<h1 class="formTitle center-align">Votre compte</h1>
+<h1 class="formTitle center-align red-text text-red accent-1">Votre compte</h1>
         <div class="container center-align">
             <div class="row">
                 <form id="formUser" method="POST" class="col s12 l12" action="index.php" >

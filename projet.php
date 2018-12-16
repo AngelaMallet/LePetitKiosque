@@ -48,7 +48,8 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 				</div>
 
 			</div>
-
+			<?php include 'actionBtn.html'; ?>
+			<div class="whiteSapce100"></div>
 			<div class="modal-footer center-align">
 				<a href="#modal1" class="modal-close waves-effect waves-light btn-large red accent-1">Inscription</a>
 				<a href="index.php" class="modal-close waves-effect waves-light btn-large red accent-1">Retour</a>

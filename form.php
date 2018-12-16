@@ -47,6 +47,7 @@
 					<i class="material-icons right">account_circle</i>
 				</button>
 			</div>
+			<!-- ... <p><a id="linkForm" href="index.php">Vous êtes déjà inscrit?</a></p>-->
 		</form>
 	</div>
 

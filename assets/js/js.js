@@ -7,3 +7,6 @@ $(document).ready(function () {
 
 				$('.fixed-action-btn').floatingActionButton();
 			});
+$('.background').background({
+    source: "https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+});
