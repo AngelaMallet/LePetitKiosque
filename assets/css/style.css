@@ -2,28 +2,28 @@
 	height: 419px;
 }
 .image-full {
-    background: url("../chat.png") no-repeat;
-    background-size: cover;
-    background-position: center center;
+	background: url("../chat.png") no-repeat;
+	background-size: cover;
+	background-position: center center;
 }
 #projetFrame{
 	padding: 80px;
 	height: 800px;
 }
 /*a, a:visited {
-   	Les liens "au repos" et déjà visités antérieurement 
-    color: grey; /* couleur gris 
+Les liens "au repos" et déjà visités antérieurement 
+color: grey; /* couleur gris 
 }
 a:hover, a:focus, a:active {
-   Les liens au survol, au focus, et actifs : on leur donne la couleur corail 
-    color: #ff8a65;
+Les liens au survol, au focus, et actifs : on leur donne la couleur corail 
+color: #ff8a65;
 }*/
 #cardList{
 	margin-left: 50px;
 }
 .card-content p{
 	font-weight: 600;
-	font-size: 0.6em;
+	font-size: 1em;
 	word-spacing: 0.1em;
 	letter-spacing:0.1em;
 }
@@ -43,32 +43,37 @@ a:hover, a:focus, a:active {
 .card-image img{
 	max-height: 450px;
 }
+#shopImg{
+	width: 76%;
+	height: 77%;
+	margin-left: 61px;
+}
 radio{
-    background-color: corail;
+	background-color: corail;
 }
 
 h1{
-    text-transform: uppercase;
-    font-weight: 100;
-    font-size: 2em;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 2em;
 }
 h2{
 	font-size: 1.3em;
 }
 h2.h2account{
- 	font-size: 1.5em;
+	font-size: 1.5em;
 }
 #accountBackground{
 
-background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
+	background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
 
 }
 #accountContainer{
 	padding: 50px;
 }
 .modal h1 {
-    font-size: 1.5em;
-    color: orange;
+	font-size: 1.5em;
+	color: orange;
 }
 #projetH1{
 	font-size: 1.3em;
@@ -80,11 +85,11 @@ background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
 	font-size: 0.8em;
 }
 #logoCard{
-    max-width: 250px;
+	max-width: 250px;
 }
 #presentationText{
-    font-size: 1em;
-    font-weight: 200;
+	font-size: 1em;
+	font-weight: 200;
 	text-align: center;
 	max-width: 900px;
 	color: coral;
@@ -96,27 +101,32 @@ background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
 	width: 50px;
 }
 #logoHead {
-    width: 15%;
+	width: 15%;
 }
 #logoHead2{
-    width: 10%;
+	width: 10%;
+}
+#miniLogo{
+	height: 25px;
+	width: 35px;
 }
 
 #orangeSpace{
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
-    /* background: -webkit-linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44));
-    background: linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44)); */
+	font-family: 'Montserrat', sans-serif;
+	/* background: -webkit-linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44));
+	background: linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44)); */
 }
+
 
 /* * Comme la dite marge est exprimée en pourcentage,
 * on l'augmente sur les devices moins larges.
 */
 @media only screen and (min-width: 993px){
-    .container {
-        width: 85%;
-    }
+	.container {
+		width: 85%;
+	}
 }

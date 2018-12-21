@@ -37,7 +37,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 			<div class="row">
 				<div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3">
 					<h1>CAUX<i>libri</i></h1>
-					<img id="imgHead" src="assets/navigationBis.png" alt="image haut de page" />
+					<img id="imgHead" class="responsive-img hide-on-small-only" src="assets/navigationBis.png" alt="image haut de page" />
 					<p>Nous pouvons tous rendre service d'une manière ou d'une autre.
 						CAUX<i>libri</i> souhaite mettre les personnes en contact pour mutualiser les déplacements et
 						rompre l'isolement des personnes non motorisées.
@@ -47,9 +47,9 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
 						<strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
 					<div class="whiteSapce50"></div>
 					<!-- Modal Trigger -->
-					<a href="#modal1" id="registrationBtn" class="modal-close waves-effect waves-light btn-large red accent-1 modal-trigger s12 m6">Inscription</a>
+					<a href="#modal1" id="registrationBtn" class="modal-close waves-effect waves-red btn-large red accent-1 modal-trigger s12 m6">Inscription</a>
 					<!-- Modal Trigger -->
-					<a href="#modal2" id="accountBtn" class="modal-close waves-effect waves-light btn-large red accent-1 modal-trigger animated bounceOutLeft s12 m6">Votre compte</a>
+					<a href="#modal2" id="accountBtn" class="modal-close waves-effect waves-red btn-large red accent-1 modal-trigger animated bounceOutLeft s12 m6">Votre compte</a>
 				</div>
 			</div>
 			<div class="whiteSapce100"></div>

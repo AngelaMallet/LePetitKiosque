@@ -12,26 +12,23 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 		<meta charset="utf-8" />
-		<title>CauxLibri</title>
+		<title>services</title>
 	</head>
-	<body>
 
-		<div class="fixed-action-btn">
-			<a class="btn-floating btn-large blue-grey">
-				<i class="large material-icons">add_circle</i>
-			</a>
-			<ul>
-				<li><a href="index.php" class="btn-floating  deep-orange lighten-4"><i class="material-icons">home</i></a></li>
-				<li><a class="btn-floating  deep-orange lighten-3"><i class="material-icons">account_circle</i></a></li>
-				<li><a class="btn-floating deep-orange lighten-2"><i class="material-icons">location_on</i></a></li>
-				<li><a href="offerForm.php" class="btn-floating deep-orange lighten-1"><i class="material-icons">airline_seat_recline_normal</i></a></li>
-			</ul>
-		</div>
-
-		<!-- fin du footer -->
+<body>
+<nav class="dot">
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <a href="index.php" class="breadcrumb">DATE</a>
+      <a href="form.php" class="breadcrumb">SERVICES</a>
+      <a href="projet.php" class="breadcrumb">DÉPART</a>
+      <a href="#!" class="breadcrumb">ARRIVÉE</a>
+	</div>
+  </div>
+</nav>
+   </body>   
+			<!-- fin du footer -->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
 		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
 		<script type="text/javascript" src="assets/js/js.js"></script>
-	</body>
 </html>
-

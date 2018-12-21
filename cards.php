@@ -43,8 +43,8 @@
 						</div>
 						<p>Vous êtes au bon endroit !</p>
 						<div class="whiteSapce100"></div>
-						<a class="waves-effect waves-light btn-small deep-orange darken-1">Offrir une place</a>
-						<a class="waves-effect waves-light btn-small deep-orange darken-1">Voir les offres</a>
+						<a href="offerForm.php" class="waves-effect waves-red btn-small deep-orange darken-1">Offrir une place</a>
+						<a class="waves-effect waves-red btn-small deep-orange darken-1">Voir les offres</a>
 						
 					</div>				
 				</div>
@@ -64,8 +64,8 @@
 						<h2>Pourquoi ne pas y aller à plusieurs ?</h2>
 						<p>Avoir la possibilité de créer des liens <br>tout en faisant un geste pour notre planète,<br> que demander de mieux ?</p>
 						<div class="whiteSapce130"></div>
-						<a class="waves-effect waves-light btn-small deep-orange darken-1">Offrir une place</a>
-						<a class="waves-effect waves-light btn-small deep-orange darken-1">Voir les offres</a>
+						<a href="offerForm.php" class="waves-effect waves-red btn-small deep-orange darken-1">Offrir une place</a>
+						<a class="waves-effect waves-red btn-small deep-orange darken-1">Voir les offres</a>
 					</div>
 				</div>
 			</div>
