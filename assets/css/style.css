@@ -11,6 +11,13 @@ max-width: 100%;
 	background-size: cover;
 	background-position: center center;
 }
+
+/* style.css */
+
+.modal-overlay {
+  background: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1000") no-repeat;
+}
+
 #projetFrame{
 	padding: 80px;
 	height: 800px;
@@ -216,6 +223,48 @@ body{
 #address {
   width: 450px;
 }
+/*
+Zone css formulaire
+
+*/
+#form{
+    max-width: 70%;
+}
+
+/* label color */
+   .input-field label {
+     color: #000;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #000;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #000;
+   }
+/*
+Zone css formulaire
+
+*/
+
+
+
 /* * Comme la dite marge est exprimée en pourcentage,
 * on l'augmente sur les devices moins larges.
 */
