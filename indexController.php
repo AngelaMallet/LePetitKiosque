@@ -8,20 +8,20 @@ $regexPassword = '/^[A-zÄ-ÿ0-9 -@_?!#$*€]+$/';
 // Déclaration d'un tableau d'erreurs
 $formError = [];
 
-// Déclaration d'e la variable $modalError
+// Déclaration de la variable $modalError
 $modalError = false;
 
 
 ////Name
-if (isset($_POST['name'])) {
-    $name = htmlspecialchars($_POST['name']);
-    if (!preg_match($regexText, $name)) {
-        $formError['name'] = 'Saisie non valide';
+if (isset($_POST['fistName'])) {
+    $fistName = htmlspecialchars($_POST['fistName']);
+    if (!preg_match($regexText, $fistName)) {
+        $formError['fistName'] = 'Saisie non valide';
     }
-    if (empty($_POST['name'])) {
-        $formError['name'] = 'Saisie vide';
+    if (empty($_POST['fistName'])) {
+        $formError['fistName'] = 'Saisie vide';
     }
-    $_SESSION['name'] = $name;
+    $_SESSION['fistName'] = $fistName;
 }
 
 ////lastName
@@ -36,17 +36,31 @@ if (isset($_POST['lastName'])) {
     $_SESSION['lastName'] = $lastName;
 }
 
-//login Attention il faut modifier la regex
-if (isset($_POST['login'])) {
-    $login = htmlspecialchars($_POST['login']);
-    if (!preg_match($regexText, $login)) {
-        $formError ['login'] = 'Saisie non valide';
+////tel
+if (isset($_POST['tel'])) {
+    $tel = htmlspecialchars($_POST['tel']);
+    if (!preg_match($regexText, $tel)) {
+        $formError ['tel'] = 'Saisie non valide';
     }
-    if (empty($_POST['login'])) {
-        $formError ['login'] = 'Saisie vide';
+    if (empty($_POST['tel'])) {
+        $formError ['tel'] = 'Saisie vide';
     }
-    $_SESSION['login'] = $login;
+    $_SESSION['tel'] = $tel;
 }
+
+////address
+if (isset($_POST['address'])) {
+    $address = htmlspecialchars($_POST['address']);
+    if (!preg_match($regexText, $address)) {
+        $formError ['address'] = 'Saisie non valide';
+    }
+    if (empty($_POST['address'])) {
+        $formError ['address'] = 'Saisie vide';
+    }
+    $_SESSION['address'] = $address;
+}
+
+
 //
 ////password    Attention il faut modifier la regex
 if (isset($_POST['password'])) {
@@ -72,16 +86,18 @@ if (isset($_POST['email'])) {
     $_SESSION['email'] = $email;
 }
 
-// on test si le choix est vide
-if (isset($_POST['submit']) && !array_key_exists('choix', $_POST)) {
-    $formError['choix'] = 'Saisie vide';
+
+// on test si startingPoint est vide :
+if (isset($_POST['submitForm']) && !array_key_exists('startingPoint', $_POST)) {
+    $formError['startingPoint'] = 'Saisie vide';
 }
 
-// on test si le choix existe 
-if (isset($_POST['choix'])) {
-    $choix = htmlspecialchars($_POST['choix']);
-    $_SESSION['choix'] = $choix;
+// on test si startingPoint existe :
+if (isset($_POST['startingPoint'])) {
+    $startingPoint = htmlspecialchars($_POST['startingPoint']);
+    $_SESSION['startingPoint'] = $startingPoint;
 }
+
 
 ?>
    

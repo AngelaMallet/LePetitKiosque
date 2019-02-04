@@ -20,27 +20,16 @@
     </head>
     <body>
 				<!-- header et navbar -->
-			<div class="navbar-fixed">
-				<nav>
-					<div class="nav-wrapper white">
-						<ul class="right">
-							<li><a href="#home" class="red-text text-red accent-1">Accueil</a></li>
-							<li><a href="projet.php" class="red-text text-red accent-1">Le projet</a></li>
-
-							
-						</ul>
-					</div>
-				</nav>
-			</div>
+		<?php include 'nav.html'; ?>
         <div id="accountContainer" class="container">
             <div class="row">
                 <div class="container center-align">
-                    <img id="logoHead2" src="assets/colibriB.png">
+                    <img class="responsive-img" id="logoHead2" src="assets/colibriB.png">
                     <div class="row">
                         <div class="card-content center-align">
                             <span class="card-title center-align">Espace abonné</span>
                             <h2 class="h2account">Bonjour !</h2><br />
-                            <p><?= ($_SESSION['choix']) . ' ' . $_SESSION['name'] . ' ' . $_SESSION['lastName']; ?></p>
+                            <p><?= $_SESSION['firstName'] . ' ' . $_SESSION['lastName']; ?></p>
                             <p><?= ($_SESSION['email']); ?></p>
                         </div>
                    </div>
@@ -57,6 +46,9 @@
                 </div>
             </div>
        </div>
+        
+        <!-- début du footer -->
+         <?php include 'nav.html'; ?>
         <!-- fin du footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="assets/js/materialize.min.js"></script>

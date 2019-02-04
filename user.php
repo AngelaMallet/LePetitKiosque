@@ -5,7 +5,7 @@
                     <div class="row input-field col s12 l6">
                         <input name="confimLogin" value = "" id = "confimLogin" type="text" class = "active" />
                         <label for="confimLogin">Login</label>
-                        <p class="css" id="confimLoginField"><?= isset($formError['confimLogin']) ? $formError['confimLogin'] : '' ?></p>
+                        <p class="css" id="confimLoginField"><?= isset($formError['confimEmail']) ? $formError['confimEmail'] : '' ?></p>
                     </div>
                      <div class="row">
                             <div class="input-field col s12 l6">

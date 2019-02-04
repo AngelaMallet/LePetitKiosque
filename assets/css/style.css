@@ -1,3 +1,8 @@
+img, table, td, blockquote, code, pre, textarea, input, iframe,
+object, embed, video {
+max-width: 100%;
+}
+
 #imgHead{
 	height: 419px;
 }
@@ -18,6 +23,13 @@ a:hover, a:focus, a:active {
 Les liens au survol, au focus, et actifs : on leur donne la couleur corail 
 color: #ff8a65;
 }*/
+.spinner {
+    background-color: #e4625b;
+    border-radius: 100%;  
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
 #cardList{
 	margin-left: 50px;
 }
@@ -63,11 +75,7 @@ h2{
 h2.h2account{
 	font-size: 1.5em;
 }
-#accountBackground{
 
-	background:linear-gradient(4deg, rgba(236, 142, 0, 0), #ffd14f);
-
-}
 #accountContainer{
 	padding: 50px;
 }
@@ -77,7 +85,13 @@ h2.h2account{
 }
 #projetH1{
 	font-size: 1.3em;
+        margin-left: 15px;
 }
+.projetText {
+    text-align: justify;
+    line-height: 1.8em;
+}
+
 #registrationBtn{
 	font-size: 0.8em;
 }
@@ -103,9 +117,7 @@ h2.h2account{
 #logoHead {
 	width: 15%;
 }
-#logoHead2{
-	width: 10%;
-}
+
 #miniLogo{
 	height: 25px;
 	width: 35px;
@@ -117,11 +129,93 @@ h2.h2account{
 
 body{
 	font-family: 'Montserrat', sans-serif;
-	/* background: -webkit-linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44));
-	background: linear-gradient(16deg, rgb(254, 100, 100), rgb(255, 243, 44)); */
+}
+
+[class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3"] p {
+  line-height: 2em;
+  font-size: larger;
+}
+
+[cz-shortcut-listen] {
+  background-color: #fcf8f7;
+}
+
+.breadcrumb:hover {
+  color: white;
+  text-decoration: underline overline;
+}
+
+/* Bouton profil btnProfil.php*/
+
+[data-target] {
+  width: 100px;
 }
 
 
+.dropdown-content li a{
+  font-size: 0.7em;
+}
+
+
+*[data-tooltip] {
+    position: relative;
+}
+
+*[data-tooltip]::after {
+    content: attr(data-tooltip);
+    
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    width: 150px;
+    
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -ms-transition: opacity .15s ease-in-out;
+    -o-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+    
+    display: block;
+    font-size: 0.8em;
+    line-height: 16px;
+    background: #607D8A;
+    margin-right: 50px;
+    padding: 2px 2px;
+    border: 1px solid #fff1e0;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+    color: #fff1e0;
+}
+
+*[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+
+/* inline_style_edits.inline.css */
+
+#accountImg{
+  max-width: 15em;
+  margin-left: 150px;
+}
+
+
+/* inline_style_edits.inline.css Problème du bouton droit dans le modal du formulaire "s'identifier'"*/
+
+[cz-shortcut-listen] .input-field button:nth-of-type(2) {
+  padding: 0px;
+}
+
+#submitFormValidBtn {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+#address {
+  width: 450px;
+}
 /* * Comme la dite marge est exprimée en pourcentage,
 * on l'augmente sur les devices moins larges.
 */
