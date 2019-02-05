@@ -1,14 +1,10 @@
 <?php
-session_start(); // On démarre la session AVANT toute chose
-include ('indexController.php');
-// header qui change en fonction d'une variable
-if ((count($formError) == 0) && isset($_POST['submit'])) {
-    header('Location:account.php');
-}
-if ((count($formError) != 0) && isset($_POST['submit'])) {
-    $modalError = true;
-}
-?>
+require_once 'controllers/controllerAjoutUsers.php';
+    
+?>  
+<?php if ($addSuccess) { ?>
+<h2><?= 'Vous êtes enregistré !' ?></h2>
+                            <?php } ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -17,7 +13,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
         <!-- Favicons-->
         <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-            
+        
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="animate.min.css">
@@ -49,7 +45,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
                         D'accompagner d'autres enfants du même village quand nous allons chercher notre enfant au collège ou lycée.
                         Et pourquoi ne pas prendre une personne agée avec nous pour nous rendre dans le village voisin faire ses courses?<br/>
                         <strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
-                            
+                    
                 </div>
             </div>
             <div id="offer" class="whiteSapce100"></div>
@@ -66,26 +62,21 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
              <?php
              echo 'La partie gauche du mail est : ' .$mail[1];
             ?>
-                
+            
             <div class="modal-content center-align">
                 <?php include 'cards.php'; ?>
             </div>
-                
+            
             <!-- Modal Structure inscription-->
             <div id="modal1" class="modal <?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
                 <div class="modal-content center-align">
                     <?php include 'form.php'; ?>
                 </div>
             </div>
-            <!-- Modal Structure connection-->
-            <div id="modal2" class="modal <?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
-                <div class="modal-content center-align">
-                    <?php include 'user.php'; ?>
-                </div>
-            </div>
+
         </div>
         <?php include 'actionBtn.html'; ?>
-            
+        
         <div class="whiteSapce200"></div>
         <!-- debut du footer -->
          <?php include 'footer.html'; ?>

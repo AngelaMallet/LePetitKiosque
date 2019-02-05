@@ -1,12 +1,13 @@
-  <div class="container">  
-<h1 class="formTitle center-align red-text text-red accent-1">Formulaire d'inscription</h1>
 
+<div class="container">  
+    <h1 class="formTitle center-align red-text text-red accent-1">Formulaire d'inscription</h1>
+    
     <div class="row">
         <form id="form" method="POST" class="col s12 offset-l2" action="index.php">
             <div class="row input-field col s12 l12">
-                <input name="fistName" value ="<?= isset($name) ? $name : ''; ?>" id ="fistName" type="text" class="active" />
-                <label for="name">Prénom*</label>
-                <p class="css" id="firstNameField"><?= isset($formError['fistName']) ? $formError['fistName'] : '' ?></p>
+                <input name="firstName" value ="<?= isset($firstName) ? $firstName : ''; ?>" id ="firstName" type="text" class="active" />
+                <label for="firstName">Prénom*</label>
+                <p class="css" id="firstNameField"><?= isset($formError['firstName']) ? $formError['firstName'] : '' ?></p>
             </div>
             <div class="row input-field col s12 l12">
                 <input name="lastName" value = "<?= isset($lastName) ? $lastName : ''; ?>" id = "lastName" type="text" class = "active" />
@@ -20,14 +21,14 @@
             </div>
             <div class="row">
                 <div class="input-field col s12 l12">
-                    <input name="password" value="<?= isset($password) ? $password : ''; ?>" id="password" type="password" class="active">
+                    <input pattern=".{6,}" title="6 caracteres minimum" name="password" value="<?= isset($password) ? $password : ''; ?>" id="password" type="password" class="active">
                     <label for="password">Mot de passe*</label>
                     <p class="css" id="passwordField"><?= isset($formError['password']) ? $formError['password'] : '' ?></p>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 l12">
-                    <input name="passwordConf" value="<?= isset($passwordConf) ? $passwordConf : ''; ?>" id="passwordConf" type="password" class="active">
+                    <input name="passwordConf" id="passwordConf" type="password" class="active">
                     <label for="passwordConf">Confirmation du mot de passe*</label>
                     <p class="css" id="passwordConfField"><?= isset($formError['passwordConf']) ? $formError['passwordConf'] : '' ?></p>
                 </div>
@@ -39,11 +40,11 @@
             </div>
             <div class="row input-field col s12 l12">
                 <input name="address" value="<?= isset($address) ? $address : ''; ?>" id="address" type="text" class="active">
-                <label for="address">Votre adresse</label>
+                <label for="address">Adresse</label>
                 <p class="css" id="addressNameField"><?= isset($formError['address']) ? $formError['address'] : '' ?></p>
             </div>
             <div class="row input-field col s12 l12">
-                <button class="modal-close waves-effect waves-light btn red accent-1 modal-trigger" type="submit" name="submitForm">M'inscrire</button>
+                <button class="waves-effect waves-light btn red accent-1 modal-trigger" type="submit" name="submitForm">M'inscrire</button>
             </div>
             
             <div class="row">
@@ -53,8 +54,5 @@
             </div>
         </form>
     </div>
-     
-   <!-- ... <p><a id="linkForm" href="index.php">Vous êtes déjà inscrit?</a></p>-->
 </div>
-    
-    
+

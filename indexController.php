@@ -13,15 +13,15 @@ $modalError = false;
 
 
 ////Name
-if (isset($_POST['fistName'])) {
-    $fistName = htmlspecialchars($_POST['fistName']);
+if (isset($_POST['firstName'])) {
+    $firstName = htmlspecialchars($_POST['firstName']);
     if (!preg_match($regexText, $fistName)) {
-        $formError['fistName'] = 'Saisie non valide';
+        $formError['firstName'] = 'Saisie non valide';
     }
-    if (empty($_POST['fistName'])) {
-        $formError['fistName'] = 'Saisie vide';
+    if (empty($_POST['firstName'])) {
+        $formError['firstName'] = 'Saisie vide';
     }
-    $_SESSION['fistName'] = $fistName;
+    $_SESSION['firstName'] = $fistName;
 }
 
 ////lastName
