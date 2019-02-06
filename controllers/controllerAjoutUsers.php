@@ -25,9 +25,6 @@ $hideSuccess = true;
 // Déclaration d'un tableau d'erreurs
 $formError = [];
 
-var_dump($_POST);   
-var_dump($formError);
-
 ////firstName
 if (isset($_POST['firstName'])) {
     //Si: je récupère la valeur de firstName
@@ -78,7 +75,7 @@ if (isset($_POST['password']) || isset($_POST['passwordConf'])) {
         $formError['passwordConf'] = 'Saisie vide';
     }
     if ($password !== $passwordConf){
-        $formError['passwordConf'] = 'Pas identique';
+        $formError['passwordConf'] = 'Saisie non identique';
     } else {
        $passwordConf= password_hash($_POST['passwordConf'],PASSWORD_DEFAULT);
     }
@@ -103,10 +100,14 @@ if (isset($_POST['address'])) {
 //    if (!preg_match($usersObj->address)) {              // Pour le moment pas encore de regex
 //        $formError ['address'] = 'Saisie non valide';
 //    }
-    if (empty($_POST['address'])) {
-        $formError ['address'] = 'Saisie vide';
-    }
+//    if (empty($_POST['address'])) {
+//        $formError ['address'] = 'Saisie vide';
+//    }
         
+}
+
+if (!empty($formError)) {
+    $modalError = true;
 }
     
 // Je regarde s'il n'y a pas d'erreurs dans le formulaire 
@@ -119,11 +120,13 @@ if (count($formError) == 0 && isset($_POST['submitForm'])) {
     $usersObj->password = $passwordConf;
     $usersObj->tel = $tel;
     $usersObj->address = $address;
-    
+    $count = 0;//$usersObj->checkfree();
+    if($count>0){
+        echo 'L\'adresse email est déjà utilisée.';
+    } else {
     $usersObj->addUsers(); 
     $addSuccess = true;
-    
-    }
-
+   }
+  }
 ?>
 

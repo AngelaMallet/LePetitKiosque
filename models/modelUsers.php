@@ -27,6 +27,15 @@ class users extends database {
         parent::__construct();
     }
 
+    
+    
+    public function checkfree(){
+      $queryResult = $this->database->prepare('SELECT * FROM fluo_users WHERE email = :email');
+      $queryResult->bindValue(':email', $this->email, PDO::PARAM_STR);
+      $queryResult->execute();
+      return $queryResult->rowCount();
+    }
+
     /**
      * Fonction qui ajoute un user
      * @return type EXECUTE
@@ -46,6 +55,23 @@ class users extends database {
         $queryResult->bindValue(':address', $this->address, PDO::PARAM_STR);
         return $queryResult->execute(); //@return exécute la requête pour ajouter un user.
     }
+    
+       public function IdUsers() {
+       
+        $query = 'SELECT `id_users`, `firstName`, `lastName`, `email`, `password`, `tel`, `address` FROM fluo_users WHERE id_users=:id_users';
+        //le résultat de ma requête je le stocke dans $showProfileList
+        //$this = correspond aux attributs de ma classe ex patients, à l'élément de ma classe (table patients) 
+        $resultProfileUsers = $this->database->prepare($query);
+        //avec le this=ATTRIBUT il faut cibler l'élément de ma classe 
+        //Je lie le marqueur nominatif id à l'attribut id
+        $resultProfileUsers->bindValue(':id_users', $_GET['id_users'], PDO::PARAM_INT);
+        $resultProfileUsers->execute();
+        $arrayProfileUsers=$resultProfileUsers->fetch(PDO::FETCH_OBJ);
+        return $arrayProfileUsers;
+        //le résultat = on lui demande d'aller chercher les éléments firstname,lastname...etc donc il faut 
+        //faire un fetchALL en utilisant l'objet PDO.
+    }
+    
     
        public function __destruct() {
         parent::__destruct();

@@ -2,9 +2,7 @@
 require_once 'controllers/controllerAjoutUsers.php';
     
 ?>  
-<?php if ($addSuccess) { ?>
-<h2><?= 'Vous êtes enregistré !' ?></h2>
-                            <?php } ?>
+    
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -13,7 +11,7 @@ require_once 'controllers/controllerAjoutUsers.php';
         <!-- Favicons-->
         <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-        
+            
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="animate.min.css">
@@ -36,7 +34,7 @@ require_once 'controllers/controllerAjoutUsers.php';
                     <img id="imgHead" class="responsive-img hide-on-small-only" src="assets/navigationBis.png" alt="image haut de page" />
                     <div class="whiteSapce50"></div>
                     <!-- Modal Trigger -->
-                    <a href="#modal1" id="registrationBtn" class="modal-close waves-effect waves-red btn-large red accent-1 modal-trigger s12 m6">Inscription</a>
+                    <a href="#modal1" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Inscription</a>
                     <!-- Modal Trigger -->
                     <p>Nous pouvons tous rendre service d'une manière ou d'une autre.
                         CAUX<i>libri</i> souhaite mettre les personnes en contact pour mutualiser les déplacements et
@@ -45,7 +43,7 @@ require_once 'controllers/controllerAjoutUsers.php';
                         D'accompagner d'autres enfants du même village quand nous allons chercher notre enfant au collège ou lycée.
                         Et pourquoi ne pas prendre une personne agée avec nous pour nous rendre dans le village voisin faire ses courses?<br/>
                         <strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
-                    
+                            
                 </div>
             </div>
             <div id="offer" class="whiteSapce100"></div>
@@ -53,30 +51,25 @@ require_once 'controllers/controllerAjoutUsers.php';
                 <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3">
                     <h4>Pour offrir une place, deux options s'offrent à vous :</h4>
                 </div>
-            </div>
-            <?php 
-            $mail = 'angelamallet@gmail.com';
-            $mail = explode('@',$mail);
-            echo 'La partie gauche du mail est : ' .$mail[0]; ?> 
-            <br/>
-             <?php
-             echo 'La partie gauche du mail est : ' .$mail[1];
-            ?>
-            
+          
             <div class="modal-content center-align">
                 <?php include 'cards.php'; ?>
             </div>
-            
+                
             <!-- Modal Structure inscription-->
-            <div id="modal1" class="modal <?= $modalError ? 'modalError' : ''; ?> modal-fixed-footer">
+            <div id="modal1" class="modal <?= isset($modalError) ? 'modalError' : ''; ?> <?= $addSuccess ? 'modalError' : ''; ?> modal-fixed-footer">
                 <div class="modal-content center-align">
+                                <div class="col s12 l12 right-align">
+                                    <a id="closeModal" href="#!" class="modal-action modal-close waves-effect waves-red btn-tiny"><i class="material-icons">cancel</i></a>
+        </div>
+           
                     <?php include 'form.php'; ?>
                 </div>
             </div>
-
+                
         </div>
         <?php include 'actionBtn.html'; ?>
-        
+            
         <div class="whiteSapce200"></div>
         <!-- debut du footer -->
          <?php include 'footer.html'; ?>

@@ -12,11 +12,16 @@ max-width: 100%;
 	background-position: center center;
 }
 
+
 /* style.css */
 
-.modal-overlay {
-  background: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1000") no-repeat;
-}
+/*.modal-overlay {
+  background: url("../coco2.jpg") no-repeat;
+ -webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 
+    filter: grayscale(100%);
+}*/
+
+
 
 #projetFrame{
 	padding: 80px;
@@ -87,7 +92,7 @@ h2.h2account{
 	padding: 50px;
 }
 .modal h1 {
-	font-size: 1.5em;
+	font-size: 1.3em;
 	color: orange;
 }
 #projetH1{
@@ -227,10 +232,9 @@ body{
 Zone css formulaire
 
 */
-#form{
-    max-width: 70%;
+#form {
+    margin-top: -30px;
 }
-
 /* label color */
    .input-field label {
      color: #000;
@@ -258,6 +262,23 @@ Zone css formulaire
    .input-field .prefix.active {
      color: #000;
    }
+
+   
+   .css {
+       color: coral;
+       font-size: 0.8em;
+   }
+   
+   #pModalForm{
+       font-size: 0.8em;
+   }
+/* materialize.min.css */
+
+#closeModal {
+  color: #8e919c;
+}
+
+
 /*
 Zone css formulaire
 
