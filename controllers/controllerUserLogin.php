@@ -39,6 +39,7 @@ if (count($formError) == 0 && isset($_POST['logBtn'])) {
            $_SESSION['email'] = $infosUser->email;  
            $_SESSION['tel'] = $infosUser->tel; 
            $_SESSION['address'] = $infosUser->address; 
+           
             var_dump($infosUser);
        }
            

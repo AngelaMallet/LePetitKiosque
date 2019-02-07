@@ -9,15 +9,20 @@
                 <li><a href="index.php#offer" class="white-text text-red accent-1 spinner">Offrir une place</a></li>
                 <li><a href="projet.php" class="white-text text-red accent-1">Le projet</a></li>
                 <li><a href="#contact" class="white-text text-red accent-1">contact</a></li>
-                  <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn red accent-1  center-align' data-target='dropdown1'><i class="large material-icons">account_circle</i></a>
-
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a class=" blue-grey-text accent-1 center-align" href="index.php#modal2">Inscription</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a class=" blue-grey-text accent-1 center-align" href="user-infos.php">Votre espace</a></li>
-  </ul>
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-trigger btn red accent-1  center-align' data-target='dropdown1'><i class="large material-icons">account_circle</i></a>
+                    
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+      <?php if(!isset($_SESSION)){ ?>
+                    <li><a class=" blue-grey-text accent-1 center-align" href="index.php#modal2">Inscription</a></li>
+      <?php } ?>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a class=" blue-grey-text accent-1 center-align" href="user-infos.php">Votre espace</a></li>
+                    <?php if(isset($_SESSION)){ ?>
+                    <li><a class=" blue-grey-text accent-1 center-align" href="logOut.php">Deconnexion</a></li>
+      <?php } ?>
+                </ul>
             </ul>
         </div>
     </nav>

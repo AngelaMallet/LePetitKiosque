@@ -22,7 +22,7 @@ require_once 'controllers/controllerListAllUsers.php';
         
         <header>
             <!-- header et navbar -->
-            <?php include 'nav.html'; ?>
+            <?php include 'nav.php'; ?>
         </header>
         <div class="container">
             <div class="row">
@@ -73,11 +73,11 @@ require_once 'controllers/controllerListAllUsers.php';
             
             
             
-        <?php include 'actionBtn.html'; ?>
+        <?php include 'actionBtn.php'; ?>
             
         <div class="whiteSapce200"></div>
         <!-- debut du footer -->
-         <?php include 'footer.html'; ?>
+         <?php include 'footer.php'; ?>
         <!-- fin du footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
         <script type="text/javascript" src="assets/js/materialize.min.js"></script>

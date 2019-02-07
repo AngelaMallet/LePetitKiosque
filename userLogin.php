@@ -1,6 +1,10 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
 require_once 'controllers/controllerUserLogin.php';
+if(!isset($_SESSION)) {
+    header('location : 404.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +29,7 @@ require_once 'controllers/controllerUserLogin.php';
         
         <header>
             <!-- header et navbar -->
-            <?php include 'nav.html'; ?>
+            <?php include 'nav.php'; ?>
         </header>
         <h1 class="formTitle center-align red-text text-red accent-1">Votre compte</h1>
         <div class="container center-align">
@@ -50,11 +54,11 @@ require_once 'controllers/controllerUserLogin.php';
                 </form>
             </div>
         </div>
-<?php include 'actionBtn.html'; ?>
+<?php include 'actionBtn.php'; ?>
     
         <div class="whiteSapce200"></div>
         <!-- debut du footer -->
-         <?php include 'footer.html'; ?>
+         <?php include 'footer.php'; ?>
         <!-- fin du footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
         <script type="text/javascript" src="assets/js/materialize.min.js"></script>
