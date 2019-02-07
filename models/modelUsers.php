@@ -56,8 +56,15 @@ class users extends database {
         return $queryResult->execute(); //@return exécute la requête pour ajouter un user.
     }
     
-       public function IdUsers() {
-       
+
+    public function listAllUsers() {
+       $queryResult = $this->database->query('SELECT * FROM fluo_users ORDER BY lastName'); 
+       $allUsersData = $queryResult->fetchAll(PDO::FETCH_OBJ);
+       return $allUsersData;  
+    }
+    
+    public function infosUsers() {
+        
         $query = 'SELECT `id_users`, `firstName`, `lastName`, `email`, `password`, `tel`, `address` FROM fluo_users WHERE id_users=:id_users';
         //le résultat de ma requête je le stocke dans $showProfileList
         //$this = correspond aux attributs de ma classe ex patients, à l'élément de ma classe (table patients) 
@@ -72,8 +79,16 @@ class users extends database {
         //faire un fetchALL en utilisant l'objet PDO.
     }
     
-    
-       public function __destruct() {
+    public function verifUser($email) {
+         $query = 'SELECT * FROM fluo_users WHERE email =:email';
+         $verifUser = $this->database->prepare($query);
+         $verifUser->bindValue(':email', $email, PDO::PARAM_STR);
+         $verifUser->execute();
+         $infosUser = $verifUser->fetch(PDO::FETCH_OBJ);
+         return $infosUser;
+    }
+
+    public function __destruct() {
         parent::__destruct();
     }
     

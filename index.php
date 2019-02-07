@@ -34,7 +34,7 @@ require_once 'controllers/controllerAjoutUsers.php';
                     <img id="imgHead" class="responsive-img hide-on-small-only" src="assets/navigationBis.png" alt="image haut de page" />
                     <div class="whiteSapce50"></div>
                     <!-- Modal Trigger -->
-                    <a href="#modal1" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Inscription</a>
+                    <a href="#modal1" id="registrationBtn" class=" waves-effect waves-grey btn-large blue-grey lighten-2 modal-trigger s12 m6">Inscription</a>
                     <!-- Modal Trigger -->
                     <p>Nous pouvons tous rendre service d'une manière ou d'une autre.
                         CAUX<i>libri</i> souhaite mettre les personnes en contact pour mutualiser les déplacements et

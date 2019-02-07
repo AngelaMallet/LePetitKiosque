@@ -46,14 +46,14 @@
         <p class="css" id="telNameField"><?= isset($formError['tel']) ? $formError['tel'] : '' ?></p>
     </div>
     
-    <div class="input-field col s12 l6">
+    <div class="row input-field col s12 l6">
         <input pattern=".{6,}" title="6 caracteres minimum" name="password" value="<?= isset($password) ? $password : ''; ?>" id="password" type="password" class="active">
         <label for="password">Mot de passe*</label>
         <p class="css" id="passwordField"><?= isset($formError['password']) ? $formError['password'] : '' ?></p>
     </div>
     
     
-    <div class="input-field col s12 l6">
+    <div class="row input-field col s12 l6">
         <input name="passwordConf" id="passwordConf" type="password" class="active">
         <label for="passwordConf">Confirmation du mot de passe*</label>
         <p class="css" id="passwordConfField"><?= isset($formError['passwordConf']) ? $formError['passwordConf'] : '' ?></p>

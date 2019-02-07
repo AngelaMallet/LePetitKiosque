@@ -230,8 +230,29 @@ body{
 }
 /*
 Zone css formulaire
-
 */
+/*
+modal1
+*/
+
+/* style.css */
+
+#modal1 {
+  height: 1500px;
+}
+
+/* inline_style_edits.inline.css */
+
+[cz-shortcut-listen] [tabindex] .modal-content {
+    height: 1000px;
+  padding-bottom: 0px;
+}
+/* inline_style_edits.inline.css */
+
+body {
+  overflow: hidden;
+}
+
 #form {
     margin-top: -30px;
 }

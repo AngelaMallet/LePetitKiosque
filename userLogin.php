@@ -1,3 +1,8 @@
+<?php
+session_start(); // On démarre la session AVANT toute chose
+require_once 'controllers/controllerUserLogin.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -17,6 +22,7 @@
     </head>
     <body>
         
+        
         <header>
             <!-- header et navbar -->
             <?php include 'nav.html'; ?>
@@ -24,22 +30,22 @@
         <h1 class="formTitle center-align red-text text-red accent-1">Votre compte</h1>
         <div class="container center-align">
             <div class="row">
-                <form id="formUser" method="POST" class="col s12 offset-l2 l8 offset-l2 " action="index.php" >
+                <form id="formUser" method="POST" class="col s12 offset-l2 l8 offset-l2 " action="userLogin.php" >
                     <div class="row input-field col s12 l6">
-                        <input name="confimLogin" value = "" id = "confimLogin" type="text" class = "active" />
-                        <label for="confimLogin">Email</label>
-                        <p class="css" id="confimLoginField"><?= isset($formError['confimEmail']) ? $formError['confimEmail'] : '' ?></p>
+                        <input name="email" value = "" id = "email" type="text" class = "active" />
+                        <label for="email">Email</label>
+                        <p class="css"><?= isset($formError['email']) ? $formError['email'] : '' ?></p>
                     </div>
                     <div class="row">
                         <div class="input-field col s12 l6">
-                            <input name="confirmPassword" value="" id="confirmPassword" type="password" class="active">
-                            <label for="confirmPassword">Mot de passe</label>
-                            <p class="css" id="confirmPasswordField"><?= isset($formError['confirmPassword']) ? $formError['confirmPassword'] : '' ?></p>
+                            <input name="password" value="" id="password" type="password" class="active">
+                            <label for="password">Mot de passe</label>
+                            <p class="css"><?= isset($formError['password']) ? $formError['password'] : '' ?></p>
                         </div>
                     </div>
                         
                     <div class="row input-field col s12 l12">
-                        <button class="modal-close waves-effect waves-light btn red accent-1 modal-trigger" type="submit" name="action">Valider</button>
+                        <button class="modal-close waves-effect waves-light btn red accent-1 modal-trigger" type="submit" name="logBtn">Valider</button>
                     </div>
                 </form>
             </div>

@@ -1,35 +1,33 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
+require_once 'controllers/controllerUserInfo.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="utf-8" />
+        <!--Import Google Font-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,600,700,800" rel="stylesheet" />
+        <!-- Favicons-->
+        <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-        <link rel="stylesheet" href="assets/css/materialize.css" />
+        
+        <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="animate.min.css">
         <link rel="stylesheet" href="assets/css/style.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Compte client</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+        <meta charset="utf-8" />
+        
+        <title>Vos informations </title>
     </head>
     <body>
-        <!-- header et navbar -->
-		<?php include 'nav.html'; ?>
-        <div>
-            <div class="row">
-                <div class="container center-align">
-                    <div class="whiteSapce100"></div>
-                    <div class="row">
-                        <div>
-                            <img class="col s12 m6 l6 responsive-img" id="accountImg" src="assets/account.png">
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col s12 m12 s12">
-                                    <h1>Profil patient :</h1>
-                                </div>
-                                <div class="col s12 m12 l12">
+        <header>
+            <!-- header et navbar -->
+            <?php include 'nav.html'; ?>
+        </header>
+        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos informations : </h1>
+        <div class="col s12 m12 l12">
                                     <table>
                                         <thead class="highlight blue-grey-text text-blue-grey darken-3">
                                             <tr>
@@ -66,14 +64,16 @@ session_start(); // On démarre la session AVANT toute chose
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    
-                    <div class="whiteSapce100"></div>
-                     <?php include 'actionBtn.html'; ?>
-                </div>
-            </div>
-        </div>
-                                 <?php  include 'footer.html'; ?>
+        <?php include 'actionBtn.html'; ?>
+        
+        <div class="whiteSapce200"></div>
+        <!-- debut du footer -->
+         <?php include 'footer.html'; ?>
+        <!-- fin du footer -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+        <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+        <script type="text/javascript" src="assets/js/js.js"></script>
     </body>
 </html>
+
+

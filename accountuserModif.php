@@ -27,28 +27,28 @@ session_start(); // On démarre la session AVANT toute chose
 		<form id="form" method="POST" class="col s12 l6" action="index.php">
 			<div class="row input-field col s12 l6">
 				<input name="fistName" value ="<?= isset($fistName) ? $fistName : ($_SESSION['fistName']); ?>" id ="fistName" type="text" class="active" />
-				<label for="name">Prénom</label>
+				
 				<p class="css" id="firstNameField"><?= isset($formError['fistName']) ? $formError['fistName'] : '' ?></p>
 			</div>
 			<div class="row input-field col s12 l6">
 				<input name="lastName" value = "<?= isset($lastName) ? $lastName : ($_SESSION['lastName']); ?>" id = "lastName" type="text" class = "active" />
-				<label for="lastName">Nom</label>
+				
 				<p class="css" id="lastNameField"><?= isset($formError['lastName']) ? $formError['lastName'] : '' ?></p>
 			</div>
 			<div class="row input-field col s12 l6">
 				<input name="email" value="<?= isset($email) ? $email : ($_SESSION['email']); ?>" id="email" type="email" class="active">
-				<label for="email">Email</label>
+				
 				<p class="css" id="emailNameField"><?= isset($formError['email']) ? $formError['email'] : '' ?></p>
 			</div>
 			<div class="row input-field col s12 l6">
 				<input name="tel" value="<?= isset($tel) ? $tel : ($_SESSION['tel']); ?>" id="tel" type="tel" class="active">
-				<label for="tel">N° de téléphone</label>
+				
 				<p class="css" id="telNameField"><?= isset($formError['tel']) ? $formError['tel'] : '' ?></p>
 			</div>
                     
                     <div class="row input-field col s12 l12 right-align">
 				<input name="address" value="<?= isset($address) ? $address : ($_SESSION['address']); ?>" id="address" type="address" class="active">
-				<label for="address">Votre adresse</label>
+		
 				<p class="css" id="addressNameField"><?= isset($formError['address']) ? $formError['address'] : '' ?></p>
 			</div>
 			<div class="row input-field col s12 l12">
