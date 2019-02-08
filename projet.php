@@ -29,7 +29,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
     </head>
     <body>
         <!-- header et navbar -->
-        <?php include 'nav.html'; ?>
+        <?php include 'nav.php'; ?>
         
         <div id="projetFrame" class="container center-align">
             <div class="row">
@@ -62,7 +62,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
                         Les trajets sont offerts par les personnes qui les proposent. C’est une démarche altruiste où chacun peut être un petit colibri.</p>
                 </div>
             </div>
-            <?php include 'actionBtn.html'; ?>
+            <?php include 'actionBtn.php'; ?>
             <div class="whiteSapce100"></div>
             <div class="modal-footer center-align">
                 <a href="#modal1" class="modal-close waves-effect waves-light btn-large red accent-1">Inscription</a>
@@ -72,21 +72,10 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
         
         <div class="whiteSapce200"></div>
         <!-- début du footer -->
-        <?php include 'footer.html'; ?>
+        <?php include 'footer.php'; ?>
         <!-- fin du footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script type="text/javascript" src="assets/js/materialize.min.js"></script>
-        <!--        <script ype="text/javascript" src="assets/js/js.js"></script>-->
-        <script>
-            $(document).ready(function () {
-                // on initialise toutes les modals
-                $('.modal').modal();
-
-                // seul les modals error restent/vont s'ouvrir
-                $('.modalError').modal('open');
-
-                $('.fixed-action-btn').floatingActionButton();
-            });
-        </script>
+        <script type="text/javascript" src="assets/js/js.js"></script>
     </body>
 </html>

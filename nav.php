@@ -16,10 +16,12 @@
                 <ul id='dropdown1' class='dropdown-content'>
       <?php if(!isset($_SESSION)){ ?>
                     <li><a class=" blue-grey-text accent-1 center-align" href="index.php#modal2">Inscription</a></li>
+                    <li><a class=" blue-grey-text accent-1 center-align" href="userLogin.php">Log In</a></li>
       <?php } ?>
+                    <?php if(isset($_SESSION)){ ?>
                     <li class="divider" tabindex="-1"></li>
                     <li><a class=" blue-grey-text accent-1 center-align" href="user-infos.php">Votre espace</a></li>
-                    <?php if(isset($_SESSION)){ ?>
+                    
                     <li><a class=" blue-grey-text accent-1 center-align" href="logOut.php">Deconnexion</a></li>
       <?php } ?>
                 </ul>

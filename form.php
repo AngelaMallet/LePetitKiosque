@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class=" col s12 l12">
-    <a href="userAccount.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Votre compte</a>
+    <a href="userLogin.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Votre compte</a>
     
 </div>
 
@@ -69,7 +69,7 @@
         <button class="waves-effect waves-light btn blue-grey lighten-2 modal-trigger" type="submit" name="submitForm">M'inscrire</button>
     </div>
     
-    <p id="pModalForm">Vous êtes déjà inscrit ? </p><a href="user.php">S'identifier</a>
+    <p id="pModalForm">Vous êtes déjà inscrit ? </p><a href="userLogin.php">S'identifier</a>
 </form>
        <?php } ?>
  

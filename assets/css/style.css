@@ -20,8 +20,11 @@ max-width: 100%;
  -webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 
     filter: grayscale(100%);
 }*/
+/* materialize.css */
 
-
+blockquote {
+  border-left: 5px solid #5f6a75;
+}
 
 #projetFrame{
 	padding: 80px;
@@ -249,9 +252,7 @@ modal1
 }
 /* inline_style_edits.inline.css */
 
-body {
-  overflow: hidden;
-}
+
 
 #form {
     margin-top: -30px;

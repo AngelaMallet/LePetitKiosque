@@ -15,7 +15,7 @@ session_start(); // On démarre la session AVANT toute chose
     </head>
     <body>
         <!-- header et navbar -->
-		<?php include 'nav.html'; ?>
+		<?php include 'nav.php'; ?>
         <div>
             <div class="row">
                 <div class="container center-align">
@@ -26,7 +26,7 @@ session_start(); // On démarre la session AVANT toute chose
                         </div>
 		<form id="form" method="POST" class="col s12 l6" action="index.php">
 			<div class="row input-field col s12 l6">
-				<input name="fistName" value ="<?= isset($fistName) ? $fistName : ($_SESSION['fistName']); ?>" id ="fistName" type="text" class="active" />
+				<input name="firstName" value ="<?= isset($firstName) ? $firstName : ($_SESSION['firstName']); ?>" id ="fistName" type="text" class="active" />
 				
 				<p class="css" id="firstNameField"><?= isset($formError['fistName']) ? $formError['fistName'] : '' ?></p>
 			</div>
@@ -61,10 +61,10 @@ session_start(); // On démarre la session AVANT toute chose
                         
                  
                     <div class="whiteSapce100"></div>
-                     <?php include 'actionBtn.html'; ?>
+                     <?php include 'actionBtn.php'; ?>
                 </div>
             </div>
         </div>
-                                 <?php  include 'footer.html'; ?>
+                                 <?php  include 'footer.php'; ?>
     </body>
 </html>
