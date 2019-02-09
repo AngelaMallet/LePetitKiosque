@@ -20,51 +20,55 @@ session_start(); // On démarre la session AVANT toute chose
             <div class="row">
                 <div class="container center-align">
                     <div class="whiteSapce100"></div>
-                        <div class="row">
-                            <div>
-                                <img class="col s12 m6 l6 responsive-img" id="accountImg" src="assets/account.png">
+                    <div class="row">
+                        <div>
+                            <img class="col s12 m6 l6 responsive-img" id="accountImg" src="assets/account.png">
                         </div>
-		<form id="form" method="POST" class="col s12 l6" action="index.php">
-			<div class="row input-field col s12 l6">
-				<input name="firstName" value ="<?= isset($firstName) ? $firstName : ($_SESSION['firstName']); ?>" id ="fistName" type="text" class="active" />
-				
-				<p class="css" id="firstNameField"><?= isset($formError['fistName']) ? $formError['fistName'] : '' ?></p>
-			</div>
-			<div class="row input-field col s12 l6">
-				<input name="lastName" value = "<?= isset($lastName) ? $lastName : ($_SESSION['lastName']); ?>" id = "lastName" type="text" class = "active" />
-				
-				<p class="css" id="lastNameField"><?= isset($formError['lastName']) ? $formError['lastName'] : '' ?></p>
-			</div>
-			<div class="row input-field col s12 l6">
-				<input name="email" value="<?= isset($email) ? $email : ($_SESSION['email']); ?>" id="email" type="email" class="active">
-				
-				<p class="css" id="emailNameField"><?= isset($formError['email']) ? $formError['email'] : '' ?></p>
-			</div>
-			<div class="row input-field col s12 l6">
-				<input name="tel" value="<?= isset($tel) ? $tel : ($_SESSION['tel']); ?>" id="tel" type="tel" class="active">
-				
-				<p class="css" id="telNameField"><?= isset($formError['tel']) ? $formError['tel'] : '' ?></p>
-			</div>
+                        <form id="form" method="POST" class="col s12 l6" action="index.php">
+                            <div class="row input-field col s12 l6">
+                                <input name="firstName" value ="<?= isset($firstName) ? $firstName : ($_SESSION['firstName']); ?>" id ="fistName" type="text" class="active" />
+                                
+                                <p class="css" id="firstNameField"><?= isset($formError['fistName']) ? $formError['fistName'] : '' ?></p>
+                            </div>
+                            <div class="row input-field col s12 l6">
+                                <input name="lastName" value = "<?= isset($lastName) ? $lastName : ($_SESSION['lastName']); ?>" id = "lastName" type="text" class = "active" />
+                                
+                                <p class="css" id="lastNameField"><?= isset($formError['lastName']) ? $formError['lastName'] : '' ?></p>
+                            </div>
+                            <div class="row input-field col s12 l6">
+                                <input name="email" value="<?= isset($email) ? $email : ($_SESSION['email']); ?>" id="email" type="email" class="active">
+                                
+                                <p class="css" id="emailNameField"><?= isset($formError['email']) ? $formError['email'] : '' ?></p>
+                            </div>
+                            <div class="row input-field col s12 l6">
+                                <input name="tel" value="<?= isset($tel) ? $tel : ($_SESSION['tel']); ?>" id="tel" type="tel" class="active">
+                                
+                                <p class="css" id="telNameField"><?= isset($formError['tel']) ? $formError['tel'] : '' ?></p>
+                            </div>
+                            
+                            <div class="row input-field col s12 l12 right-align">
+                                <input name="address" value="<?= isset($address) ? $address : ($_SESSION['address']); ?>" id="address" type="address" class="active">
+                                <label id="labelAddressModif">Votre adresse : </label>
+                                <p class="css" id="addressNameField"><?= isset($formError['address']) ? $formError['address'] : '' ?></p>
+                            </div>
+                            <div class="row input-field col s12 l12">
+                                <button class="modal-close waves-effect waves-light btn red accent-1 modal-trigger"type="submit" name="submitFormModif">Modifier</button>
+                                <button id="submitFormValidBtn" class="modal-close waves-effect waves-light btn red accent-2 modal-trigger" type="submit" name="submitFormValid">Valider</button>
+                            </div>
+                            <!-- ... <p><a id="linkForm" href="index.php">Vous êtes déjà inscrit?</a></p>-->
+                        </form>
+                    </div>
                     
-                    <div class="row input-field col s12 l12 right-align">
-				<input name="address" value="<?= isset($address) ? $address : ($_SESSION['address']); ?>" id="address" type="address" class="active">
-		
-				<p class="css" id="addressNameField"><?= isset($formError['address']) ? $formError['address'] : '' ?></p>
-			</div>
-			<div class="row input-field col s12 l12">
-                            <button class="modal-close waves-effect waves-light btn red accent-1 modal-trigger"type="submit" name="submitFormModif">Modifier</button>
-                            <button id="submitFormValidBtn" class="modal-close waves-effect waves-light btn red accent-2 modal-trigger" type="submit" name="submitFormValid">Valider</button>
-			</div>
-			<!-- ... <p><a id="linkForm" href="index.php">Vous êtes déjà inscrit?</a></p>-->
-		</form>
-	</div>
-                        
-                 
+                    
                     <div class="whiteSapce100"></div>
                      <?php include 'actionBtn.php'; ?>
                 </div>
             </div>
         </div>
                                  <?php  include 'footer.php'; ?>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+        <script type="text/javascript" src="assets/js/js.js"></script>
     </body>
 </html>
+

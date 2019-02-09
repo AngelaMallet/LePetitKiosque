@@ -1,3 +1,9 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+
 img, table, td, blockquote, code, pre, textarea, input, iframe,
 object, embed, video {
 max-width: 100%;
@@ -6,13 +12,14 @@ max-width: 100%;
 #imgHead{
 	height: 419px;
 }
-.image-full {
-	background: url("../chat.png") no-repeat;
-	background-size: cover;
-	background-position: center center;
+
+.presentationText {
+    line-height: 2.3rem;
 }
 
-
+#labelAddressModif{
+    margin-top: -10px;
+}
 /* style.css */
 
 /*.modal-overlay {
@@ -105,10 +112,12 @@ h2.h2account{
 .projetText {
     text-align: justify;
     line-height: 1.8em;
+    padding-bottom: 1rem;
 }
 
 #registrationBtn{
 	font-size: 0.8em;
+        margin-bottom: 1.3rem;
 }
 #accountBtn{
 	font-size: 0.8em;
@@ -142,9 +151,7 @@ h2.h2account{
 	margin-bottom: 0;
 }
 
-body{
-	font-family: 'Montserrat', sans-serif;
-}
+
 
 [class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3"] p {
   line-height: 2em;
@@ -286,7 +293,7 @@ modal1
    }
 
    
-   .css {
+   .NotValid {
        color: coral;
        font-size: 0.8em;
    }
@@ -306,6 +313,39 @@ Zone css formulaire
 
 */
 
+.forecast {
+    margin: 3rem;
+    padding: .3rem;
+    background-color: white;
+    border-top: .3rem #e4625b solid;
+    font-size: 1rem;
+}
+
+mark {
+  background-color: #FF8A80;
+  color: white;
+  padding: 1rem;
+  border-radius: .5rem;
+  margin-bottom: 1.3rem;
+}
+
+h4 {
+    padding: 3rem;
+    font-size: 1.3rem;
+    font-weight: lighter;
+   
+}
+
+/* carte de gauche sur l'index car image de plus petite taille */
+.dayforecast .m6:nth-of-type(1) .waves-light {
+  padding-bottom: 2rem;
+}
+
+.dayforecast {
+    margin: 3rem;
+    padding: 1rem;
+    background-color: white;
+}
 
 
 /* * Comme la dite marge est exprimée en pourcentage,
