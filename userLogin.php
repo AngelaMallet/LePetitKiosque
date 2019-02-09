@@ -6,7 +6,7 @@ if(!isset($_SESSION)) {
     exit();
 }
 ?>
-
+    
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -31,6 +31,40 @@ if(!isset($_SESSION)) {
             <!-- header et navbar -->
             <?php include 'nav.php'; ?>
         </header>
+            
+            
+            
+        <?php if ($logSucces) { ?>
+        <div class="row">
+            <div class=" col s12 l12 center-align">
+                <h2 class="errorMessageUserLogin"><mark><?= 'Login ou mot de passe incorrect' ?></mark></h2>
+            </div>
+            <h1 class="formTitle center-align red-text text-red accent-1">Votre compte</h1>
+            <div class="container center-align">
+                <div class="row">
+                    <form id="formUser" method="POST" class="col s12 offset-l2 l8 offset-l2 " action="userLogin.php" >
+                        <div class="row input-field col s12 l6">
+                            <input name="email" value = "" id = "email" type="text" class = "active" />
+                            <label for="email">Email</label>
+                            <p class="NotValid"><?= isset($formError['email']) ? $formError['email'] : '' ?></p>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 l6">
+                                <input name="password" value="" id="password" type="password" class="active">
+                                <label for="password">Mot de passe</label>
+                                <p class="NotValid"><?= isset($formError['password']) ? $formError['password'] : '' ?></p>
+                            </div>
+                        </div>
+                            
+                        <div class="row input-field col s12 l12">
+                            <button class="modal-close waves-effect waves-light btn red accent-1 modal-trigger" type="submit" name="logBtn">Valider</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+  <?php } else { ?>
+      
         <h1 class="formTitle center-align red-text text-red accent-1">Votre compte</h1>
         <div class="container center-align">
             <div class="row">
@@ -38,13 +72,14 @@ if(!isset($_SESSION)) {
                     <div class="row input-field col s12 l6">
                         <input name="email" value = "" id = "email" type="text" class = "active" />
                         <label for="email">Email</label>
-                        <p class="css"><?= isset($formError['email']) ? $formError['email'] : '' ?></p>
+                        <p class="NotValid"><?= isset($formError['email']) ? $formError['email'] : '' ?></p>
                     </div>
                     <div class="row">
                         <div class="input-field col s12 l6">
                             <input name="password" value="" id="password" type="password" class="active">
                             <label for="password">Mot de passe</label>
-                            <p class="css"><?= isset($formError['password']) ? $formError['password'] : '' ?></p>
+                            <p class="
+                               NotValid"><?= isset($formError['password']) ? $formError['password'] : '' ?></p>
                         </div>
                     </div>
                         
@@ -54,6 +89,7 @@ if(!isset($_SESSION)) {
                 </form>
             </div>
         </div>
+         <?php } ?>
 <?php include 'actionBtn.php'; ?>
     
         <div class="whiteSapce200"></div>

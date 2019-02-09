@@ -16,7 +16,7 @@
     </head>
 
     <body>
-         <?php include 'nav.html'; ?>
+         <?php include 'nav.php'; ?>
         <div class="container center-align">
             <div class="whiteSapce50"></div>
             <div id="serviceRow" class="row center-align">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="whiteSapce100"></div>
                 </div>
-                <?php include 'actionBtn.html'; ?>
+                <?php include 'actionBtn.php'; ?>
                 <div class="modal-footer center-align">
                     <a href="index.php" class="modal-close waves-effect waves-light btn-large red accent-1">Retour</a>
                     <a href="offerForm.php" class="modal-close waves-effect waves-light btn-large red accent-1">Valider</a>

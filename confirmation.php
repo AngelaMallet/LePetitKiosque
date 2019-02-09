@@ -15,7 +15,7 @@
 		<title>Confirmation</title>
     </head>
 	<body>
-        <?php include 'nav.html'; ?>
+        <?php include 'nav.php'; ?>
         <div class="row">
             <div class="col s12 m12 l12 center-align">
         <h1>Merci</h1>

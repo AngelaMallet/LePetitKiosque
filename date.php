@@ -16,7 +16,7 @@
     </head>
     <!-- header et navbar -->
     <boby>
-        <?php include 'nav.html'; ?>
+        <?php include 'nav.php'; ?>
         <div id="projetFrame" class="container center-align">
            <nav class="dot hide-on-med-and-down">
                 <div class="nav-wrapper red acent-1 ">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <?php include 'actionBtn.html'; ?>
+            <?php include 'actionBtn.php'; ?>
             <div class="whiteSapce100"></div>
             <div class="modal-footer center-align">
                 <a href="index.php" class="modal-close waves-effect waves-light btn-large red accent-1">Annuler</a>

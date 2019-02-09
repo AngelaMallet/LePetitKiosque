@@ -1,20 +1,27 @@
 body{
-	font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
 
 img, table, td, blockquote, code, pre, textarea, input, iframe,
 object, embed, video {
-max-width: 100%;
+    max-width: 100%;
 }
 
 #imgHead{
-	height: 419px;
+    height: 419px;
 }
 
-.presentationText {
+#offerForm {
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+}
+
+#presentationText {
     line-height: 2.3rem;
+    margin-bottom: 5rem;
+    text-align: justify;
 }
 
 #labelAddressModif{
@@ -30,12 +37,12 @@ max-width: 100%;
 /* materialize.css */
 
 blockquote {
-  border-left: 5px solid #5f6a75;
+    border-left: 5px solid #5f6a75;
 }
 
 #projetFrame{
-	padding: 80px;
-	height: 800px;
+    padding-top: 5rem;
+    height: 100%;
 }
 /*a, a:visited {
 Les liens "au repos" et déjà visités antérieurement 
@@ -49,65 +56,68 @@ color: #ff8a65;
     background-color: #e4625b;
     border-radius: 100%;  
     -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-  animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
 }
 
 #cardList{
-	margin-left: 50px;
+    margin-left: 50px;
 }
 .card-content p{
-	font-weight: 600;
-	font-size: 1em;
-	word-spacing: 0.1em;
-	letter-spacing:0.1em;
+    font-weight: 600;
+    font-size: 1em;
+    word-spacing: 0.1em;
+    letter-spacing:0.1em;
 }
-.whiteSapce50{
-	height: 50px;
+/*.whiteSapce50{
+    height: 50px;
 }
-.whiteSapce100{
-	height: 100px;
+*/.whiteSapce100{
+    height: 100px;
 }
+/*
+*/
 .whiteSapce130{
-	height: 130px;
+    height: 130px;
 }
+/*
 .whiteSapce200{
-	height: 200px;
-}
+    height: 200px;
+}*/
 
 .card-image img{
-	max-height: 450px;
+    max-height: 450px;
 }
 #shopImg{
-	width: 76%;
-	height: 77%;
-	margin-left: 61px;
+    width: 76%;
+    height: 77%;
+    margin-left: 61px;
 }
 radio{
-	background-color: corail;
+    background-color: corail;
 }
 
 h1{
-	text-transform: uppercase;
-	font-weight: 100;
-	font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 2em;
 }
 h2{
-	font-size: 1.3em;
+    font-size: 1.3em;
 }
 h2.h2account{
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 #accountContainer{
-	padding: 50px;
+    padding: 50px;
 }
 .modal h1 {
-	font-size: 1.3em;
-	color: orange;
+    font-size: 1.3em;
+    color: orange;
 }
 #projetH1{
-	font-size: 1.3em;
-        margin-left: 15px;
+    font-size: 1.3em;
+    margin-left: 15px;
 }
 .projetText {
     text-align: justify;
@@ -116,66 +126,65 @@ h2.h2account{
 }
 
 #registrationBtn{
-	font-size: 0.8em;
-        margin-bottom: 1.3rem;
+    font-size: 0.8em;
+    margin-bottom: 1.3rem;
 }
 #accountBtn{
-	font-size: 0.8em;
+    font-size: 0.8em;
 }
 #logoCard{
-	max-width: 250px;
+    max-width: 250px;
 }
 #presentationText{
-	font-size: 1em;
-	font-weight: 200;
-	text-align: center;
-	max-width: 900px;
-	color: coral;
+    font-size: 1em;
+    font-weight: 200;
+    text-align: center;
+    color: coral;
 }
 #navLogo{
-	margin-left: 25px;
-	margin-top: 10px;
-	height: 40px;
-	width: 50px;
+    margin-left: 25px;
+    margin-top: 10px;
+    height: 40px;
+    width: 50px;
 }
 #logoHead {
-	width: 15%;
+    width: 15%;
 }
 
 #miniLogo{
-	height: 25px;
-	width: 35px;
+    height: 25px;
+    width: 35px;
 }
 
 #orangeSpace{
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 
 
 [class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3"] p {
-  line-height: 2em;
-  font-size: larger;
+    line-height: 2em;
+    font-size: larger;
 }
 
 [cz-shortcut-listen] {
-  background-color: #fcf8f7;
+    background-color: #fcf8f7;
 }
 
 .breadcrumb:hover {
-  color: white;
-  text-decoration: underline overline;
+    color: white;
+    text-decoration: underline overline;
 }
 
 /* Bouton profil btnProfil.php*/
 
 [data-target] {
-  width: 100px;
+    width: 100px;
 }
 
 
 .dropdown-content li a{
-  font-size: 0.7em;
+    font-size: 0.7em;
 }
 
 
@@ -214,19 +223,21 @@ h2.h2account{
     opacity: 1;
 }
 
-
+button{
+    padding: 0px;
+}
 /* inline_style_edits.inline.css */
 
 #accountImg{
-  max-width: 15em;
-  margin-left: 150px;
+    max-width: 15em;
+    margin-left: 150px;
 }
 
 
 /* inline_style_edits.inline.css Problème du bouton droit dans le modal du formulaire "s'identifier'"*/
 
 [cz-shortcut-listen] .input-field button:nth-of-type(2) {
-  padding: 0px;
+    padding: 0px;
 }
 
 #submitFormValidBtn {
@@ -236,7 +247,7 @@ h2.h2account{
 
 
 #address {
-  width: 450px;
+    width: 450px;
 }
 /*
 Zone css formulaire
@@ -248,14 +259,14 @@ modal1
 /* style.css */
 
 #modal1 {
-  height: 1500px;
+    height: 1500px;
 }
 
 /* inline_style_edits.inline.css */
 
 [cz-shortcut-listen] [tabindex] .modal-content {
     height: 1000px;
-  padding-bottom: 0px;
+    padding-bottom: 0px;
 }
 /* inline_style_edits.inline.css */
 
@@ -265,46 +276,46 @@ modal1
     margin-top: -30px;
 }
 /* label color */
-   .input-field label {
-     color: #000;
-   }
-   /* label focus color */
-   .input-field input[type=text]:focus + label {
-     color: #000;
-   }
-   /* label underline focus color */
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* valid color */
-   .input-field input[type=text].valid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* invalid color */
-   .input-field input[type=text].invalid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* icon prefix focus color */
-   .input-field .prefix.active {
-     color: #000;
-   }
+.input-field label {
+    color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #000;
+}
 
-   
-   .NotValid {
-       color: coral;
-       font-size: 0.8em;
-   }
-   
-   #pModalForm{
-       font-size: 0.8em;
-   }
+
+.NotValid {
+    color: coral;
+    font-size: 0.8em;
+}
+
+#pModalForm{
+    font-size: 0.8em;
+}
 /* materialize.min.css */
 
 #closeModal {
-  color: #8e919c;
+    color: #8e919c;
 }
 
 
@@ -322,23 +333,23 @@ Zone css formulaire
 }
 
 mark {
-  background-color: #FF8A80;
-  color: white;
-  padding: 1rem;
-  border-radius: .5rem;
-  margin-bottom: 1.3rem;
+    background-color: #FF8A80;
+    color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-bottom: 1.3rem;
 }
 
 h4 {
     padding: 3rem;
     font-size: 1.3rem;
     font-weight: lighter;
-   
+    
 }
 
 /* carte de gauche sur l'index car image de plus petite taille */
 .dayforecast .m6:nth-of-type(1) .waves-light {
-  padding-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .dayforecast {
@@ -347,12 +358,20 @@ h4 {
     background-color: white;
 }
 
+.errorMessageUserLogin {
+    margin-bottom: 3rem;
+}
+
+#btnInscriptionProjet {
+    margin:-8rem;
+}
+/* materialize.css */
 
 /* * Comme la dite marge est exprimée en pourcentage,
 * on l'augmente sur les devices moins larges.
 */
 @media only screen and (min-width: 993px){
-	.container {
-		width: 85%;
-	}
+    .container {
+        width: 85%;
+    }
 }

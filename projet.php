@@ -28,8 +28,11 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
         <title>CauxLibri</title>
     </head>
     <body>
-        <!-- header et navbar -->
-        <?php include 'nav.php'; ?>
+        <header>
+            <!-- header et navbar -->
+            <?php include 'nav.php'; ?>
+        </header>
+        <!--Fin du header et navbar -->
         
         <div id="projetFrame" class="container center-align">
             <div class="row">
@@ -63,14 +66,14 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
                 </div>
             </div>
             <?php include 'actionBtn.php'; ?>
-         
-            <div class="modal-footer center-align">
-                <a href="#modal1" class="modal-close waves-effect waves-light btn-large red accent-1">Inscription</a>
-                <a href="index.php" class="modal-close waves-effect waves-light btn-large red accent-1">Retour</a>
+            <div class="row">
+                <div class="col s12 l12 center-align">
+                    <a href="index.php" class="modal-close waves-effect waves-light btn-large blue-grey" id="btnInscriptionProjet">Inscription</a>
+                </div>
             </div>
         </div>
         
-    
+        
         <!-- début du footer -->
         <?php include 'footer.php'; ?>
         <!-- fin du footer -->

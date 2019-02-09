@@ -17,10 +17,21 @@
 
     <body>
         <!-- header et navbar -->
-        <?php include 'nav.html'; ?>
+        <?php include 'nav.php'; ?>
 
 
         <div id="offerForm" class="container center-align">
+              <nav class="dot">
+                <div class="nav-wrapper red acent-1">
+                    <div class="col s12">
+                        <a href="date.php" class="breadcrumb">DATE</a>
+                        <a href="services.php" class="breadcrumb">SERVICES</a>
+                        <a href="depart.php" class="breadcrumb">DÉPART</a>
+                        <a href="arrivee.php" class="breadcrumb">ARRIVÉE</a>
+                        <a></a>
+                    </div>
+                </div>
+            </nav>
             <div class="row">
                 <div class="col s12 m6 left-align">
                     <h1 id="projetH1">Offrir un trajet CAUX<i>libri</i> ?</h1>
@@ -35,27 +46,17 @@
                 </div>
 
             </div>
-            <nav class="dot">
-                <div class="nav-wrapper red acent-1">
-                    <div class="col s12">
-                        <a href="date.php" class="breadcrumb">DATE</a>
-                        <a href="services.php" class="breadcrumb">SERVICES</a>
-                        <a href="depart.php" class="breadcrumb">DÉPART</a>
-                        <a href="arrivee.php" class="breadcrumb">ARRIVÉE</a>
-                        <a></a>
-                    </div>
-                </div>
-            </nav>
-            <?php include 'actionBtn.html'; ?>
+          
+            <?php include 'actionBtn.php'; ?>
             <div class="whiteSapce100"></div>
             <div class="modal-footer center-align">
                 <a href="#" class="modal-close waves-effect waves-red btn-large red accent-1">Modifier</a>
                 <a href="index.php" class="modal-close waves-effect waves-red btn-large red accent-1">Retour</a>
             </div>
         </div>
-        <div class="whiteSapce200"></div>
+        
            <!-- début du footer -->
-    <?php include 'footer.html'; ?>
+    <?php include 'footer.php'; ?>
     <!-- fin du footer -->
     </body>   
  

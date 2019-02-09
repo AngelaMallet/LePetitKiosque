@@ -15,7 +15,7 @@
         <title>Arrivée</title>
     </head>
     <body>
-        <?php include 'nav.html'; ?>
+        <?php include 'nav.php'; ?>
         <div class="container center-align">
             <div class="whiteSapce50"></div>
             <nav class="dot">
@@ -66,7 +66,7 @@
                             </label>
                         </p>
                     </form>
-                <?php include 'actionBtn.html'; ?>
+                <?php include 'actionBtn.php'; ?>
                     <div class="whiteSapce100"></div>
                 </div>
                 <div class="hide-on-small-only">
