@@ -1,6 +1,5 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
-//require_once 'controllers/controllerUserInfo.php';
 ?>
 
 <!DOCTYPE html>
@@ -41,12 +40,11 @@ session_start(); // On démarre la session AVANT toute chose
                                         </thead>                  
                                         <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                                             <tr>
-                                                <td><?= isset($firstName) ? $firstName : ($_SESSION['firstName']); ?></td>
-                                                <td><?= isset($lastName) ? $lastName : ($_SESSION['lastName']); ?></td>
-                                                <td><?= isset($email) ? $email : ($_SESSION['email']); ?></td>
-                                                <td><?= isset($tel) ? $tel : ($_SESSION['tel']); ?></td>
-                                                <td><?= isset($address) ? $address : ($_SESSION['address']); ?></td>
-                                                
+                                                <td><?= isset($_SESSION['firstName']) ? $_SESSION['firstName']: ''; ?></td>
+                                                <td><?= isset($_SESSION['lastName']) ? $_SESSION['lastName']: ''; ?></td>
+                                                <td><?= isset($_SESSION['email']) ? $_SESSION['email']: ''; ?></td>
+                                                <td><?= isset($_SESSION['tel']) ? $_SESSION['tel']: ''; ?></td>
+                                                <td><?= isset($_SESSION['address']) ? $_SESSION['address']: ''; ?></td>
                                                 <td><button><a href="accountuserModif.php" class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button></td>
                                             </tr>   
                                         </tbody>

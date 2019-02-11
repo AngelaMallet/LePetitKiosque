@@ -1,5 +1,6 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
+require_once 'controllers/controllerModifUsers.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +15,31 @@ session_start(); // On démarre la session AVANT toute chose
         <title>Compte client</title>
     </head>
     <body>
+        
         <!-- header et navbar -->
 		<?php include 'nav.php'; ?>
+        
+        <?php if ($addSuccess) { ?>
+        <div class="row">
+            <div class="whiteSapce50"></div>
+            <div class=" col s12 l12">
+                <h2 class="card-panel red accent-1 white-text text-white"><?= 'Profil est modifié !' ?></h2>
+            </div>
+        </div>
+        <div class="whiteSapce100"></div>
+        <div class="row">
+            <div class=" col s12 l12">
+                <img  width="200" height="200" src="../LePetitKiosque/assets/merciColibri.png">
+            </div>
+        </div>
+        <div class=" col s12 l12">
+            <a href="userLogin.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Votre compte</a>
+            
+        </div>
+        
+                            <?php } else { ?>   
+        
+        
         <div>
             <div class="row">
                 <div class="container center-align">
@@ -24,19 +48,18 @@ session_start(); // On démarre la session AVANT toute chose
                         <div>
                             <img class="col s12 m6 l6 responsive-img" id="accountImg" src="assets/account.png">
                         </div>
-                        <form id="form" method="POST" class="col s12 l6" action="index.php">
+                        <form id="form" method="POST" class="col s12 l6" action="accountuserModif.php">
                             <div class="row input-field col s12 l6">
-                                <input name="firstName" value ="<?= isset($firstName) ? $firstName : ($_SESSION['firstName']); ?>" id ="fistName" type="text" class="active" />
-                                
+                                <input name="firstName" value ="<?= isset($firstName) ? $firstName : ($_SESSION['firstName']) ?>" id ="fistName" type="text" class="active" />
                                 <p class="css" id="firstNameField"><?= isset($formError['fistName']) ? $formError['fistName'] : '' ?></p>
                             </div>
                             <div class="row input-field col s12 l6">
-                                <input name="lastName" value = "<?= isset($lastName) ? $lastName : ($_SESSION['lastName']); ?>" id = "lastName" type="text" class = "active" />
+                                <input name="lastName" value = "<?= isset($lastName) ? $lastName : ($_SESSION['lastName']) ?>" id = "lastName" type="text" class = "active" />
                                 
                                 <p class="css" id="lastNameField"><?= isset($formError['lastName']) ? $formError['lastName'] : '' ?></p>
                             </div>
                             <div class="row input-field col s12 l6">
-                                <input name="email" value="<?= isset($email) ? $email : ($_SESSION['email']); ?>" id="email" type="email" class="active">
+                                <input name="email" value="<?= isset($email) ? $email : ($_SESSION['email']) ?>" id="email" type="email" class="active">
                                 
                                 <p class="css" id="emailNameField"><?= isset($formError['email']) ? $formError['email'] : '' ?></p>
                             </div>
@@ -47,19 +70,18 @@ session_start(); // On démarre la session AVANT toute chose
                             </div>
                             
                             <div class="row input-field col s12 l12 right-align">
-                                <input name="address" value="<?= isset($address) ? $address : ($_SESSION['address']); ?>" id="address" type="address" class="active">
+                                <input name="address" value="<?= isset($address) ? $address : ($_SESSION['address']) ?>" id="address" type="address" class="active">
                                 <label id="labelAddressModif">Votre adresse : </label>
                                 <p class="css" id="addressNameField"><?= isset($formError['address']) ? $formError['address'] : '' ?></p>
                             </div>
                             <div class="row input-field col s12 l12">
-                                <button class="modal-close waves-effect waves-light btn red accent-1 modal-trigger"type="submit" name="submitFormModif">Modifier</button>
-                                <button id="submitFormValidBtn" class="modal-close waves-effect waves-light btn red accent-2 modal-trigger" type="submit" name="submitFormValid">Valider</button>
+                                <button id="submitFormValidBtn" class="modal-close waves-effect waves-light btn red accent-2 modal-trigger" type="submit" name="submitFormModif">Valider</button>
                             </div>
                             <!-- ... <p><a id="linkForm" href="index.php">Vous êtes déjà inscrit?</a></p>-->
                         </form>
                     </div>
                     
-                    
+                       <?php } ?>
                     <div class="whiteSapce100"></div>
                      <?php include 'actionBtn.php'; ?>
                 </div>

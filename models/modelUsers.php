@@ -22,10 +22,6 @@ class users extends database {
         
 
 
-    // Méthode magique __construct() L’évènement qui appelle la méthode__construct est la création de l'objet.
-    public function __construct() { //Le construct a été déclaré en visibilité publique afin de pouvoir être invoqué de n'importe quel endroit du site.
-        parent::__construct();
-    }
 
     
     
@@ -87,10 +83,25 @@ class users extends database {
          $infosUser = $verifUser->fetch(PDO::FETCH_OBJ);
          return $infosUser;
     }
-
-    public function __destruct() {
-        parent::__destruct();
+    
+     public function modifUser() { //addAllpatients est une méthode avec la requête 
+    //qui va inclure les nouveaux patients dans la table patients.
+    
+    //Modifications des données du patient à l'aide de la requête préparée avec INSERT INTO et le nom des champs de la table
+    //Insertion des valeurs des variables via les marqueurs nominatifs exemple :nomdumarqueur en gros c'est comme un alias
+ // :marqueurs nominatifs 
+        $queryResult = $this->database->prepare('UPDATE fluo_users SET firstName=:firstName, lastName=:lastName, email=:email,  tel=:tel, address=:address WHERE id_users=:id_users;');
+        $queryResult->bindValue(':firstName', $this->firstName, PDO::PARAM_STR);
+        $queryResult->bindValue(':lastName', $this->lastName, PDO::PARAM_STR);
+        $queryResult->bindValue(':email', $this->email, PDO::PARAM_STR);
+        $queryResult->bindValue(':tel', $this->tel, PDO::PARAM_STR);
+        $queryResult->bindValue(':address', $this->address, PDO::PARAM_STR);
+        $queryResult->bindValue(':id_users', $_SESSION['id_users'], PDO::PARAM_INT);
+        
+        return $queryResult->execute(); 
     }
+
+ 
     
 }
 ?>
