@@ -6,7 +6,7 @@
         <!-- Favicons-->
         <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-                    
+            
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="assets/css/style.css" />
@@ -75,10 +75,11 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer center-align">
-                <a href="index.php" class="modal-close waves-effect waves-light btn-large red accent-1">Annuler</a>
-                <a href="confirmation.php" class="modal-close waves-effect waves-light btn-large red accent-1">VALIDER</a>
+            <div class="row col s12 l12">
+                <a href="services.php" class="waves-effect waves-red btn-large red accent-1">Précédent</a>
+                <button class="waves-effect waves-red btn-large red accent-1" type="submit" name="submitForm">Suivant</button>
             </div>
+            <a href="index.php" class="blue-grey-text">Retour</a>
         </div>
     </body>   
     <!-- fin du footer -->

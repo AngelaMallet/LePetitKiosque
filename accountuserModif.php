@@ -33,7 +33,7 @@ require_once 'controllers/controllerModifUsers.php';
             </div>
         </div>
         <div class=" col s12 l12">
-            <a href="userLogin.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Votre compte</a>
+            <a href="user-Infos.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Votre compte</a>
             
         </div>
         

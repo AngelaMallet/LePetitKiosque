@@ -1,3 +1,6 @@
+<?php
+session_start(); // On démarre la session AVANT toute chose
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -6,7 +9,7 @@
         <!-- Favicons-->
         <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-
+        
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="assets/css/style.css" />
@@ -14,14 +17,14 @@
         <meta charset="utf-8" />
         <title>CauxLibri</title>
     </head>
-
+    
     <body>
         <!-- header et navbar -->
         <?php include 'nav.php'; ?>
-
-
+        
+        
         <div id="offerForm" class="container center-align">
-              <nav class="dot">
+            <nav class="dot">
                 <div class="nav-wrapper red acent-1">
                     <div class="col s12">
                         <a href="date.php" class="breadcrumb">DATE</a>
@@ -44,22 +47,22 @@
                         <img  width="500" height="400" src="../LePetitKiosque/assets/offer.png">
                     </div>
                 </div>
-
+                
             </div>
-          
+            
             <?php include 'actionBtn.php'; ?>
             <div class="whiteSapce100"></div>
-            <div class="modal-footer center-align">
-                <a href="#" class="modal-close waves-effect waves-red btn-large red accent-1">Modifier</a>
-                <a href="index.php" class="modal-close waves-effect waves-red btn-large red accent-1">Retour</a>
+            <div class="row input-field col s12 l12">
+                <a href="date.php" class="modal-close waves-effect waves-red btn-large red accent-1">Commencer</a>
             </div>
+            <a href="index.php" class="blue-grey-text">Retour</a>
         </div>
         
-           <!-- début du footer -->
+        <!-- début du footer -->
     <?php include 'footer.php'; ?>
-    <!-- fin du footer -->
+        <!-- fin du footer -->
     </body>   
- 
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/js.js"></script>
