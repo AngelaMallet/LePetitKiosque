@@ -51,7 +51,7 @@ require_once 'controllers/controllerModifUsers.php';
                         <form id="form" method="POST" class="col s12 l6" action="accountuserModif.php">
                             <div class="row input-field col s12 l6">
                                 <input name="firstName" value ="<?= isset($firstName) ? $firstName : ($_SESSION['firstName']) ?>" id ="fistName" type="text" class="active" />
-                                <p class="css" id="firstNameField"><?= isset($formError['fistName']) ? $formError['fistName'] : '' ?></p>
+                                <p class="css" id="firstNameField"><?= isset($formError['firstName']) ? $formError['firstName'] : '' ?></p>
                             </div>
                             <div class="row input-field col s12 l6">
                                 <input name="lastName" value = "<?= isset($lastName) ? $lastName : ($_SESSION['lastName']) ?>" id = "lastName" type="text" class = "active" />

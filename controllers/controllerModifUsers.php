@@ -5,7 +5,7 @@ require_once 'models/modelUsers.php';
 
 $modifUser = new users(); //$usersObj est un nouvel objet de la classe users. On dit que l'on instancie la classe users.
  
-$_SESSION['id_users'] =  $modifUser->id_users;
+
 
 
 // Je regarde s'il n'y a pas d'erreurs dans le formulaire 
@@ -105,9 +105,18 @@ if (count($formError) == 0 && isset($_POST['submitFormModif'])) {
     $modifUser->email = $email; 
     $modifUser->tel = $tel;
     $modifUser->address = $address;
+    $modifUser->id_users = $_SESSION['id_users'];
     $modifUser->modifUser(); 
     $addSuccess = true;
     } 
+    if($modifUser->modifUser()){
+           $_SESSION['firstName'] = $firstName;
+           $_SESSION['lastName'] = $lastName;  
+           $_SESSION['email'] = $email;  
+           $_SESSION['tel'] = $tel; 
+           $_SESSION['address'] = $address; 
+    }
+    
   
 ?>
 
