@@ -40,10 +40,6 @@ blockquote {
     border-left: 5px solid #5f6a75;
 }
 
-#projetFrame{
-    padding-top: 5rem;
-    height: 100%;
-}
 /*a, a:visited {
 Les liens "au repos" et déjà visités antérieurement 
 color: grey; /* couleur gris 

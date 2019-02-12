@@ -108,7 +108,6 @@ if (count($formError) == 0 && isset($_POST['submitFormModif'])) {
     $modifUser->id_users = $_SESSION['id_users'];
     $modifUser->modifUser(); 
     $addSuccess = true;
-    } 
     if($modifUser->modifUser()){
            $_SESSION['firstName'] = $firstName;
            $_SESSION['lastName'] = $lastName;  
@@ -116,6 +115,8 @@ if (count($formError) == 0 && isset($_POST['submitFormModif'])) {
            $_SESSION['tel'] = $tel; 
            $_SESSION['address'] = $address; 
     }
+    } 
+    
     
   
 ?>

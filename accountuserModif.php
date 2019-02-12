@@ -50,7 +50,7 @@ require_once 'controllers/controllerModifUsers.php';
                         </div>
                         <form id="form" method="POST" class="col s12 l6" action="accountuserModif.php">
                             <div class="row input-field col s12 l6">
-                                <input name="firstName" value ="<?= isset($firstName) ? $firstName : ($_SESSION['firstName']) ?>" id ="fistName" type="text" class="active" />
+                                <input name="firstName" value ="<?= isset($firstName) ? $firstName : ($_SESSION['firstName']) ?>" id ="firstName" type="text" class="active" />
                                 <p class="css" id="firstNameField"><?= isset($formError['firstName']) ? $formError['firstName'] : '' ?></p>
                             </div>
                             <div class="row input-field col s12 l6">

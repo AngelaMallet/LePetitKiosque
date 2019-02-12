@@ -21,7 +21,7 @@ require_once 'controllers/controllerAjoutDate.php';
     <!-- header et navbar -->
     <boby>
         <?php include 'nav.php'; ?>
-        <div id="projetFrame" class="container center-align">
+        <div class="container center-align">
             <nav class="dot hide-on-med-and-down">
                 <div class="nav-wrapper red acent-1 ">
                     <div class="col s12">

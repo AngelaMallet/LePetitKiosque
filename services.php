@@ -18,7 +18,6 @@
     <body>
          <?php include 'nav.php'; ?>
         <div class="container center-align">
-            <div class="whiteSapce50"></div>
             <div id="serviceRow" class="row center-align">
                 <nav class="dot">
                     <div class="nav-wrapper red acent-1">
