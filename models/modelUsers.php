@@ -42,13 +42,15 @@ class users extends database {
     //Insertion des données du users à l'aide de la requête préparée avec INSERT INTO et le nom des champs de la table
     //Insertion des valeurs des variables via les marqueurs nominatifs exemple :nomdumarqueur en gros c'est comme un alias
  // :marqueurs nominatifs 
-        $queryResult = $this->database->prepare('INSERT INTO fluo_users(firstName, lastName, email, password, tel, address) VALUES (:firstName, :lastName, :email, :password, :tel, :address)'); 
+        $queryResult = $this->database->prepare('INSERT INTO fluo_users(firstName, lastName, email, password, tel, address, certified, id_user_type) VALUES (:firstName, :lastName, :email, :password, :tel, :address, 0, 1)'); 
         $queryResult->bindValue(':firstName', $this->firstName, PDO::PARAM_STR);
         $queryResult->bindValue(':lastName', $this->lastName, PDO::PARAM_STR);
         $queryResult->bindValue(':email', $this->email, PDO::PARAM_STR);
         $queryResult->bindValue(':password', $this->password, PDO::PARAM_STR);
         $queryResult->bindValue(':tel', $this->tel, PDO::PARAM_STR);
         $queryResult->bindValue(':address', $this->address, PDO::PARAM_STR);
+//        $queryResult->bindValue(':certified',0, PDO::PARAM_INT);
+//        $queryResult->bindValue(':id_user_type',1, PDO::PARAM_INT);
         return $queryResult->execute(); //@return exécute la requête pour ajouter un user.
     }
     

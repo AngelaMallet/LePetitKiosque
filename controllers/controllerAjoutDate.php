@@ -6,16 +6,7 @@ $dayObj = new transports(); //$usersObj est un nouvel objet de la classe users. 
     
     
     
-// Déclaration des regeX
-//$regexText = '/^[A-zÂ-ÿ -]+$/';
-//$regexEmail = '/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/';
-//$regexPassword = '/^[A-zÄ-ÿ0-9 -@_?!#$*€]+$/';
-//$regexPhone = '/^0[0-9]([ .-]?[0-9]{2}){4}$/';
 
-//Pour les regexs les groupes sont mis dans des parenthèses. Dans les parenthèses, tout ce qui est entre les crochets sont des données demandées. 
-//Tout ce  qui est hors crochets et hors parenthèses est obligatoire.
-    
-    
 //Initialise $addSuccess en False pour afficher message
 $addSuccess = false;
 //Initialise $hideSuccess en true pour afficher inputform
@@ -28,11 +19,7 @@ $formError = [];
 ////date
 if (isset($_POST['date'])) {
     //Si: je récupère la valeur de firstName
-   $date = htmlspecialchars($_POST['date']);  // Pour accéder à la propriété $usersObj j'utilise l'opérateur -> 
-    // qui permet d'accéder aux propriétés de la classe. Propriété est le nom d'une variable en POO
-//    if (!preg_match($regexText, $date)) {
-//        $formError['date'] = 'Saisie non valide';
-//    }
+   $date = htmlspecialchars($_POST['date']);  // Pour accéder à la propriété $dayObj  j'utilise l'opérateur -> 
     if (empty($_POST['date'])) {
         $formError['date'] = 'Saisie vide';
     }
@@ -42,12 +29,8 @@ if (isset($_POST['date'])) {
 
 ////date
 if (isset($_POST['hour'])) {
-    //Si: je récupère la valeur de firstName
-   $hour = htmlspecialchars($_POST['hour']);  // Pour accéder à la propriété $usersObj j'utilise l'opérateur -> 
-    // qui permet d'accéder aux propriétés de la classe. Propriété est le nom d'une variable en POO
-//    if (!preg_match($regexText, $date)) {
-//        $formError['date'] = 'Saisie non valide';
-//    }
+    //Si: je récupère la valeur de hour
+   $hour = htmlspecialchars($_POST['hour']);  // Pour accéder à la propriété $dayObj j'utilise l'opérateur -> 
     if (empty($_POST['hour'])) {
         $formError['hour'] = 'Saisie vide';
     }
@@ -62,11 +45,15 @@ if (!empty($formError)) {
     
 // Je regarde s'il n'y a pas d'erreurs dans le formulaire 
 // S'il n'y a pas d'erreurs et que je clique sur le bouton send alors 
-//j'envoie les nouvelles données dans ma table fluo_users
+//j'envoie les nouvelles données dans ma table fluo_transport
 if (count($formError) == 0 && isset($_POST['submitFormDate'])) {
     $dayObj->date = $date;
+    $dayObj->hour = $hour;
     $dayObj->addDate(); 
     $addSuccess = true;
-   }
+   } else {
+       echo 'Mauvaise saisie';
+}
+   
 ?>
 

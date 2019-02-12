@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+    
+<?php
+session_start(); // On démarre la session AVANT toute chose
+require_once 'controllers/controllerAjoutServices.php';
+?><!DOCTYPE html>
 <html lang="fr">
     <head>
         <!--Import Google Font-->
@@ -30,46 +34,52 @@
                         </div>
                     </div>
                 </nav>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="assets/covoiturage.png">
+                <div class="row">
+                    <form  method="POST" class = "col s12 m12 l12" action="services.php">
+                        <div class="col s12 m4">
+                            
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="assets/covoiturage.png">
+                                </div>
+                                <div class="card-content">
+                                    
+                                    <a class="waves-effect waves-light btn-large red red-text accent-1" name="typesName" value ="covoiturage" id ="carpooling" type = "submit"><p>COVOITURAGE</p></a>
+                                        
+                                </div>			
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <a class="waves-effect waves-light btn-large red white-text accent-1" name="carpooling"><p>COVOITURAGE</p></a>
-                                
-                        </div>			
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img id="shopImg" class="activator" src="assets/shop.png">
+                        <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img id="shopImg"src="assets/shop.png">
+                                </div>
+                                <div class="card-content">
+                                    <a class="waves-effect waves-light btn-large red red-text accent-1" name="typesName" value ="courses" id ="shopping" type = "submit"><p>COURSES</p></a>
+                                        
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <a class="waves-effect waves-light btn-large red white-text accent-1" name="shopping"><p>COURSES</p></a>
-                                
+                        <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img src="assets/school.png">
+                                </div>
+                                <div class="card-content">
+                                    <a class="waves-effect waves-light btn-large red red-text accent-1" name="typesName" value ="scolaire" id ="schoolRide" type = "submit"><p>TRAJET SCOLAIRE</p></a>
+                                </div>				
+                            </div>
+                            <div class="whiteSapce100"></div>
                         </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="assets/school.png">
+                            
+                        <div class="row col s12 l12">
+                            <a href="date.php" class="waves-effect waves-red btn-large red accent-1">Précédent</a>
                         </div>
-                        <div class="card-content">
-                            <a class="waves-effect waves-light btn-large red white-text accent-1" name="shopping"><p>TRAJET SCOLAIRE</p></a>
-                        </div>				
-                    </div>
-                    <div class="whiteSapce100"></div>
+                        <a href="index.php" class="blue-grey-text">Annuler</a>
+                    </form>
                 </div>
-                <?php include 'actionBtn.php'; ?>
-                <div class="row col s12 l12">
-                    <a href="depart.php" class="waves-effect waves-red btn-large red accent-1">Précédent</a>
-                    <button class="waves-effect waves-red btn-large red accent-1" type="submit" name="submitForm">Suivant</button>
-                </div>
-                <a href="index.php" class="blue-grey-text">Retour</a>
             </div>
+               <?php include 'actionBtn.php'; ?> 
         </div>
     </body>   
     <!-- fin du footer -->

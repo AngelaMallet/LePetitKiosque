@@ -33,6 +33,7 @@ require_once 'controllers/controllerAjoutDate.php';
                     </div>
                 </div>
             </nav>
+
             <div class="container">
                 <div class="row">
                     <div class="hide-on-small-only">
@@ -57,14 +58,13 @@ require_once 'controllers/controllerAjoutDate.php';
                             <p class="NotValid" id="hourField"><?= isset($formError['hour']) ? $formError['hour'] : '' ?></p>
                         </div></form>
                 </div>
-            <?php include 'actionBtn.php'; ?>
-                
-                <div class="row col s12 l12">
+           <div class="row col s12 l12">
                     <a href="date.php" class="waves-effect waves-red btn-large red accent-1">Précédent</a>
                     <button class="waves-effect waves-red btn-large red accent-1" type="submit" name="submitFormDate">Suivant</button>
                 </div>
                 <a href="index.php" class="blue-grey-text">Retour</a>
             </div>
+            <?php include 'actionBtn.php'; ?>
         </div>
         
     </boby>

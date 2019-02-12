@@ -125,9 +125,8 @@ if (count($formError) == 0 && isset($_POST['submitForm'])) {
         echo 'L\'adresse email est déjà utilisée.';
     } else {
     $usersObj->addUsers(); 
-    $addSuccess = true;
-    $extra = 'services.php';
-            header("Location: http://localhost:8888/PDO-P2/$extra");
+    $extra = 'userLogin.php';
+            header("Location: http://localhost:8888/LePetitKiosque/$extra");
             exit;
    }
   }
