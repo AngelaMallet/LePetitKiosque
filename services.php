@@ -1,4 +1,4 @@
-    
+
 <?php
 session_start(); // On démarre la session AVANT toute chose
 require_once 'controllers/controllerAjoutServices.php';
@@ -10,7 +10,7 @@ require_once 'controllers/controllerAjoutServices.php';
         <!-- Favicons-->
         <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-            
+
         <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="assets/css/style.css" />
@@ -18,7 +18,7 @@ require_once 'controllers/controllerAjoutServices.php';
         <meta charset="utf-8" />
         <title>services</title>
     </head>
-        
+
     <body>
          <?php include 'nav.php'; ?>
         <div class="container center-align">
@@ -26,8 +26,8 @@ require_once 'controllers/controllerAjoutServices.php';
                 <nav class="dot">
                     <div class="nav-wrapper red acent-1">
                         <div class="col s12">
+                        <a href="services.php" class="breadcrumb white-text">SERVICES</a>
                             <a href="date.php" class="breadcrumb">DATE</a>
-                            <a href="services.php" class="breadcrumb white-text">SERVICES</a>
                             <a href="depart.php" class="breadcrumb">DÉPART</a>
                             <a href="arrivee.php" class="breadcrumb">ARRIVÉE</a>
                             <a></a>
@@ -37,16 +37,13 @@ require_once 'controllers/controllerAjoutServices.php';
                 <div class="row">
                     <form  method="POST" class = "col s12 m12 l12" action="services.php">
                         <div class="col s12 m4">
-                            
                             <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img src="assets/covoiturage.png">
                                 </div>
                                 <div class="card-content">
-                                    
-                                    <a class="waves-effect waves-light btn-large red red-text accent-1" name="typesName" value ="covoiturage" id ="carpooling" type = "submit"><p>COVOITURAGE</p></a>
-                                        
-                                </div>			
+                                 <a class="waves-effect waves-light btn-large red red-text accent-1" name="typesName" value ="covoiturage" id ="carpooling" type = "submit"><p>COVOITURAGE</p></a>
+                                </div>
                             </div>
                         </div>
                         <div class="col s12 m4">
@@ -56,7 +53,6 @@ require_once 'controllers/controllerAjoutServices.php';
                                 </div>
                                 <div class="card-content">
                                     <a class="waves-effect waves-light btn-large red red-text accent-1" name="typesName" value ="courses" id ="shopping" type = "submit"><p>COURSES</p></a>
-                                        
                                 </div>
                             </div>
                         </div>
@@ -67,23 +63,22 @@ require_once 'controllers/controllerAjoutServices.php';
                                 </div>
                                 <div class="card-content">
                                     <a class="waves-effect waves-light btn-large red red-text accent-1" name="typesName" value ="scolaire" id ="schoolRide" type = "submit"><p>TRAJET SCOLAIRE</p></a>
-                                </div>				
+                                </div>
                             </div>
                             <div class="whiteSapce100"></div>
                         </div>
-                            
                         <div class="row col s12 l12">
-                            <a href="date.php" class="waves-effect waves-red btn-large red accent-1">Précédent</a>
+                            <a href="date.php" class="waves-effect waves-red btn-large red accent-1">Suivant</a>
                         </div>
                         <a href="index.php" class="blue-grey-text">Annuler</a>
                     </form>
                 </div>
             </div>
-               <?php include 'actionBtn.php'; ?> 
+               <?php include 'actionBtn.php'; ?>
         </div>
-    </body>   
+    </body>
     <!-- fin du footer -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/js.js"></script>
 </html>

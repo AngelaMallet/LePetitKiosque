@@ -64,6 +64,8 @@ color: #ff8a65;
     word-spacing: 0.1em;
     letter-spacing:0.1em;
 }
+
+
 /*.whiteSapce50{
     height: 50px;
 }
@@ -80,13 +82,9 @@ color: #ff8a65;
     height: 200px;
 }*/
 
-.card-image img{
-    max-height: 250px;
-}
-#shopImg{
-    width: 76%;
-    height: 77%;
-    margin-left: 61px;
+
+#selectDepartName{
+    padding: 5rem;
 }
 radio{
     background-color: corail;
@@ -128,9 +126,7 @@ h2.h2account{
 #accountBtn{
     font-size: 0.8em;
 }
-#logoCard{
-    max-width: 250px;
-}
+
 #presentationText{
     font-size: 1em;
     font-weight: 200;

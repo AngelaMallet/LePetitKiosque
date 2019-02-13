@@ -22,8 +22,8 @@
             <nav class="dot">
                 <div class="nav-wrapper red acent-1">
                     <div class="col s12">
-                        <a href="date.php" class="breadcrumb">DATE</a>
                         <a href="services.php" class="breadcrumb">SERVICES</a>
+                        <a href="date.php" class="breadcrumb">DATE</a>
                         <a href="depart.php" class="breadcrumb white-text">DÉPART</a>
                         <a href="arrivee.php" class="breadcrumb">ARRIVÉE</a>
                         <a></a>
@@ -80,7 +80,7 @@
                 <a href="services.php" class="waves-effect waves-red btn-large red accent-1">Précédent</a>
                 <button class="waves-effect waves-red btn-large red accent-1" type="submit" name="submitForm">Suivant</button>
             </div>
-            <a href="index.php" class="blue-grey-text">Retour</a>
+            <a href="index.php" class="blue-grey-text">Annuler</a>
         </div>
     </body>   
     <!-- fin du footer -->
