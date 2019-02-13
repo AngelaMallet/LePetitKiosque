@@ -55,6 +55,7 @@ color: #ff8a65;
     animation: sk-scaleout 1.0s infinite ease-in-out;
 }
 
+
 #cardList{
     margin-left: 50px;
 }
@@ -316,6 +317,15 @@ Zone css formulaire
 
 */
 
+.articleTrajetForm {
+    margin: 3rem;
+    margin-top: 8rem;
+    padding-bottom: 3rem;
+    background-color: white;
+    border-top: .3rem #e4625b solid;
+    font-size: 1rem;
+}
+
 .forecast {
     margin: 3rem;
     padding: .3rem;
@@ -325,11 +335,12 @@ Zone css formulaire
 }
 
 mark {
-    background-color: #FF8A80;
+    background-color: rgb(172, 172, 187);
     color: white;
     padding: 1rem;
     border-radius: .5rem;
     margin-bottom: 1.3rem;
+    font-size: 1rem;
 }
 
 h4 {
@@ -357,9 +368,20 @@ h4 {
 #btnInscriptionProjet {
     margin:-8rem;
 }
+.colorLink {
+    color: #e4625b;
+}
 
 #imgDate {
     padding-bottom: 2rem;
+    max-width: 30rem;
+    max-height: 30rem;
+}
+
+#imgDepart {
+    padding-bottom: 2rem;
+    max-width: 23rem;
+    max-height: 30rem;
 }
 /* materialize.css */
 
