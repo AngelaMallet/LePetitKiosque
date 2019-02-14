@@ -1,4 +1,7 @@
-
+<?php
+session_start(); // On démarre la session AVANT toute chose
+require_once 'controllers/controllerListTrajets.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -33,6 +36,8 @@
                                 <th></th>
                                 <th>DATE</th>
                                 <th></th>
+                                <th>HEURE</th>
+                                <th></th>
                                 <th>DÉPART</th>
                                 <th></th>
                                 <th>ARRIVÉE</th>
@@ -43,20 +48,22 @@
                         </thead>                  
                     <?php
                     // On affiche chaque entrée une à une
-                    foreach ($listTrajetArray as $trajetsList) {
+                    foreach ($listTrajetArray as $rowtrajets) {
                         ?>
                         
                         <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                             <tr>
-                                <td><?= $trajetsList->firstName; ?></td>
+                                <td><?= $rowtrajets->typesName; ?></td>
                                 <td></td>
-                                <td><?= $trajetsList->lastName; ?></td>
+                                <td><?= $rowtrajets->date; ?></td>
                                 <td></td>
-                                <td><?= $trajetsList->email; ?></td>
+                                <td><?= $rowtrajets->hour; ?></td>
                                 <td></td>
-                                <td><?= $trajetsList->tel; ?></td>
+                                <td><?= $rowtrajets->location_choice_name_aller; ?></td>
                                 <td></td>
-                                <td><button><a href="user-Infos.php?id=<?= $usersList->id_users; ?>" class="waves-effect waves-light btn-small white-text blue-grey">Informations</a></button></td>
+                                <td><?= $rowtrajets->location_choice_name_retour; ?></td>
+                                <td></td>
+                                <td><button><a href="user-Infos.php?id=<?= $rowtrajets->id_users; ?>" class="waves-effect waves-light btn-small white-text blue-grey">Contacter le Colibri</a></button></td>
                                 <td></td>
                             </tr>   
                         </tbody>
