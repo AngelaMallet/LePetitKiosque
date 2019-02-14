@@ -5,8 +5,8 @@
             <a href="index.php"  class="brand-logo hide-on-large-only left"><img id="miniLogo" src="assets/colibri565.png" /></a>
             <ul class="right">
                 <li class="active"><li><a href="index.php" class="white-text text-red accent-1 hide-on-med-and-down">Accueil</a></li>
-                <li><a href="" class="white-text text-red accent-1">Trajets disponibles</a></li>
-                <li><a href="offerFormDate.php" class="white-text text-red accent-1 spinner">Offrir une place</a></li>
+                <li><a href="liste-trajets.php" class="white-text text-red accent-1">Trajets disponibles</a></li>
+                <li><a href="TrajetForm.php" class="white-text text-red accent-1 spinner">Offrir une place</a></li>
                 <li><a href="projet.php" class="white-text text-red accent-1">Le projet</a></li>
                 <li><a href="#contact" class="white-text text-red accent-1">contact</a></li>
                 <!-- Dropdown Trigger -->

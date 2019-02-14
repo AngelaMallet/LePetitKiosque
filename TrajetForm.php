@@ -1,6 +1,6 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
-require_once 'controllers/controllerAjoutServices.php';
+require_once 'controllers/controllerAjoutTrajet.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -23,16 +23,20 @@ require_once 'controllers/controllerAjoutServices.php';
 <body>
     <?php include 'nav.php'; ?>
     <div class="container center-align">
+    
 
-
+    <div class="col s12 m6 center-align">
+                        <h1>Pour offrir une ou plusieurs places dans votre voiture, il vous suffit de remplir le formulaire ci-dessous.</h1>
+                        <p><mark>En trois étapes :</mark></p>    
+                </div>
 
             <div class="row articleTrajetForm">
             <nav class="dot" id="services">
                 <div class="nav-wrapper red acent-1">
                     <div class="col s12">
-                        <a href="#services" class="breadcrumb white-text">SERVICES</a>
-                        <a href="#date" class="breadcrumb">DATE</a>
-                        <a href="#depart" class="breadcrumb">DÉPART  &  ARRIVÉE</a>
+                        <a href="#services" class="breadcrumb white-text"><b>1.SERVICES</b></a>
+                        <a href="#date" class="breadcrumb">2.DATE</a>
+                        <a href="#depart" class="breadcrumb">3.DÉPART  &  ARRIVÉE</a>
                         <a></a>
                     </div>
                 </div>
@@ -59,7 +63,7 @@ require_once 'controllers/controllerAjoutServices.php';
                     </div>
                 </div>
 
-                <form method="POST" class="col s12 m12 l12" action="services.php">
+                <form method="POST" class="col s12 m12 l12" action="TrajetForm.php">
                     <div class="row">
                         <div class="col s12 m4 l4 left-align">
                             <h2>Merci de choisir votre Service.</h2>
@@ -67,24 +71,17 @@ require_once 'controllers/controllerAjoutServices.php';
                         </div>
                         <div class="col s12 m4 l4 left-align">
                             <h1><mark>SERVICES</mark></h1>
+                            <?php
+                            foreach ($arrayGetService as $rowService) {
+                                ?>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="typesName" value="covoiturage" type="radio" />
-                                    <span>Covoiturage</span>
+                                    <input class="with-gap" name="id_types" value="<?= $rowService->id_types; ?>" type="radio" />
+                                    <span><?= $rowService->typesName; ?></span>
                                 </label>
                             </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="typesName" value="courses" type="radio" />
-                                    <span>Courses</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="typesName" value="trajetScolaire" type="radio" />
-                                    <span>Trajet scolaire</span>
-                                </label>
-                            </p>
+                            <?php
+                            } ?>
                         </div>
                     </div>
             </div>
@@ -93,9 +90,9 @@ require_once 'controllers/controllerAjoutServices.php';
                     <nav class="dot" id="date">
                 <div class="nav-wrapper red acent-1">
                     <div class="col s12">
-                        <a href="#services" class="breadcrumb">SERVICES</a>
-                        <a href="#date" class="breadcrumb white-text">DATE</a>
-                        <a href="#depart" class="breadcrumb">DÉPART & ARRIVÉE</a>
+                        <a href="#services" class="breadcrumb">1.SERVICES</a>
+                        <a href="#date" class="breadcrumb white-text"><b>2.DATE</b></a>
+                        <a href="#depart" class="breadcrumb">3.DÉPART & ARRIVÉE</a>
                         <a></a>
                     </div>
                 </div>
@@ -113,25 +110,25 @@ require_once 'controllers/controllerAjoutServices.php';
                     </div>
                 </div>
                 <div class="row">
-                        <div class="row input-field col s12 l6">
-                            <input name="date" value ="<?=isset($date) ? $date : ''; ?>" id ="date" type = "date" class = "datepicker" />
+                        <div class="row input-field col s12 l6"> 
+                            <input name="date" value="<?= (isset($trajetObj->date)) ? $trajetObj->date : ''; ?>" id ="date" type = "date" class = "datepicker" />
                             <label>Veuillez choisir la date du trajet :</label>
                             <p class="NotValid" id="dateNameField"><?=isset($formError['date']) ? $formError['date'] : ''; ?></p>
                         </div>
                         <div class="row input-field col s12 l6">
-                            <input name="hour" value = "<?=isset($hour) ? $hour : '07:30'; ?>" id="appt-time" type="time">
+                            <input name="hour" value="<?= (isset($trajetObj->hour)) ? $trajetObj->hour : ''; ?>" id="appt-time" type="time">
                             <label for="appt-time">Veuillez choisir l'heure du départ :</label>
                             <p class="NotValid" id="hourField"><?=isset($formError['hour']) ? $formError['hour'] : ''; ?></p>
                         </div>
                     </div>
-
+            </div>
                     <div class="row articleTrajetForm">
                     <nav class="dot" id="depart">
                 <div class="nav-wrapper red acent-1">
                     <div class="col s12">
-                        <a href="#services" class="breadcrumb">SERVICES</a>
-                        <a href="#date" class="breadcrumb">DATE</a>
-                        <a href="#depart" class="breadcrumb  white-text">DÉPART & ARRIVÉE</a>
+                        <a href="#services" class="breadcrumb">1.SERVICES</a>
+                        <a href="#date" class="breadcrumb">2.DATE</a>
+                        <a href="#depart" class="breadcrumb  white-text"><b>3.DÉPART & ARRIVÉE</b></a>
                         <a></a>
                     </div>
                 </div>
@@ -145,116 +142,50 @@ require_once 'controllers/controllerAjoutServices.php';
                         </div>
                         <div class="col s12 m4 l4 left-align">
                             <h1><mark>DÉPART</mark></h1>
+                            <?php
+                            foreach ($arrayGetLocation as $rowStartLocation) {
+                                ?>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="startingPoint" value="mairie" type="radio" />
-                                    <span>Sandouville Mairie</span>
+                                    <input class="with-gap" name="id_location_choice" value="<?= $rowStartLocation->id_location_choice; ?>" type="radio" />
+                                    <span><?= $rowStartLocation->location_choice_name; ?></span>
                                 </label>
                             </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="startingPoint" value="vachat" type="radio" />
-                                    <span>Sandouville Vachat</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="startingPoint" value="carRouge" type="radio" />
-                                    <span>Sandouville Car Rouge</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="startingPoint" value="leBas" type="radio" />
-                                    <span>Sandouville Le bas</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="startingPoint" value="saintRomain" type="radio" />
-                                    <span>Saint Romain de Colbosc</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="startingPoint" value="leHavre" type="radio" />
-                                    <span>Le Havre</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="startingPoint" value="college" type="radio" />
-                                    <span>Collège André Siegfried</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="startingPoint" value="lycee" type="radio" />
-                                    <span>Lycée Guillaume Le Conquérant</span>
-                                </label>
-                            </p>
+                            <?php
+                            } ?>
 
                         </div>
                         <div class="col s12 m4 l4 left-align">
                             <h1><mark>ARRIVÉE</mark></h1>
+                            <?php
+                            foreach ($arrayGetLocationEnd as $rowArrivalLocation) {
+                                ?>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="arrivalPoint" value="saintRomain" type="radio" />
-                                    <span>Saint Romain de Colbosc</span>
+                                    <input class="with-gap" name="id_location_choice_fluo_location_choice" value="<?= $rowArrivalLocation->id_location_choice; ?>" type="radio" />
+                                    <span><?= $rowArrivalLocation->location_choice_name; ?></span>
                                 </label>
                             </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="arrivalPoint" value="leHavre" type="radio" />
-                                    <span>Le Havre</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="arrivalPoint" value="college" type="radio" />
-                                    <span>Collège André Siegfried</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="arrivalPoint" value="lycee" type="radio" />
-                                    <span>Lycée Guillaume Le Conquérant</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="arrivalPoint" value="mairie" type="radio" />
-                                    <span>Sandouville Mairie</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="arrivalPoint" value="vachat" type="radio" />
-                                    <span>Sandouville Vachat</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="arrivalPoint" value="carRouge" type="radio" />
-                                    <span>Sandouville Car Rouge</span>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="arrivalPoint" value="leBas" type="radio" />
-                                    <span>Sandouville Le bas</span>
-                                </label>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row input-field col s12 l12">
-        <button class="waves-effect waves-light btn red acent-1" type="submit" name="submitFormTrajet">VALIDER<i class="material-icons right">send</i></button>
-    </div>
-  <a class="colorLink" href="index.php">Annuler</a>
-     </form>
+                            <?php
+                            } ?>
 
-        <?php include 'actionBtn.php'; ?>
+                        </div>
+                            
+                        
+                    </div>
+                    <div class="row input-field col s12 l12" id="submitFormTrajetBtn">
+        <button class="waves-effect waves-light btn-large red acent-1" type="submit" name="submitFormTrajet">VALIDER<i class="material-icons right">send</i></button>
+        <p><a class="colorLink" href="index.php">Annuler</a></p>
     </div>
+  
+     </form>
+    
+     <?php include 'actionBtn.php'; ?>
+                    </div>
+                    <?php include 'footer.php'; ?>
+
+       
+    
 </body>
 <!-- fin du footer -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

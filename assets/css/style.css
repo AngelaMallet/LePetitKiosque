@@ -377,6 +377,11 @@ h4 {
     max-width: 30rem;
     max-height: 30rem;
 }
+#submitFormTrajetBtn {
+    margin: 3rem;
+}
+
+
 
 #imgDepart {
     padding-bottom: 2rem;
