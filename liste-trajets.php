@@ -63,7 +63,7 @@ require_once 'controllers/controllerListTrajets.php';
                                 <td></td>
                                 <td><?= $rowtrajets->location_choice_name_retour; ?></td>
                                 <td></td>
-                                <td><button><a href="user-Infos.php?id=<?= $rowtrajets->id_users; ?>" class="waves-effect waves-light btn-small white-text blue-grey">Contacter le Colibri</a></button></td>
+                                <td><button><a href="user-Infos.php?id=<?= $rowtrajets->id_users; ?>" class="waves-effect waves-light btn-small white-text blue-grey">Détails</a></button></td>
                                 <td></td>
                             </tr>   
                         </tbody>
