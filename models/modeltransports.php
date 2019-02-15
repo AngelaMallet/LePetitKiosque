@@ -39,7 +39,7 @@ class transports extends database
         $queryResult->bindValue(':id_location_choice', $this->id_location_choice, PDO::PARAM_INT);
         $queryResult->bindValue(':id_location_choice_fluo_location_choice', $this->id_location_choice_fluo_location_choice, PDO::PARAM_INT);
 
-        return $queryResult->execute();  //@return exécute la requête pour ajouter un trajet.
+        return $queryResult->execute(); //@return exécute la requête pour ajouter un trajet.
     }
 
     public function getLocation()
@@ -66,7 +66,14 @@ class transports extends database
     public function listAllTrajets()
     {
         //je fais ma requête dans une variable $query
-        $query = ('SELECT `fluo_types`.`typesName`, `fluo_location_choice_aller`.`location_choice_name` AS `location_choice_name_aller`, `fluo_location_choice_retour`.`location_choice_name` AS `location_choice_name_retour`, `fluo_transports`.`date`, `fluo_transports`.`hour`, `fluo_transports`.`id_users` FROM `fluo_transports` INNER JOIN `fluo_types` ON `fluo_transports`.`id_types` = `fluo_types`.`id_types` INNER JOIN `fluo_location_choice` AS `fluo_location_choice_aller` ON `fluo_transports`.`id_location_choice_start` = `fluo_location_choice_aller`.`id_location_choice` INNER JOIN `fluo_location_choice` AS `fluo_location_choice_retour` ON `fluo_transports`.`id_location_choice_end` = `fluo_location_choice_retour`.`id_location_choice` ORDER BY `date`');
+        $query = ('SELECT `fluo_types`.`typesName`, `fluo_location_choice_aller`.`location_choice_name` AS `location_choice_name_aller`,
+         `fluo_location_choice_retour`.`location_choice_name` AS `location_choice_name_retour`, 
+         `fluo_transports`.`date`, `fluo_transports`.`hour`, `fluo_transports`.`id_users` 
+         FROM `fluo_transports` INNER JOIN `fluo_types` ON `fluo_transports`.`id_types` = `fluo_types`.`id_types` 
+         INNER JOIN `fluo_location_choice` AS `fluo_location_choice_aller` 
+         ON `fluo_transports`.`id_location_choice_start` = `fluo_location_choice_aller`.`id_location_choice` 
+         INNER JOIN `fluo_location_choice` AS `fluo_location_choice_retour` 
+         ON `fluo_transports`.`id_location_choice_end` = `fluo_location_choice_retour`.`id_location_choice` ORDER BY `date`');
 
         $resultTrajets = $this->database->query($query);
         $listTrajetArray = $resultTrajets->fetchAll(PDO::FETCH_OBJ);
@@ -74,5 +81,25 @@ class transports extends database
         return $listTrajetArray;
         //le résultat = on lui demande d'aller chercher les éléments firstname,lastname...etc donc il faut
         //faire un fetchALL en utilisant l'objet PDO.
+    }
+
+    public function userTrajetsInfos()
+    {
+        $query = ('SELECT `fluo_types`.`typesName`, `fluo_location_choice_aller`.`location_choice_name` AS
+         `location_choice_name_aller`, `fluo_location_choice_retour`.`location_choice_name` AS 
+         `location_choice_name_retour`, `fluo_transports`.`date`, `fluo_transports`.`hour`, `fluo_transports`.`id_users` FROM
+          `fluo_transports` INNER JOIN `fluo_types` ON `fluo_transports`.`id_types` = `fluo_types`.`id_types` 
+          INNER JOIN `fluo_location_choice` AS `fluo_location_choice_aller` 
+          ON `fluo_transports`.`id_location_choice_start` = `fluo_location_choice_aller`.`id_location_choice` 
+          INNER JOIN `fluo_location_choice` AS `fluo_location_choice_retour` 
+          ON `fluo_transports`.`id_location_choice_end` = `fluo_location_choice_retour`.`id_location_choice`  
+          WHERE id_users=:id_users;');
+
+        $resultTrajets = $this->database->prepare($query);
+        $resultTrajets->bindValue(':id_users', $this->id_users, PDO::PARAM_INT);
+        $resultTrajets->execute();
+        $arraytrajetUser = $resultTrajets->fetchAll(PDO::FETCH_OBJ);
+
+        return  $arraytrajetUser;
     }
 }
