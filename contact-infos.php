@@ -1,5 +1,5 @@
 <?php
-session_start(); // On démarre la session AVANT toute chose
+require_once 'controllers/controllerContactTrajets.php';
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +24,8 @@ session_start(); // On démarre la session AVANT toute chose
         <header>
             <!-- header et navbar -->
             <?php include 'nav.php'; ?>
-        </header>
-        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos informations : </h1>
+            </header>
+        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Joindre le colibri : </h1>
         <div class="col s12 m12 l12">
                                     <table>
                                         <thead class="highlight blue-grey-text text-blue-grey darken-3">
@@ -34,14 +34,25 @@ session_start(); // On démarre la session AVANT toute chose
                                                 <th>NOM</th>
                                                 <th>ADRESSE MAIL</th>
                                                 <th>N° DE TÉLÉPHONE</th>
-                                                <th>ADRESSE</th>
                                                 <th></th>
                                             </tr>
                                         </thead>                  
+                                        <tbody class="highlight blue-grey-text text-blue-grey darken-3">
+                                            <tr>
+                                            <td><?= $ContactObj->firstName; ?></td>
+                                            <td></td>
+                                            <td><?= $ContactObj->lastName; ?></td>
+                                            <td></td>
+                                            <td><?= $ContactObj->email; ?></td>
+                                            <td></td>
+                                            <td><?= $ContactObj->tel; ?></td>
+                                            <td></td>
+                                                <td><button><a href="liste-trajets.php" class="waves-effect waves-light btn-small white-text blue-grey">Retour</a></button></td>
+                                            </tr>   
+                                        </tbody>
                                     </table>
+                                    <table>
                                 </div>
-                            </div>
-                        </div>
         <?php include 'actionBtn.php'; ?>
         
         <div class="whiteSapce200"></div>
