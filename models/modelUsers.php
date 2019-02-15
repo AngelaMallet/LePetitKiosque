@@ -105,4 +105,15 @@ class users extends database
 
         return $queryResult->execute();
     }
+
+    public function infosContact()
+    {
+        $query = 'SELECT * FROM fluo_users WHERE id_users =:id_users';
+        $verifUser = $this->database->prepare($query);
+        $verifUser->bindValue(':id_users', $this->id_users, PDO::PARAM_INT);
+        $verifUser->execute();
+        $infosUser = $verifUser->fetch(PDO::FETCH_OBJ);
+
+        return $infosUser;
+    }
 }

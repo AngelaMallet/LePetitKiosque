@@ -39,14 +39,10 @@ require_once 'controllers/controllerContactTrajets.php';
                                         </thead>                  
                                         <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                                             <tr>
-                                            <td><?= $ContactObj->firstName; ?></td>
-                                            <td></td>
-                                            <td><?= $ContactObj->lastName; ?></td>
-                                            <td></td>
-                                            <td><?= $ContactObj->email; ?></td>
-                                            <td></td>
-                                            <td><?= $ContactObj->tel; ?></td>
-                                            <td></td>
+                                            <td><?= $ArrayContact->firstName; ?></td>
+                                            <td><?= $ArrayContact->lastName; ?></td>
+                                            <td><?= $ArrayContact->email; ?></td>
+                                            <td><?= $ArrayContact->tel; ?></td>
                                                 <td><button><a href="liste-trajets.php" class="waves-effect waves-light btn-small white-text blue-grey">Retour</a></button></td>
                                             </tr>   
                                         </tbody>

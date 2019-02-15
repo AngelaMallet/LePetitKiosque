@@ -43,8 +43,8 @@
                         </div>
                         <p>Vous êtes au bon endroit !</p>
                         <div class="whiteSapce100"></div>
-                        <a href="offerFormDate.php" class="waves-effect waves-red btn-small deep-orange darken-1">Offrir une place</a>
-                        <a class="waves-effect waves-red btn-small deep-orange darken-1">Voir les offres</a>
+                        <a href="trajetForm.php" class="waves-effect waves-red btn-small deep-orange darken-1">Offrir une place</a>
+                        <a href="liste-trajets.php" class="waves-effect waves-red btn-small deep-orange darken-1">Voir les offres</a>
 
                     </div>
 
