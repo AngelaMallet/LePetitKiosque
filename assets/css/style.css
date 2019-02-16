@@ -412,15 +412,27 @@ th {
     color: #e4625b;
 }
 .dotdot {
-    height: 25px;
-    width: 25px;
+    height: 15px;
+    width: 15px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     margin-bottom: -3rem;
     box-shadow: 2px 2px 2px grey;
   }
- 
+  .dotdot2 {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    box-shadow: 2px 2px 2px grey;
+    display: inline-block;
+    margin-bottom: -3rem;
+    -ms-transform: rotate(45deg); /* Internet Explorer */
+    -moz-transform: rotate(45deg); /* Firefox */
+    -webkit-transform: rotate(45deg); /* Safari et Chrome */
+    -o-transform: rotate(45deg); /* Opera */
+  }
+
 #imgDate {
     padding-bottom: 2rem;
     max-width: 30rem;

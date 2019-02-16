@@ -36,6 +36,11 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                         src="https://3ofvx46qtnlmlz7at9pt1ba-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2019/01/undraw_usability_testing_2xs4.png">
                 </div>
                 <div class="card-stacked">
+                <div class="row  center-align">
+                    <div class="col s12 m12 l12">
+                        <span class="dotdot2"></span>
+                            </div>
+                        </div>
                     <div class="card-content">
                         <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos informations :
                         </h1>

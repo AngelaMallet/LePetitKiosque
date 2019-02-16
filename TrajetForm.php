@@ -26,7 +26,7 @@ require_once 'controllers/controllerAjoutTrajet.php';
     
 
     <div class="col s12 m6 center-align">
-                        <h1>Pour offrir une ou plusieurs places dans votre voiture, il vous suffit de remplir le formulaire ci-dessous.</h1>
+                        <h1>Pour offrir une place dans votre voiture, il vous suffit de remplir le formulaire ci-dessous.</h1>
                         <p><mark>En trois étapes :</mark></p>    
                 </div>
 

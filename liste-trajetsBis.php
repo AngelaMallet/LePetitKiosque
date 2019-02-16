@@ -29,7 +29,7 @@ require_once 'controllers/controllerListTrajets.php';
             <div class="col s12 m12">
     <div class="card horizontal">
       <div class="card-image  rightBorder">
-        <img src="../LePetitKiosque/assets/coco3.jpg" height="100%">
+        <img src="https://i.pinimg.com/564x/12/60/a2/1260a28caf76080b22c4cb50b3803103.jpg?b=t" height="100%">
       </div>
       <div class="card-stacked">
         <div class="card-content">
