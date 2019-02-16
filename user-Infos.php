@@ -1,6 +1,6 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
-require_once 'controllers/controllerUserLoginTrajet.php';
+require_once 'controllers/controllerUserLoginTrajetBis.php';
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +50,7 @@ require_once 'controllers/controllerUserLoginTrajet.php';
                                             </tr>
                                         </tbody>
                                     </table>
+        </div>
                                     <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos Trajets : </h1>
         <div class="col s12 m12 l12">
                     <table>
@@ -95,8 +96,9 @@ require_once 'controllers/controllerUserLoginTrajet.php';
                     ?>
                                     </table>
                                 </div>
-                            </div>
-                        </div>
+    
+                            
+                        
         <?php include 'actionBtn.php'; ?>
 
         <div class="whiteSapce200"></div>

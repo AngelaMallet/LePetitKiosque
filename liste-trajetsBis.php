@@ -26,11 +26,18 @@ require_once 'controllers/controllerListTrajets.php';
             <?php include 'nav.php'; ?>
         </header>
         <div class="container">
-            <div class="row">
-                <h1>Liste des trajets : </h1>
-                <div class="col s12 m6 l10">
-                    <table>
-                        <thead class="highlight blue-grey-text text-blue-grey darken-3">
+            <div class="col s12 m12">
+    <div class="card horizontal">
+      <div class="card-image  rightBorder">
+        <img src="https://i.pinimg.com/564x/12/60/a2/1260a28caf76080b22c4cb50b3803103.jpg?b=t" height="100%">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+        <div class="row">
+                <h1 class="center-align">Liste des trajets : </h1>
+                <div class="col s12 m6 l12">
+                    <table class="highlight">
+                        <thead class="blue-grey-text text-blue-grey darken-3">
                             <tr>
                                 <th>SERVICE</th>
                                 <th></th>
@@ -51,9 +58,9 @@ require_once 'controllers/controllerListTrajets.php';
                     foreach ($listTrajetArray as $rowtrajets) {
                         ?>
                         
-                        <tbody class="highlight blue-grey-text text-blue-grey darken-3">
+                        <tbody class="blue-grey-text text-blue-grey darken-3">
                             <tr>
-                                <td><?= $rowtrajets->typesName; ?></td>
+                                <td><b><?= $rowtrajets->typesName; ?></b></td>
                                 <td></td>
                                 <td><?= $rowtrajets->date; ?></td>
                                 <td></td>
@@ -75,12 +82,16 @@ require_once 'controllers/controllerListTrajets.php';
                 
             </div>
                     </table>
-                </div>
-            </div>
-                </div>
-            </div>
         </div>
-
+        <div class="card-action center-align">
+        <a class="blue-grey-text text-blue-grey darken-3" href="index.php">Retour</a>
+        </div>
+      </div>
+    </div>
+  </div>
+            
+                </div>
+      
         <?php include 'actionBtn.php'; ?>
             
         <div class="whiteSapce200"></div>

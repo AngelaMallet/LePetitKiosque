@@ -17,6 +17,7 @@
                 <ul id='dropdown1' class='dropdown-content'>
                     <?php if (!isset($_SESSION['id_users'])) {
     ?>
+                        <li><a class=" blue-grey-text accent-1 center-align" href="index.php">Inscription</a></li>
                         <li><a class=" blue-grey-text accent-1 center-align" href="userLogin.php">Log In</a></li>
                     <?php
 } else {

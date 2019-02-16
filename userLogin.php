@@ -40,8 +40,9 @@ if (!isset($_SESSION)) {
             <div class=" col s12 l12 center-align">
                 <h2 class="errorMessageUserLogin"><mark><?= 'Login ou mot de passe incorrect'; ?></mark></h2>
             </div>
-            <h1 class="formTitle center-align red-text text-red accent-1">Votre compte</h1>
+           
             <div class="container center-align">
+           <h1 class="formTitle center-align red-text text-red accent-1">Merci de vous identifier :</h1>
                 <div class="row">
                     <form id="formUser" method="POST" class="col s12 offset-l2 l8 offset-l2 " action="userLogin.php" >
                         <div class="row input-field col s12 l6">
@@ -68,8 +69,9 @@ if (!isset($_SESSION)) {
 } else {
         ?>
       
-        <h1 class="formTitle center-align red-text text-red accent-1">Votre compte</h1>
+        
         <div class="container center-align">
+        <h1 class="formTitle center-align red-text text-red accent-1">Merci de vous identifier :</h1>
             <div class="row">
                 <form id="formUser" method="POST" class="col s12 offset-l2 l8 offset-l2 " action="userLogin.php" >
                     <div class="row input-field col s12 l6">

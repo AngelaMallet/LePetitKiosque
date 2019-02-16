@@ -326,12 +326,27 @@ Zone css formulaire
     font-size: 1rem;
 }
 
+.rightBorder {
+    background-color: white;
+    border-right: .1rem rgb(172, 172, 187) solid;
+    box-shadow: 3px 0px 0px rgba(22, 22, 22, 0.568);
+    font-size: 1rem;  
+}
+
 .forecast {
     margin: 3rem;
     padding: .3rem;
     background-color: white;
-    border-top: .3rem #e4625b solid;
+    border-top: .3rem rgb(172, 172, 187) solid;
     font-size: 1rem;
+}
+
+.forecast2 { /* Dans user-info en responsive*/
+    margin: 3rem;
+    background-color: white;
+    border-top: .3rem rgb(172, 172, 187) solid;
+    font-size: 1rem;
+    line-height: 3.5em;
 }
 
 mark {
@@ -348,6 +363,30 @@ h4 {
     font-size: 1.3rem;
     font-weight: lighter;
     
+}
+
+#btnHrefUserInfos {
+    border-radius: .3rem;
+    border-top: .2rem rgb(71, 92, 102) double;   
+    border-bottom: .2rem rgb(71, 92, 102) double;   
+    padding: .5rem 1rem 0.5rem 1rem;
+}
+
+#btnHrefUserInfos2 {
+    border-radius: .3rem;
+    border-top: .2rem rgb(71, 92, 102) double;   
+    border-bottom: .2rem rgb(71, 92, 102) double;   
+    padding: .5rem 1rem 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+#cardRadiusUserInfos {
+    border: .2rem #FF8A80 solid;
+    background-color: antiquewhite;
+}
+
+th {
+    color: rgb(71, 92, 102);
 }
 
 /* carte de gauche sur l'index car image de plus petite taille */
@@ -381,13 +420,16 @@ h4 {
     margin: 3rem;
 }
 
-
+.highlight :hover{
+    background-color:#FCF8F7;
+}
 
 #imgDepart {
     padding-bottom: 2rem;
     max-width: 23rem;
     max-height: 30rem;
 }
+
 /* materialize.css */
 
 /* * Comme la dite marge est exprimée en pourcentage,

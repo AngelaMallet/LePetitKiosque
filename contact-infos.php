@@ -27,7 +27,7 @@ require_once 'controllers/controllerContactTrajets.php';
             </header>
         <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Joindre le colibri : </h1>
         <div class="col s12 m12 l12">
-                                    <table>
+                                    <table class="responsive-table">
                                         <thead class="highlight blue-grey-text text-blue-grey darken-3">
                                             <tr>
                                                 <th>PRÉNOM</th>

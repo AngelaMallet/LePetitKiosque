@@ -28,13 +28,30 @@ session_destroy();
         <header>
            
         </header>
-        <h1>Vous avez été deconnecté</h1>
-        <a  href="index.php">retour</a>
+<div class="container center-align blue-grey-text text-blue-grey darken-3">
+        <div class="col s12 m12 l12">
+    <div class="card horizontal">
+      <div class="card-stacked">
+      <div class="col s12 m12 l12">
+        <img src="assets/logout.png" alt="image logOut" height="150" width="150" class="rignt-align">
+      </div>
+        <div class="card-content">
+        <h1 class="header">Vous avez été deconnecté</h1>
+        </div>
+        <div class="card-action">
+          <a class="blue-grey-text text-blue-grey darken-3" href="index.php"><mark>retour</mark></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
         <?php include 'actionBtn.php'; ?>
         
-        <div class="whiteSapce200"></div>
-        <!-- debut du footer -->
-         <?php include 'footer.php'; ?>
+    
+      
+</div>
+  <!-- debut du footer -->
+  <?php include 'footer.php'; ?>
         <!-- fin du footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
         <script type="text/javascript" src="assets/js/materialize.min.js"></script>

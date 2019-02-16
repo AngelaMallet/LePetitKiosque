@@ -116,4 +116,16 @@ class users extends database
 
         return $infosUser;
     }
+
+    public function userInformations()
+    {
+        $query = ('SELECT * FROM fluo_users WHERE id_users=:id_users;');
+
+        $resultTrajets = $this->database->prepare($query);
+        $resultTrajets->bindValue(':id_users', $this->id_users, PDO::PARAM_INT);
+        $resultTrajets->execute();
+        $arrayinfoUser = $resultTrajets->fetchAll(PDO::FETCH_OBJ);
+
+        return  $arrayinfoUser;
+    }
 }
