@@ -15,11 +15,7 @@
         <title>CauxLibri</title>
     </head>
     <body>
-
-
-
-
-        <div class="row">
+<div class="row">
             <div class="col s12 m6">
 
                 <div class="cardImgFunnyFAce">
@@ -42,9 +38,10 @@
                             </ul>
                         </div>
                         <p>Vous êtes au bon endroit !</p>
-                        <div class="whiteSapce100"></div>
+                        <div class="whiteSapce100 hide-on-small-only"></div>
                         <a href="trajetForm.php" class="waves-effect waves-red btn-small deep-orange darken-1">Offrir une place</a>
-                        <a href="liste-trajets.php" class="waves-effect waves-red btn-small deep-orange darken-1">Voir les offres</a>
+                        <div class="whiteSapce100 hide-on-med-and-up"></div>
+                        <a href="liste-trajetsBis.php" class="waves-effect waves-red btn-small deep-orange darken-1">Voir les offres</a>
 
                     </div>
 

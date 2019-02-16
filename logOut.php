@@ -36,10 +36,10 @@ session_destroy();
         <img src="assets/logout.png" alt="image logOut" height="150" width="150" class="rignt-align">
       </div>
         <div class="card-content">
-        <h1 class="header">Vous avez été deconnecté</h1>
+        <h1 class="header">Vous êtes deconnecté</h1>
         </div>
         <div class="card-action">
-          <a class="blue-grey-text text-blue-grey darken-3" href="index.php"><mark>retour</mark></a>
+          <a class="blue-grey-text text-blue-grey darken-3" href="index.php"><mark>Accueil</mark></a>
         </div>
       </div>
     </div>

@@ -36,8 +36,12 @@ session_start(); // On démarre la session AVANT toute chose
                 <h1>CAUX<i>libri</i></h1>
 
                 <div class="row">
-                    <div class="col s12 l12">
-                        <img id="imgHead" class="responsive-img hide-on-small-only" src="assets/navigationBis.png"
+                <div class="col s12 l12 hide-on-med-and-up">
+                        <img class="responsive-img" src="assets/navigationBis.png"
+                            alt="image haut de page" />
+                    </div>
+                    <div class="col s12 l12 hide-on-small-only">
+                        <img id="imgHead" src="assets/navigationBis.png"
                             alt="image haut de page" />
                     </div>
                 </div>
@@ -62,8 +66,9 @@ session_start(); // On démarre la session AVANT toute chose
 
 
         <div class="row">
-            <div class="modal-content center-align forecast">
-
+        <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3 forecast">
+            <div class="modal-content center-align">
+            </div>
                 <?php include 'cards.php'; ?>
             </div>
 

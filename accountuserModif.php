@@ -73,13 +73,14 @@ require_once 'controllers/controllerModifUsers.php';
                             </div>
                             
                             <div class="row input-field col s12 l12 right-align">
+                                <label id="labelAddressModif" class="hide-on-small-only">Votre adresse : </label>
                                 <input name="address" value="<?= isset($address) ? $address : ($_SESSION['address']); ?>" id="address" type="address" class="active">
-                                <label id="labelAddressModif">Votre adresse : </label>
                                 <p class="css" id="addressNameField"><?= isset($formError['address']) ? $formError['address'] : ''; ?></p>
                             </div>
                             <div class="row input-field col s12 l12">
                                 <button id="submitFormValidBtn" class="modal-close waves-effect waves-light btn red accent-2 modal-trigger" type="submit" name="submitFormModif">Valider</button>
                             </div>
+                            <a class="blue-grey-text text-blue-grey darken-3" href="user-infosBis.php">Annuler</a>
                             <!-- ... <p><a id="linkForm" href="index.php">Vous êtes déjà inscrit?</a></p>-->
                         </form>
                     </div>

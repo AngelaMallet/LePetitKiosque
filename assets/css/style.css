@@ -358,6 +358,7 @@ mark {
     font-size: 1rem;
 }
 
+
 h4 {
     padding: 3rem;
     font-size: 1.3rem;
@@ -410,7 +411,16 @@ th {
 .colorLink {
     color: #e4625b;
 }
-
+.dotdot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: -3rem;
+    box-shadow: 2px 2px 2px grey;
+  }
+ 
 #imgDate {
     padding-bottom: 2rem;
     max-width: 30rem;
@@ -430,6 +440,11 @@ th {
     max-height: 30rem;
 }
 
+/* infos-usersBis img */
+
+.card.horizontal .card-image {
+    height: 30%;
+  }
 /* materialize.css */
 
 /* * Comme la dite marge est exprimée en pourcentage,

@@ -31,7 +31,7 @@ require_once 'controllers/controllerAjoutTrajet.php';
                 </div>
 
             <div class="row articleTrajetForm">
-            <nav class="dot" id="services">
+            <nav class="dot hide-on-small-only" id="services">
                 <div class="nav-wrapper red acent-1">
                     <div class="col s12">
                         <a href="#services" class="breadcrumb white-text"><b>1.SERVICES</b></a>
@@ -44,18 +44,18 @@ require_once 'controllers/controllerAjoutTrajet.php';
                 <div class="col s12 m4 ">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img src="assets/covoiturage.png">
+                            <img class="responsive-img" src="assets/covoiturage.png">
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4">
+                <div class="col s12 m4 hide-on-small-only">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img src="assets/mapShop.png">
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4">
+                <div class="col s12 m4 hide-on-small-only">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img src="assets/school.png">
@@ -86,7 +86,34 @@ require_once 'controllers/controllerAjoutTrajet.php';
                     </div>
             </div>
 
-            <div class="row articleTrajetForm">
+            <div class="row articleTrajetForm hide-on-med-and-up">
+            <div class="row">
+            <div class="col s12 m4 l4 left-align">
+                            <h1><mark>DATES & HEURES</mark></h1>
+                            <h2>Merci de choisir date & heure.</h2>
+                            <p>Pour le départ de votre trajet</p>
+                        </div>
+                    <div>
+                        <div class="col s12 m12 l12">
+                            <img class="responsive-img" src="../LePetitKiosque/assets/date.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="row input-field col s12 l6"> 
+                            <input name="date" value="<?= (isset($trajetObj->date)) ? $trajetObj->date : ''; ?>" id ="date" type = "date" class = "datepicker" />
+                            <label>Veuillez choisir la date du trajet :</label>
+                            <p class="NotValid" id="dateNameField"><?=isset($formError['date']) ? $formError['date'] : ''; ?></p>
+                        </div>
+                        <div class="row input-field col s12 l6">
+                            <input name="hour" value="<?= (isset($trajetObj->hour)) ? $trajetObj->hour : ''; ?>" id="appt-time" type="time">
+                            <label for="appt-time">Veuillez choisir l'heure du départ :</label>
+                            <p class="NotValid" id="hourField"><?=isset($formError['hour']) ? $formError['hour'] : ''; ?></p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="row articleTrajetForm hide-on-small-only">
                     <nav class="dot" id="date">
                 <div class="nav-wrapper red acent-1">
                     <div class="col s12">
@@ -103,7 +130,7 @@ require_once 'controllers/controllerAjoutTrajet.php';
                             <h2>Merci de choisir date & heure.</h2>
                             <p>Pour le départ de votre trajet</p>
                         </div>
-                    <div class="hide-on-small-only">
+                    <div>
                         <div class="col s12 m12 l12 center-align">
                             <img class="responsive-img" id="imgDate" src="../LePetitKiosque/assets/date.png">
                         </div>
@@ -123,7 +150,7 @@ require_once 'controllers/controllerAjoutTrajet.php';
                     </div>
             </div>
                     <div class="row articleTrajetForm">
-                    <nav class="dot" id="depart">
+                    <nav class="dot hide-on-small-only" id="depart">
                 <div class="nav-wrapper red acent-1">
                     <div class="col s12">
                         <a href="#services" class="breadcrumb">1.SERVICES</a>

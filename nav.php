@@ -6,7 +6,7 @@
             <a href="index.php"  class="brand-logo hide-on-large-only left"><img id="miniLogo" src="assets/colibri565.png" /></a>
             <ul class="right">
                 <li class="active"><li><a href="index.php" class="white-text text-red accent-1 hide-on-med-and-down">Accueil</a></li>
-                <li><a href="liste-trajets.php" class="white-text text-red accent-1">Trajets disponibles</a></li>
+                <li><a href="liste-trajetsBis.php" class="white-text text-red accent-1">Trajets disponibles</a></li>
                 <li><a href="TrajetForm.php" class="white-text text-red accent-1 spinner">Offrir une place</a></li>
                 <li><a href="projet.php" class="white-text text-red accent-1">Le projet</a></li>
                 <li><a href="#contact" class="white-text text-red accent-1">contact</a></li>
@@ -22,7 +22,7 @@
                     <?php
 } else {
         ?>
-                    <li><a class=" blue-grey-text accent-1 center-align" href="user-infos.php">Votre espace</a></li>
+                    <li><a class=" blue-grey-text accent-1 center-align" href="user-infosBis.php">Votre espace</a></li>
                     <li><a class=" blue-grey-text accent-1 center-align" href="logOut.php">Deconnexion</a></li>
                     <?php
     } ?>

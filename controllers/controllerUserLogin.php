@@ -38,7 +38,7 @@ if (count($formError) == 0 && isset($_POST['logBtn'])) {
             $_SESSION['email'] = $infosUser->email;
             $_SESSION['tel'] = $infosUser->tel;
             $_SESSION['address'] = $infosUser->address;
-            $extra = 'user-infos.php';
+            $extra = 'user-infosBis.php';
             header("Location: http://localhost:8888/LePetitKiosque/$extra");
             exit;
         }

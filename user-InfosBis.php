@@ -46,8 +46,6 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                                         <th>PRÉNOM</th>
                                         <th>NOM</th>
                                         <th>ADRESSE MAIL</th>
-                                        <th>N° DE TÉLÉPHONE</th>
-                                        <th>ADRESSE</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -56,6 +54,18 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                                         <td><?=isset($_SESSION['firstName']) ? $_SESSION['firstName'] : ''; ?></td>
                                         <td><?=isset($_SESSION['lastName']) ? $_SESSION['lastName'] : ''; ?></td>
                                         <td><?=isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?></td>
+                                    </tr>
+                                </tbody>
+                                <thead class="highlight blue-grey-text text-blue-grey darken-3">
+                                    <tr>
+                                        <th>TÉLÉPHONE</th>
+                                        <th>ADRESSE</th>
+                                        <th>PROFIL</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="highlight blue-grey-text text-blue-grey darken-3">
+                                    <tr>
                                         <td><?=isset($_SESSION['tel']) ? $_SESSION['tel'] : ''; ?></td>
                                         <td><?=isset($_SESSION['address']) ? $_SESSION['address'] : ''; ?></td>
                                         <td><button><a href="accountuserModif.php"
@@ -66,12 +76,15 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                             </table>
                         </div>
                     </div>
-                    <div class="col s12 m7">
-                        <div class="card horizontal">
+                        <div class="card horizontal" >
                             <div class="card-stacked">
-                                <div class="card-content">
-                                    <div class="col s12 m12 l12 forecast">
-                                        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos
+                            <div class="row  center-align">
+                    <div class="col s12 m12 l12">
+                        <span class="dotdot"></span>
+                            </div>
+                        </div>
+                              <div class="col s12 m12 l12 forecast">
+                         <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos
                                             Trajets : </h1>
                                         <table>
                                             <thead class="highlight blue-grey-text text-blue-grey darken-3">
@@ -86,7 +99,9 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                                                     <th></th>
                                                     <th>ARRIVÉE</th>
                                                     <th></th>
-                                                    <th>CONTACT</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -124,14 +139,14 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                                             ?>
                                         </table>
                                     </div>
-                                </div>
+                               
                                 <div class="card-action center-align">
                                     <a id="btnHrefUserInfos" class="blue-grey-text text-blue-grey darken-3"
                                         href="TrajetForm.php">Ajouter un trajet</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -153,7 +168,7 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                                         <p><?=isset($_SESSION['lastName']) ? $_SESSION['lastName'] : ''; ?></p>
                                         <p><mark>ADRESSE MAIL</mark></p>
                                         <p><?=isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?></p>
-                                        <p><mark>N° DE TÉLÉPHONE</mark></p>
+                                        <p><mark>TÉLÉPHONE</mark></p>
                                         <p><?=isset($_SESSION['tel']) ? $_SESSION['tel'] : ''; ?></p>
                                         <p><mark>ADRESSE</mark></p>
                                         <p><?=isset($_SESSION['address']) ? $_SESSION['address'] : ''; ?></p>
