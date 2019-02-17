@@ -49,12 +49,29 @@ Les liens au survol, au focus, et actifs : on leur donne la couleur corail
 color: #ff8a65;
 }*/
 .spinner {
-    background-color: #e4625b;
-    border-radius: 100%;  
-    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-    animation: sk-scaleout 1.0s infinite ease-in-out;
+    text-decoration: underline overline rgb(245, 175, 173);
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
+.souligner {
+    text-decoration: underline overline #FFFF00;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* bouton dans la navbar */
+
+[data-target] {
+    background-image: linear-gradient(45deg, rgb(255, 154, 158) 0%, rgb(250, 208, 196) 99%, rgb(250, 208, 196) 100%);
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px; 
+  }
 
 #cardList{
     margin-left: 50px;
@@ -134,6 +151,21 @@ h2.h2account{
     text-align: center;
     color: coral;
 }
+
+/*nav {
+    background: -webkit-linear-gradient(-1deg, rgb(221, 214, 211), rgb(174, 174, 174));
+    background: linear-gradient(-1deg, rgb(221, 214, 211), rgb(174, 174, 174));
+    background: -webkit-linear-gradient(-1deg, rgb(221, 214, 211), rgb(174, 174, 174));
+    }
+*/
+nav {
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+
+/* inline_style_edits.inline.css */
+/* inline_style_edits.inline.css */
+
+
 #navLogo{
     margin-left: 25px;
     margin-top: 10px;
@@ -322,7 +354,7 @@ Zone css formulaire
     margin-top: 8rem;
     padding-bottom: 3rem;
     background-color: white;
-    border-top: .3rem #e4625b solid;
+    border-top: .3rem rgb(172, 172, 187) solid;
     font-size: 1rem;
 }
 
@@ -358,14 +390,14 @@ Zone css formulaire
 
 
 mark {
-    background-color: rgb(172, 172, 187);
-    color: white;
     padding: 1rem;
     border-radius: .5rem;
     margin-bottom: 1.3rem;
     font-size: 1rem;
 }
-
+ .rotate {
+    transform: rotate(-4deg);
+ }
 
 h4 {
     padding: 3rem;
@@ -413,17 +445,22 @@ th {
     margin-bottom: 3rem;
 }
 
+#paddingBtnCard {
+    margin-top: 2rem;
+}
+
 .formTitle {
     margin: 0;
 }
+
+
+.formTitle2 {
+    margin: 2rem;
+}
 /* style.css */
 
-
-#btnInscriptionProjet {
-    margin:-8rem;
-}
 .colorLink {
-    color: #e4625b;
+    color: #bbb;
 }
 .dotdot {
     height: 15px;
@@ -460,7 +497,6 @@ th {
 
 
 #imgDate {
-    padding-bottom: 2rem;
     max-width: 30rem;
     max-height: 30rem;
 }

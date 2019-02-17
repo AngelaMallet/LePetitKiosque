@@ -23,20 +23,20 @@ require_once 'controllers/controllerAjoutTrajet.php';
 <body>
     <?php include 'nav.php'; ?>
     <div class="container center-align">
-    
+
 
     <div class="col s12 m6 center-align">
                         <h1>Pour offrir une place dans votre voiture, il vous suffit de remplir le formulaire ci-dessous.</h1>
-                        <p><mark>En trois étapes :</mark></p>    
+                        <p class="rotate"><mark>En trois étapes :</mark></p>
                 </div>
 
             <div class="row articleTrajetForm">
             <nav class="dot hide-on-small-only" id="services">
-                <div class="nav-wrapper red acent-1">
+                <div class="nav-wrapper white">
                     <div class="col s12">
-                        <a href="#services" class="breadcrumb white-text"><b>1.SERVICES</b></a>
-                        <a href="#date" class="breadcrumb">2.DATE</a>
-                        <a href="#depart" class="breadcrumb">3.DÉPART  &  ARRIVÉE</a>
+                        <a href="#services" class="breadcrumb grey-text text-grey lighten-1"><b>1.SERVICES</b></a>
+                        <a href="#date" class="breadcrumb grey-text text-grey lighten-1">2.DATE</a>
+                        <a href="#depart" class="breadcrumb grey-text text-grey lighten-1">3.DÉPART  &  ARRIVÉE</a>
                         <a></a>
                     </div>
                 </div>
@@ -70,18 +70,18 @@ require_once 'controllers/controllerAjoutTrajet.php';
                             <p>Voici une liste des services les plus fréquents.</p>
                         </div>
                         <div class="col s6 m4 l4 left-align">
-                            <h1><mark>SERVICES</mark></h1>
+                            <h1 class="souligner">SERVICES</h1>
                             <?php
-                            foreach ($arrayGetService as $rowService) {
-                                ?>
+foreach ($arrayGetService as $rowService) {
+    ?>
                                 <span>
                          <label>
-                                    <input class="with-gap" name="id_types" value="<?= $rowService->id_types; ?>" type="radio" />
-                                    <span><?= $rowService->typesName; ?></span>
+                                    <input class="with-gap" name="id_types" value="<?=$rowService->id_types; ?>" type="radio" />
+                                    <span><?=$rowService->typesName; ?></span>
                                 </label>
                            </span>
                             <?php
-                            } ?>
+}?>
                         </div>
                     </div>
             </div>
@@ -89,24 +89,22 @@ require_once 'controllers/controllerAjoutTrajet.php';
             <div class="row articleTrajetForm hide-on-med-and-up">
             <div class="row">
             <div class="col s12 m4 l4 left-align">
-                            <h1><mark>DATES & HEURES</mark></h1>
+                            <h1 class="souligner"> DATES & HEURES</h1>
                             <h2>Merci de choisir date & heure.</h2>
                             <p>Pour le départ de votre trajet</p>
                         </div>
-                    <div>
-                        <div class="col s12 m12 l12">
-                            <img class="responsive-img" src="../LePetitKiosque/assets/date.png">
-                        </div>
-                    </div>
+                        <div>
+                        <img class="responsive-img" src="../LePetitKiosque/assets/date.png">
+               </div>
                 </div>
                 <div class="row">
-                        <div class="row input-field col s12 l6"> 
-                            <input name="date" value="<?= (isset($trajetObj->date)) ? $trajetObj->date : ''; ?>" id ="date" type = "date" class = "datepicker" />
+                        <div class="row input-field col s12 l6">
+                            <input name="date" value="<?=(isset($trajetObj->date)) ? $trajetObj->date : ''; ?>" id ="date" type = "date" class = "datepicker" />
                             <label>Veuillez choisir la date du trajet :</label>
                             <p class="NotValid" id="dateNameField"><?=isset($formError['date']) ? $formError['date'] : ''; ?></p>
                         </div>
                         <div class="row input-field col s12 l6">
-                            <input name="hour" value="<?= (isset($trajetObj->hour)) ? $trajetObj->hour : ''; ?>" id="appt-time" type="time">
+                            <input name="hour" value="<?=(isset($trajetObj->hour)) ? $trajetObj->hour : ''; ?>" id="appt-time" type="time">
                             <label for="appt-time">Veuillez choisir l'heure du départ :</label>
                             <p class="NotValid" id="hourField"><?=isset($formError['hour']) ? $formError['hour'] : ''; ?></p>
                         </div>
@@ -115,34 +113,33 @@ require_once 'controllers/controllerAjoutTrajet.php';
 
             <div class="row articleTrajetForm hide-on-small-only">
                     <nav class="dot" id="date">
-                <div class="nav-wrapper red acent-1">
+                <div class="nav-wrapper white">
                     <div class="col s12">
-                        <a href="#services" class="breadcrumb">1.SERVICES</a>
-                        <a href="#date" class="breadcrumb white-text"><b>2.DATE</b></a>
-                        <a href="#depart" class="breadcrumb">3.DÉPART & ARRIVÉE</a>
+                        <a href="#services" class="breadcrumb grey-text text-grey lighten-1">1.SERVICES</a>
+                        <a href="#date" class="breadcrumb grey-text text-grey lighten-1"><b>2.DATE</b></a>
+                        <a href="#depart" class="breadcrumb grey-text text-grey lighten-1">3.DÉPART & ARRIVÉE</a>
                         <a></a>
                     </div>
                 </div>
             </nav>
             <div class="row">
+            <img class="responsive-img" id="imgDate" src="../LePetitKiosque/assets/date.png">
             <div class="col s12 m4 l4 left-align">
-                            <h1><mark>DATES & HEURES</mark></h1>
+                            <h1 class="souligner"> DATES & HEURES</h1>
                             <h2>Merci de choisir la date & <br> l'heure de départ.</h2>
+                            
                         </div>
-                    <div>
-                        <div class="col s12 m12 l12 center-align">
-                            <img class="responsive-img" id="imgDate" src="../LePetitKiosque/assets/date.png">
-                        </div>
-                    </div>
+                 
+                    
                 </div>
                 <div class="row">
-                        <div class="col s12 offset-l3 l3"> 
-                            <input name="date" value="<?= (isset($trajetObj->date)) ? $trajetObj->date : ''; ?>" id ="date" type = "date" class = "datepicker" />
+                        <div class="col s12 offset-l3 l3">
+                            <input name="date" value="<?=(isset($trajetObj->date)) ? $trajetObj->date : ''; ?>" id ="date" type = "date" class = "datepicker" />
                             <label>Veuillez choisir la date du trajet :</label>
                             <p class="NotValid" id="dateNameField"><?=isset($formError['date']) ? $formError['date'] : ''; ?></p>
                         </div>
                         <div class="col s12 l3">
-                            <input name="hour" value="<?= (isset($trajetObj->hour)) ? $trajetObj->hour : ''; ?>" id="appt-time" type="time">
+                            <input name="hour" value="<?=(isset($trajetObj->hour)) ? $trajetObj->hour : ''; ?>" id="appt-time" type="time">
                             <label for="appt-time">Veuillez choisir l'heure du départ :</label>
                             <p class="NotValid" id="hourField"><?=isset($formError['hour']) ? $formError['hour'] : ''; ?></p>
                         </div>
@@ -150,11 +147,11 @@ require_once 'controllers/controllerAjoutTrajet.php';
             </div>
                     <div class="row articleTrajetForm">
                     <nav class="dot hide-on-small-only" id="depart">
-                <div class="nav-wrapper red acent-1">
+                <div class="nav-wrapper white">
                     <div class="col s12">
-                        <a href="#services" class="breadcrumb">1.SERVICES</a>
-                        <a href="#date" class="breadcrumb">2.DATE</a>
-                        <a href="#depart" class="breadcrumb  white-text"><b>3.DÉPART & ARRIVÉE</b></a>
+                        <a href="#services" class="breadcrumb grey-text text-grey lighten-1">1.SERVICES</a>
+                        <a href="#date" class="breadcrumb grey-text text-grey lighten-1">2.DATE</a>
+                        <a href="#depart" class="breadcrumb grey-text text-grey lighten-1"><b>3.DÉPART & ARRIVÉE</b></a>
                         <a></a>
                     </div>
                 </div>
@@ -167,51 +164,51 @@ require_once 'controllers/controllerAjoutTrajet.php';
                             </div>
                         </div>
                         <div class="col s12 m4 l4 left-align">
-                            <h1><mark>DÉPART</mark></h1>
+                            <h1 class="souligner">DÉPART</h1>
                             <?php
-                            foreach ($arrayGetLocation as $rowStartLocation) {
-                                ?>
+foreach ($arrayGetLocation as $rowStartLocation) {
+        ?>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="id_location_choice" value="<?= $rowStartLocation->id_location_choice; ?>" type="radio" />
-                                    <span><?= $rowStartLocation->location_choice_name; ?></span>
+                                    <input class="with-gap" name="id_location_choice" value="<?=$rowStartLocation->id_location_choice; ?>" type="radio" />
+                                    <span><?=$rowStartLocation->location_choice_name; ?></span>
                                 </label>
                             </p>
                             <?php
-                            } ?>
+    }?>
 
                         </div>
                         <div class="col s12 m4 l4 left-align">
-                            <h1><mark>ARRIVÉE</mark></h1>
+                            <h1 class="souligner">ARRIVÉE</h1>
                             <?php
-                            foreach ($arrayGetLocationEnd as $rowArrivalLocation) {
-                                ?>
+foreach ($arrayGetLocationEnd as $rowArrivalLocation) {
+        ?>
                             <p>
                                 <label>
-                                    <input class="with-gap" name="id_location_choice_fluo_location_choice" value="<?= $rowArrivalLocation->id_location_choice; ?>" type="radio" />
-                                    <span><?= $rowArrivalLocation->location_choice_name; ?></span>
+                                    <input class="with-gap" name="id_location_choice_fluo_location_choice" value="<?=$rowArrivalLocation->id_location_choice; ?>" type="radio" />
+                                    <span><?=$rowArrivalLocation->location_choice_name; ?></span>
                                 </label>
                             </p>
                             <?php
-                            } ?>
+    }?>
 
                         </div>
-                            
-                        
+
+
                     </div>
                     <div class="row input-field col s12 l12" id="submitFormTrajetBtn">
-        <button class="waves-effect waves-light btn-large red acent-1" type="submit" name="submitFormTrajet">VALIDER<i class="material-icons right">send</i></button>
+        <button class="waves-effect waves-light btn-large blue-grey lighten-3" type="submit" name="submitFormTrajet">VALIDER<i class="material-icons right">send</i></button>
         <p><a class="colorLink" href="index.php">Annuler</a></p>
     </div>
-  
+
      </form>
-    
+
      <?php include 'actionBtn.php'; ?>
                     </div>
                     <?php include 'footer.php'; ?>
 
-       
-    
+
+
 </body>
 <!-- fin du footer -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

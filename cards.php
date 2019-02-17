@@ -39,9 +39,9 @@
                         </div>
                         <p>Vous êtes au bon endroit !</p>
                         <div class="whiteSapce100 hide-on-small-only"></div>
-                        <a href="trajetForm.php" class="waves-effect waves-red btn-small deep-orange darken-1">Offrir une place</a>
-                        <div class="whiteSapce100 hide-on-med-and-up"></div>
-                        <a href="liste-trajetsBis.php" class="waves-effect waves-red btn-small deep-orange darken-1">Voir les offres</a>
+                        <a href="trajetForm.php" class="waves-effect waves-red btn-small blue-grey lighten-3">Offrir une place</a>
+                        <a href="liste-trajetsBis.php" class="waves-effect waves-red btn-small blue-grey lighten-3 hide-on-med-and-down">Voir les trajets</a>
+                        <a href="liste-trajetsBis.php" class="waves-effect waves-red btn-small blue-grey lighten-3 hide-on-med-and-up" id="paddingBtnCard">Voir les trajets</a>
 
                     </div>
 

@@ -71,9 +71,12 @@ if (!isset($_SESSION)) {
       
         
         <div class="container center-align">
-        <h1 class="formTitle center-align red-text text-red accent-1">Merci de vous identifier :</h1>
+        <h1 class="formTitle2 center-align red-text text-red accent-1">Merci de vous identifier :</h1>
             <div class="row">
-                <form id="formUser" method="POST" class="col s12 offset-l2 l8 offset-l2 " action="userLogin.php" >
+            <div class="col s12 m12 l12">
+                               <img class="responsive-img" src="assets/valide.png" width="200" height="200">
+                               </div>
+                <form id="formUser" method="POST" class="col s12 offset-l2 l8 offset-l2 forecast3" action="userLogin.php" >
                     <div class="row input-field col s12 l6">
                         <input name="email" value = "" id = "email" type="text" class = "active" />
                         <label for="email">Email</label>

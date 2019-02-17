@@ -59,7 +59,7 @@ session_start(); // On démarre la session AVANT toute chose
                         D'accompagner d'autres enfants du même village quand nous allons chercher notre enfant au
                         collège ou lycée.
                         Et pourquoi ne pas prendre une personne agée avec nous pour nous rendre dans le village voisin
-                        faire ses courses?<strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
+                        faire ses courses?<br><strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
                 </div>
             </div>
         </div>

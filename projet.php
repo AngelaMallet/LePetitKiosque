@@ -1,7 +1,7 @@
 
 <?php
 session_start(); // On démarre la session AVANT toute chose
-include ('indexController.php');
+include 'indexController.php';
 // header qui change en fonction d'une variable
 if ((count($formError) == 0) && isset($_POST['submit'])) {
     header('Location:account.php');
@@ -36,10 +36,10 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
         
         <div id="projetFrame" class="container center-align">
             <div class="row">
-                <div class="col s12 m6 left-align">
+                <div class="col s12 m6 left-align blue-grey-text text-blue-grey darken-3">
                     <h1 id="projetH1">La légende du colibri</h1>
                     <div class="col s12 m8 left-align">
-                        <blockquote class="projetText">“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</blockquote>
+                        <blockquote class="projetText blue-grey-text text-blue-grey darken-3">“Un jour, dit la légende, il y eut un immense incendie de forêt. Tous les animaux terrifiés, atterrés, observaient impuissants le désastre. Seul le petit colibri s’activait, allant chercher quelques gouttes avec son bec pour les jeter sur le feu. Après un moment, le tatou, agacé par cette agitation dérisoire, lui dit : « Colibri ! Tu n’es pas fou ? Ce n’est pas avec ces gouttes d’eau que tu vas éteindre le feu ! »</blockquote>
                         <h6 class="center-align">Et le colibri lui répondit :</h6>
                         <h6 class="center-align">« <i>Je le sais, mais je fais ma part.</i> »”</h6>
                     </div>
@@ -50,12 +50,12 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="col s12 m12 l12">
-                    <p class="projetText">
-                        Tout est parti d’un constat, j’habite un village près du Havre dépourvu de transports en commun :
-                        - Plusieurs parents du même village viennent chercher leurs enfants au collège.
-                        - Au quotidien, nous sommes nombreux à nous déplacer vers Le Havre.
-                        - Les médecins et les pharmacies sont situés dans le village voisin.
-                        La problématique est « comment mutualiser nos déplacements ? »
+                    <p class="projetText blue-grey-text text-blue-grey darken-3">
+                        <b>Tout est parti d’un constat, j’habite un village près du Havre dépourvu de transports en commun :</b><br>
+                        - Plusieurs parents du même village viennent chercher leurs enfants au collège.<br>
+                        - Au quotidien, nous sommes nombreux à nous déplacer vers Le Havre.<br>
+                        - Les médecins et les pharmacies sont situés dans le village voisin.<br>
+                        La problématique est « comment mutualiser nos déplacements ? »<br>
                         Offrir une place dans son véhicule n’est que du bon sens pour les sorties d’écoles et les déplacements quotidiens. Il suffit de faire le choix du partage et d’en être informé.
                         Il faut aussi prendre en compte que l'isolement est inévitable pour une personne non motorisée dans un village. Lui donner la possibilité de se déplacer de nouveau rompt aussitôt cette situation subie.
                         C’est en réponse à ce constat que le site CAUXlibri est né.
@@ -68,7 +68,7 @@ if ((count($formError) != 0) && isset($_POST['submit'])) {
             <?php include 'actionBtn.php'; ?>
             <div class="row">
                 <div class="col s12 l12 center-align">
-                    <a href="index.php" class="modal-close waves-effect waves-light btn-large blue-grey" id="btnInscriptionProjet">Inscription</a>
+                    <a href="index.php" class="modal-close waves-effect waves-light btn-large blue-grey" id="btnInscriptionProjet">Accueil</a>
                 </div>
             </div>
         </div>
