@@ -26,7 +26,7 @@
 } else {
         ?>
 
-<form id="form" method="POST" class="col s12 l12" action="index.php">
+<form id="form2" method="POST" class="col s12 l12" action="index.php">
     <h1 class="formTitle center-align red-text text-red accent-1">Formulaire d'inscription</h1>
     
     <div class="row input-field col s12 l6">

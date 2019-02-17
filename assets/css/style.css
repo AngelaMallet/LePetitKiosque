@@ -265,11 +265,6 @@ button{
     padding: 0px;
 }
 
-#submitFormValidBtn {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
 
 #address {
     width: 450px;
@@ -295,10 +290,19 @@ modal1
 }
 /* inline_style_edits.inline.css */
 
+#submitFormValidBtn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+
+#form2 {
+    margin-top: 0;
+}
 
 
 #form {
-    margin-top: -30px;
+    margin-top: 5rem;
 }
 /* label color */
 .input-field label {
