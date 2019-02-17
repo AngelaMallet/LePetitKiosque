@@ -318,7 +318,7 @@ Zone css formulaire
 */
 
 .articleTrajetForm {
-    margin: 3rem;
+    margin: unset;
     margin-top: 8rem;
     padding-bottom: 3rem;
     background-color: white;
@@ -348,6 +348,14 @@ Zone css formulaire
     font-size: 1rem;
     line-height: 3.5em;
 }
+
+.forecast3 { /* Dans user-info en responsive*/
+    margin: 3rem;
+    background-color: rgb(250, 250, 250);
+    font-size: 1rem;
+    line-height: 3.5em;
+}
+
 
 mark {
     background-color: rgb(172, 172, 187);
@@ -405,6 +413,12 @@ th {
     margin-bottom: 3rem;
 }
 
+.formTitle {
+    margin: 0;
+}
+/* style.css */
+
+
 #btnInscriptionProjet {
     margin:-8rem;
 }
@@ -417,21 +431,33 @@ th {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    margin-bottom: -3rem;
     box-shadow: 2px 2px 2px grey;
+    margin-bottom: 0px;
   }
-  .dotdot2 {
+  .dotdotdot {
     height: 15px;
     width: 15px;
     background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 2px 2px 2px grey;
+    margin-bottom:-1.5rem;
+  }
+
+  .dotdot2 {
+    height: 12px;
+    width: 12px;
+    background-color: rgb(187, 187, 187);
     box-shadow: 2px 2px 2px grey;
     display: inline-block;
-    margin-bottom: -3rem;
+    margin-bottom: -1.5rem;
     -ms-transform: rotate(45deg); /* Internet Explorer */
     -moz-transform: rotate(45deg); /* Firefox */
     -webkit-transform: rotate(45deg); /* Safari et Chrome */
     -o-transform: rotate(45deg); /* Opera */
   }
+
+
 
 #imgDate {
     padding-bottom: 2rem;
@@ -447,7 +473,6 @@ th {
 }
 
 #imgDepart {
-    padding-bottom: 2rem;
     max-width: 23rem;
     max-height: 30rem;
 }
@@ -457,6 +482,15 @@ th {
 .card.horizontal .card-image {
     height: 30%;
   }
+
+
+/* padding sur la page trajetForm au niveau des services */
+
+.hide-on-small-only .left-align {
+    padding: 5rem;
+    padding-bottom: inherit;
+  }
+
 /* materialize.css */
 
 /* * Comme la dite marge est exprimée en pourcentage,
@@ -466,4 +500,15 @@ th {
     .container {
         width: 85%;
     }
+
+
 }
+
+    hr {
+        border: none;
+       width: 16rem; 
+       height: .3rem;
+       margin-top: 1rem;
+       margin-bottom: 1rem;
+       background-color: rgb(217, 255, 5);  
+    }

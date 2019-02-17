@@ -69,17 +69,17 @@ require_once 'controllers/controllerAjoutTrajet.php';
                             <h2>Merci de choisir votre Service.</h2>
                             <p>Voici une liste des services les plus fréquents.</p>
                         </div>
-                        <div class="col s12 m4 l4 left-align">
+                        <div class="col s6 m4 l4 left-align">
                             <h1><mark>SERVICES</mark></h1>
                             <?php
                             foreach ($arrayGetService as $rowService) {
                                 ?>
-                            <p>
-                                <label>
+                                <span>
+                         <label>
                                     <input class="with-gap" name="id_types" value="<?= $rowService->id_types; ?>" type="radio" />
                                     <span><?= $rowService->typesName; ?></span>
                                 </label>
-                            </p>
+                           </span>
                             <?php
                             } ?>
                         </div>
@@ -127,8 +127,7 @@ require_once 'controllers/controllerAjoutTrajet.php';
             <div class="row">
             <div class="col s12 m4 l4 left-align">
                             <h1><mark>DATES & HEURES</mark></h1>
-                            <h2>Merci de choisir date & heure.</h2>
-                            <p>Pour le départ de votre trajet</p>
+                            <h2>Merci de choisir la date & <br> l'heure de départ.</h2>
                         </div>
                     <div>
                         <div class="col s12 m12 l12 center-align">
@@ -137,12 +136,12 @@ require_once 'controllers/controllerAjoutTrajet.php';
                     </div>
                 </div>
                 <div class="row">
-                        <div class="row input-field col s12 l6"> 
+                        <div class="col s12 offset-l3 l3"> 
                             <input name="date" value="<?= (isset($trajetObj->date)) ? $trajetObj->date : ''; ?>" id ="date" type = "date" class = "datepicker" />
                             <label>Veuillez choisir la date du trajet :</label>
                             <p class="NotValid" id="dateNameField"><?=isset($formError['date']) ? $formError['date'] : ''; ?></p>
                         </div>
-                        <div class="row input-field col s12 l6">
+                        <div class="col s12 l3">
                             <input name="hour" value="<?= (isset($trajetObj->hour)) ? $trajetObj->hour : ''; ?>" id="appt-time" type="time">
                             <label for="appt-time">Veuillez choisir l'heure du départ :</label>
                             <p class="NotValid" id="hourField"><?=isset($formError['hour']) ? $formError['hour'] : ''; ?></p>
@@ -163,7 +162,7 @@ require_once 'controllers/controllerAjoutTrajet.php';
                         <div class="col s12 m4 l4 left-align">
                             <h2>Merci de choisir votre point de départ et votre point d'arrivée.</h2>
                             <p>Voici une liste des trajets les plus fréquents.</p>
-                            <div class="hide-on-small-only">
+                            <div>
                                 <img class="responsive-img" id="imgDepart" src="../LePetitKiosque/assets/from.png">
                             </div>
                         </div>
