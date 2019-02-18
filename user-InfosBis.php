@@ -138,8 +138,7 @@ foreach ($arraytrajetUser as $rowUserTrajets) {
                                                                 class="waves-effect waves-light btn-small white-text blue-grey lighten-2">Supprimer</a></button>
                                                     </td>
                                                     <td></td>
-                                                    <td class="center-align"><button><a
-                                                                href="TrajetFormModif.php?id=<?=$rowUserTrajets->id_users; ?>"
+                                                    <td class="center-align"><button><a href="TrajetFormModif.php?id_transports=<?= $rowUserTrajets->id_transports; ?>"
                                                                 class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button>
                                                     </td>
                                                     <td></td>

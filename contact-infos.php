@@ -32,7 +32,7 @@ require_once 'controllers/controllerContactTrajets.php';
             <div class="col s12 m12 l12" id="divContactInfos" >
                <div class="card-content"  id="contactInfosCard">
                             <div class="row center-align">
-                                <img class="responsive-img" src="assets/contact.png" width="300" height="300">
+                                <img class="responsive-img" src="assets/contact.png" width="300" height="00">
                             </div>
                             <div class="row center-align">
                                 <h1 class="header soulignerSansJaune">Coordonnées du Colibri</h1>

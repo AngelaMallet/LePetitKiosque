@@ -9,10 +9,10 @@ $infoUserObj = new users();
 
 if (isset($_SESSION['id_users'])) {
     $trajetUserObj->id_users = $_SESSION['id_users'];
+    $arraytrajetUser = $trajetUserObj->userTrajetsInfos();
 }
-$arraytrajetUser = $trajetUserObj->userTrajetsInfos();
 
 if (isset($_SESSION['id_users'])) {
     $infoUserObj->id_users = $_SESSION['id_users'];
+    $arrayinfoUser = $infoUserObj->userInformations();
 }
-$arrayinfoUser = $infoUserObj->userInformations();

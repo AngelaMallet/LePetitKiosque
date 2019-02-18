@@ -23,6 +23,8 @@ class transports extends database
     public $id_location_choice;
     public $location_choice_name;
     public $id_location_choice_fluo_location_choice;
+    public $id_location_choice_start;
+    public $id_location_choice_end;
 
     public function addTrajet()
     { //addTrajet est une méthode avec la requête
@@ -85,7 +87,7 @@ class transports extends database
 
     public function userTrajetsInfos()
     {
-        $query = ('SELECT `fluo_types`.`typesName`, `fluo_location_choice_aller`.`location_choice_name` AS
+        $query = ('SELECT `fluo_transports`.`id_transports`, `fluo_types`.`typesName`, `fluo_location_choice_aller`.`location_choice_name` AS
          `location_choice_name_aller`, `fluo_location_choice_retour`.`location_choice_name` AS 
          `location_choice_name_retour`, DATE_FORMAT( `fluo_transports`.`date`, "%d/%m/%Y") AS `date`, DATE_FORMAT(`fluo_transports`.`hour`, "%H:%i") AS `hour`,`fluo_transports`.`id_users` FROM
           `fluo_transports` INNER JOIN `fluo_types` ON `fluo_transports`.`id_types` = `fluo_types`.`id_types` 
@@ -101,5 +103,29 @@ class transports extends database
         $arraytrajetUser = $resultTrajets->fetchAll(PDO::FETCH_OBJ);
 
         return  $arraytrajetUser;
+    }
+
+    public function modifTrajet()
+    {
+        $queryResult = $this->database->prepare('UPDATE `fluo_transports` SET `id_types` = :id_types, `id_date` = :id_date, `id_hour` = :id_hour, `id_location_choice_start` = :id_location_choice_start, `id_location_choice_end` = :id_location_choice_end
+        WHERE id_users=:id_users;');
+
+        $queryResult->bindValue(':id_users', $_SESSION['id_users'], PDO::PARAM_INT);
+        $queryResult->bindValue(':date', $this->date, PDO::PARAM_STR);
+        $queryResult->bindValue(':hour', $this->hour, PDO::PARAM_STR);
+        $queryResult->bindValue(':id_types', $this->id_types, PDO::PARAM_INT);
+        $queryResult->bindValue(':id_location_choice_start', $this->id_location_choice_start, PDO::PARAM_INT);
+        $queryResult->bindValue(':id_location_choice_end', $this->id_location_choice_end, PDO::PARAM_INT);
+
+        return $queryResult->execute();
+    }
+
+    public function displayUserTrajet() //Pour récuperer les trajets les traje
+    {
+        $queryResult = $this->database->prepare('SELECT * FROM `fluo_transports` WHERE `id_transports` = :id_transports');
+        $queryResult->bindValue(':id_transports', $_SESSION['id_transports'], PDO::PARAM_INT);
+        $queryResult->execute();
+
+        return $queryResult->fetch(PDO::FETCH_OBJ);
     }
 }
