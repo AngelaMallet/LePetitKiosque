@@ -64,6 +64,15 @@ color: #ff8a65;
     margin-right: 1rem;
 }
 
+.soulignerSansJaune {
+    margin-top: -2rem;
+    font-size: 1.2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 /* bouton dans la navbar */
 
 [data-target] {
@@ -160,6 +169,11 @@ h2.h2account{
 */
 nav {
     background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+
+#divContactInfos { 
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 /* inline_style_edits.inline.css */
@@ -295,15 +309,34 @@ modal1
     padding-right: 1rem;
   }
 
+  #btnListe-trajetsBis {
+      margin: 3rem;
+  }
 
+#backgroundColorListTrajets {
+    background-color: #FFF;
+    border-top: .3rem solid rgb(136, 136, 133);
+}
+
+/*
+#borderForm {
+    border: .2rem solid #8e919c;   
+}
+*/
 #form2 {
     margin-top: 0;
 }
 
-
-#form {
-    margin-top: 5rem;
+.paddingListeTrajets {
+    padding-left: 3rem;
 }
+
+#baselineContact {
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
 /* label color */
 .input-field label {
     color: #000;
@@ -409,6 +442,18 @@ h4 {
     font-weight: lighter;
     
 }
+
+/* inline_style_edits.inline.css */
+
+#contactInfosCard {
+    margin: 100px 300px;
+    background-color: rgb(255, 251, 251); 
+    display: inline-block;
+    box-shadow: 2px 2px 2px grey;
+    border-width: .5rem;
+    border-style: solid;
+    border-image: linear-gradient(#f78ca0 , #f7cb51) 30;
+  }
 
 #btnHrefUserInfos {
     border-radius: .3rem;
@@ -550,5 +595,5 @@ th {
        height: .3rem;
        margin-top: 1rem;
        margin-bottom: 1rem;
-       background-color: rgb(217, 255, 5);  
+       background-color: rgb(189, 189, 188);  
     }

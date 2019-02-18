@@ -68,7 +68,7 @@ class transports extends database
         //je fais ma requête dans une variable $query
         $query = ('SELECT `fluo_types`.`typesName`, `fluo_location_choice_aller`.`location_choice_name` AS `location_choice_name_aller`,
          `fluo_location_choice_retour`.`location_choice_name` AS `location_choice_name_retour`, 
-        DATE_FORMAT( `fluo_transports`.`date`, "%d/%m/%Y") AS date, `fluo_transports`.`hour`, `fluo_transports`.`id_users` 
+        DATE_FORMAT( `fluo_transports`.`date`, "%d/%m/%Y") AS date, DATE_FORMAT(`fluo_transports`.`hour`, "%H:%i") AS `hour`, `fluo_transports`.`id_users` 
          FROM `fluo_transports` INNER JOIN `fluo_types` ON `fluo_transports`.`id_types` = `fluo_types`.`id_types` 
          INNER JOIN `fluo_location_choice` AS `fluo_location_choice_aller` 
          ON `fluo_transports`.`id_location_choice_start` = `fluo_location_choice_aller`.`id_location_choice` 
@@ -87,7 +87,7 @@ class transports extends database
     {
         $query = ('SELECT `fluo_types`.`typesName`, `fluo_location_choice_aller`.`location_choice_name` AS
          `location_choice_name_aller`, `fluo_location_choice_retour`.`location_choice_name` AS 
-         `location_choice_name_retour`, DATE_FORMAT( `fluo_transports`.`date`, "%d/%m/%Y") AS date, `fluo_transports`.`hour`, `fluo_transports`.`id_users` FROM
+         `location_choice_name_retour`, DATE_FORMAT( `fluo_transports`.`date`, "%d/%m/%Y") AS `date`, DATE_FORMAT(`fluo_transports`.`hour`, "%H:%i") AS `hour`,`fluo_transports`.`id_users` FROM
           `fluo_transports` INNER JOIN `fluo_types` ON `fluo_transports`.`id_types` = `fluo_types`.`id_types` 
           INNER JOIN `fluo_location_choice` AS `fluo_location_choice_aller` 
           ON `fluo_transports`.`id_location_choice_start` = `fluo_location_choice_aller`.`id_location_choice` 

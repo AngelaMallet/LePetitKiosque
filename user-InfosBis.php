@@ -100,7 +100,7 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                        <table>
                                             <thead class="highlight blue-grey-text text-blue-grey darken-3">
                                                 <tr>
-                                                    <th>SERVICE</th>
+                                                    <th class="paddingListeTrajets">SERVICE</th>
                                                     <th></th>
                                                     <th>DATE</th>
                                                     <th></th>
@@ -110,9 +110,9 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                                                     <th></th>
                                                     <th>ARRIVÉE</th>
                                                     <th></th>
+                                                    <th class="center-align"><i class="small material-icons">delete_sweep</i></th>
                                                     <th></th>
-                                                    <th></th>
-                                                    <th></th>
+                                                    <th class="center-align"><i class="small material-icons">autorenew</i></th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -123,7 +123,7 @@ foreach ($arraytrajetUser as $rowUserTrajets) {
 
                                             <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                                                 <tr>
-                                                    <td><?=$rowUserTrajets->typesName; ?></td>
+                                                    <td class="paddingListeTrajets"><?=$rowUserTrajets->typesName; ?></td>
                                                     <td></td>
                                                     <td><?=$rowUserTrajets->date; ?></td>
                                                     <td></td>
@@ -133,13 +133,13 @@ foreach ($arraytrajetUser as $rowUserTrajets) {
                                                     <td></td>
                                                     <td><?=$rowUserTrajets->location_choice_name_retour; ?></td>
                                                     <td></td>
-                                                    <td><button><a
+                                                    <td class="center-align"><button><a
                                                                 href="contact-infos.php?id=<?=$rowUserTrajets->id_users; ?>"
                                                                 class="waves-effect waves-light btn-small white-text blue-grey lighten-2">Supprimer</a></button>
                                                     </td>
                                                     <td></td>
-                                                    <td><button><a
-                                                                href="contact-infos.php?id=<?=$rowUserTrajets->id_users; ?>"
+                                                    <td class="center-align"><button><a
+                                                                href="TrajetFormModif.php?id=<?=$rowUserTrajets->id_users; ?>"
                                                                 class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button>
                                                     </td>
                                                     <td></td>
@@ -152,8 +152,7 @@ foreach ($arraytrajetUser as $rowUserTrajets) {
                                     </div>
 
                                 <div class="card-action center-align">
-                                    <a id="btnHrefUserInfos" class="blue-grey-text text-blue-grey darken-3"
-                                        href="TrajetForm.php">Ajouter un trajet</a>
+                                    <a id="btnHrefUserInfos" class="blue-grey-text text-blue-grey darken-3" href="TrajetForm.php">Ajouter un trajet</a>
                                 </div>
                             </div>
                         </div>
