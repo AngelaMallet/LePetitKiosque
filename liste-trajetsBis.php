@@ -89,7 +89,7 @@ require_once 'controllers/controllerListTrajets.php';
                     </table>
                 </div>
                 <div class="card-action center-align" id="btnListe-trajetsBis">
-                    <a href="index.php" class="waves-effect waves-light btn-large blue-grey lighten-3">Retour</a>
+                    <a href="index.php" class="waves-effect waves-light btn-small blue-grey lighten-3">Retour</a>
                 </div>
             </div>
 

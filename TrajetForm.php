@@ -197,7 +197,7 @@ foreach ($arrayGetLocationEnd as $rowArrivalLocation) {
 
                     </div>
                     <div class="row input-field col s12 l12" id="submitFormTrajetBtn">
-        <button class="waves-effect waves-light btn-large blue-grey lighten-3" type="submit" name="submitFormTrajet">VALIDER<i class="material-icons right">send</i></button>
+        <button class="waves-effect waves-light btn-large blue-grey lighten-3" type="submit" name="submitFormTrajet">VALIDER</button>
         <p><a class="colorLink" href="index.php">Annuler</a></p>
     </div>
 

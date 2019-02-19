@@ -17,7 +17,7 @@
                             <li><a class="white-text text-lighten-3" href="#!">Compte client</a></li>
                             <li><a class="white-text text-lighten-3" href="#!">Les trajets diponibles</a></li>
                             <li><a class="white-text text-lighten-3" href="index.php#offer">Offrir une place</a></li>
-                            <li><a class="white-text text-lighten-3" href="projet.php">Le projet</a></li>
+                            <li><a class="white-text text-lighten-3" href="leProjet.php">Le projet</a></li>
                         </ul>
                     </div>
                     <div class="container-fluid p-0">

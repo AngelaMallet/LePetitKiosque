@@ -8,7 +8,7 @@
                 <li class="active"><li><a href="index.php" class="white-text  hide-on-med-and-down">Accueil</a></li>
                 <li><a href="liste-trajetsBis.php" class="white-text ">Trajets disponibles</a></li>
                 <li><a href="TrajetForm.php" class="white-text spinner">Offrir une place</a></li>
-                <li><a href="projet.php" class="white-text">Le projet</a></li>
+                <li><a href="leProjet.php" class="white-text">Le projet</a></li>
                 <li><a href="#contact" class="white-text">contact</a></li>
                 <!-- Dropdown Trigger -->
 

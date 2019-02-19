@@ -32,7 +32,7 @@ require_once 'controllers/controllerModifTrajet.php';
             <img class="responsive-img" src="assets/car.png" width="200" height="200">
         </div>
 
-        <form method="POST" class="col s12 m12 l12" action="TrajetForm.php">
+        <form method="POST" class="col s12 m12 l12" action="">
             <div class="row">
                 <div class="col s6 m12 l12 center-align">
                     <h1 class="souligner">SERVICES</h1>
@@ -104,8 +104,8 @@ require_once 'controllers/controllerModifTrajet.php';
             </div>
             <div class="row input-field col s12 l12" id="submitFormTrajetBtn">
         <button class="waves-effect waves-light btn-large blue-grey lighten-3" type="submit"
-            name="submitModifTrajet">VALIDER<i class="material-icons right">send</i></button>
-        <p><a class="colorLink" href="index.php">Annuler</a></p>
+            name="submitModifTrajet">VALIDER</button>
+        <p><a class="colorLink" href="user-infosBis.php">Annuler</a></p>
         </form>
     </div>
     </div>

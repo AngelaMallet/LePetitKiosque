@@ -55,11 +55,11 @@ if (isset($_POST['id_location_choice_end'])) {
 }
 
 if (count($formError) == 0 && isset($_POST['submitModifTrajet'])) {
-    $trajetObj->id_users = $_SESSION['id_users'];
     $trajetObj->date = $date;
     $trajetObj->hour = $hour;
     $trajetObj->id_types = $id_types;
     $trajetObj->id_location_choice_start = $id_location_choice_start;
     $trajetObj->id_location_choice_end = $id_location_choice_end;
     $trajetObj->modifTrajet();
+    echo $date.' '.$hour.' '.$id_types.' '.$id_location_choice_start.' '.$id_location_choice_end;
 }

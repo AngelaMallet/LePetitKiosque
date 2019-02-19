@@ -107,10 +107,9 @@ class transports extends database
 
     public function modifTrajet()
     {
-        $queryResult = $this->database->prepare('UPDATE `fluo_transports` SET `id_types` = :id_types, `id_date` = :id_date, `id_hour` = :id_hour, `id_location_choice_start` = :id_location_choice_start, `id_location_choice_end` = :id_location_choice_end
-        WHERE id_users=:id_users;');
+        $queryResult = $this->database->prepare('UPDATE `fluo_transports` SET `id_types` = :id_types, `date` = :date, `hour` = :hour, `id_location_choice_start` = :id_location_choice_start, `id_location_choice_end` = :id_location_choice_end WHERE id_transports=:id_transports;');
 
-        $queryResult->bindValue(':id_users', $_SESSION['id_users'], PDO::PARAM_INT);
+        $queryResult->bindValue(':id_transports', $_SESSION['id_transports'], PDO::PARAM_INT);
         $queryResult->bindValue(':date', $this->date, PDO::PARAM_STR);
         $queryResult->bindValue(':hour', $this->hour, PDO::PARAM_STR);
         $queryResult->bindValue(':id_types', $this->id_types, PDO::PARAM_INT);
@@ -120,7 +119,7 @@ class transports extends database
         return $queryResult->execute();
     }
 
-    public function displayUserTrajet() //Pour récuperer les trajets les traje
+    public function displayUserTrajet() //Pour récuperer les trajets les trajets
     {
         $queryResult = $this->database->prepare('SELECT * FROM `fluo_transports` WHERE `id_transports` = :id_transports');
         $queryResult->bindValue(':id_transports', $_SESSION['id_transports'], PDO::PARAM_INT);
