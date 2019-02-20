@@ -27,10 +27,61 @@ require_once 'controllers/controllerContactTrajets.php';
         <!-- header et navbar -->
         <?php include 'nav.php'; ?>
     </header>
-    <div class="container">
+    <div class="container hide-on-small-only">
         <div class="row blue-grey-text text-blue-grey darken-3">
             <div class="col s12 m12 l12" id="divContactInfos" >
                <div class="card-content"  id="contactInfosCard">
+                            <div class="row center-align">
+                                <img class="responsive-img" src="assets/contact.png" width="300" height="00">
+                            </div>
+                            <div class="row center-align">
+                                <h1 class="header soulignerSansJaune">Coordonnées du Colibri</h1>
+                                <p id="baselineContact"><i>pour finaliser votre trajet</i></p>
+                            </div>
+                            <form id="form" method="POST" class="col s12 m12 offset-l2 l8 offset-l2"
+                                action="accountuserModif.php">
+
+                                <div class="row input-field col s12 l8 offset-l2">
+                                    <label><i class="tiny material-icons">account_circle</i>Prénom</label>
+                                    <input name="firstName" disabled value="<?=$ArrayContact->firstName; ?>"
+                                        id="firstName" type="text" class="active" />
+                                </div>
+                                <div class="row input-field col s12 l8 offset-l2">
+                                    <label><i class="tiny material-icons">face</i>Nom</label>
+                                    <input name="lastName" disabled value="<?=$ArrayContact->lastName; ?>" id="lastName"
+                                        type="text" class="active" />
+
+                                </div>
+                                <div class="row input-field col s12 l8 offset-l2">
+                                    <label><i class="tiny material-icons">mail</i>Adresse mail</label>
+                                    <input name="email" disabled value="<?=$ArrayContact->email; ?>" id="email"
+                                        type="email" class="active">
+
+                                </div>
+                                <div class="row input-field col s12 l8 offset-l2">
+                                    <label><i class="tiny material-icons">local_phone</i>Téléphone</label>
+                                    <input name="tel" disabled value="<?=$ArrayContact->tel; ?>" id="tel" type="tel"
+                                        maxlength="10" size="10" class="active">
+                                </div>
+                                <div class="row col s12 l12 center-align">
+                                    <a class="blue-grey-text text-blue-grey darken-3"
+                                        href="liste-trajetsBis.php">RETOUR</a>
+                                    <!-- ... <p><a id="linkForm" href="index.php">Vous êtes déjà inscrit?</a></p>-->
+                                </div>
+                            </form>
+
+                        </div>
+                    
+               
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container hide-on-med-and-up">
+        <div class="row blue-grey-text text-blue-grey darken-3">
+            <div class="col s12 m12 l12">
+               <div class="card-content">
                             <div class="row center-align">
                                 <img class="responsive-img" src="assets/contact.png" width="300" height="00">
                             </div>

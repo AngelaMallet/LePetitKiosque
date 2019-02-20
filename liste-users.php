@@ -30,42 +30,42 @@ require_once 'controllers/controllerListAllUsers.php';
         <div class="row">
             <h1>Liste des colibris : </h1>
             <div class="col s12 m6 l10">
-                <table>
-                    <thead class="highlight blue-grey-text text-blue-grey darken-3">
+                <table class="responsive-table">
+                    <thead class="blue-grey-text text-blue-grey darken-3">
                         <tr>
                             <th>NOM</th>
-                            <th></th>
+                           
                             <th>PRÉNOM</th>
-                            <th></th>
+                            
                             <th>E-MAIL</th>
-                            <th></th>
+                            
                             <th>TÉLÉPHONE</th>
-                            <th></th>
+                            
                             <th>DÉTAILS</th>
-                            <th></th>
+                            
                             <th>CERTIFIÉ</th>
-                            <th></th>
+                            
                         </tr>
                     </thead>
+                    <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                     <?php
                     // On affiche chaque entrée une à une
                     foreach ($listUsersArray as $usersList) {
                         ?>
 
-                    <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                         <tr>
                             <td><?=$usersList->firstName; ?></td>
-                            <td></td>
+                            
                             <td><?=$usersList->lastName; ?></td>
-                            <td></td>
+                            
                             <td><?=$usersList->email; ?></td>
-                            <td></td>
+                           
                             <td><?=$usersList->tel; ?></td>
-                            <td></td>
+                            
                             <td><button><a href="user-InfosBis.php?id=<?=$usersList->id_users; ?>"
                                         class="waves-effect waves-light btn-small white-text blue-grey">Informations</a></button>
                             </td>
-                            <td></td>
+                           
                             <td id="certifiedListeUsers" >
                                 <form method="POST" action="">
                                     <label>
@@ -76,28 +76,24 @@ require_once 'controllers/controllerListAllUsers.php';
                                         <input class="with-gap" name="certified<?=$usersList->id_users; ?>" type="radio" value="1" <?= $usersList->certified == 1 ? 'checked' : ''; ?> />
                                         <span>Oui</span>
                                     </label>
-                                    <button class="btn waves-effect waves-light" type="submit" name="certifiedStatut" value="<?=$usersList->id_users; ?>">Envoyer</button>
+                                    <button class="btn-floating btn-small waves-effect waves-light white-text blue-grey" type="submit" name="certifiedStatut" value="<?=$usersList->id_users; ?>"><i class="material-icons">beenhere</i></button>
                                 </form>
                             </td>
-                            <td></td>
+                           
                         </tr>
-                    </tbody>
+                   
                     <?php
                     }
                     ?>
+                     </tbody>
                 </table>
             </div>
 
         </div>
 
     </div>
-
-
-
     <?php include 'actionBtn.php'; ?>
-
-    <div class="whiteSapce200"></div>
-    <!-- debut du footer -->
+  <!-- debut du footer -->
     <?php include 'footer.php'; ?>
     <!-- fin du footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

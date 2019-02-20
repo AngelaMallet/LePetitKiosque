@@ -57,4 +57,6 @@ if (isset($_POST['id_location_choice_fluo_location_choice'])) {
         $trajetObj->id_location_choice = $id_location_choice;
         $trajetObj->id_location_choice_fluo_location_choice = $id_location_choice_fluo_location_choice;
         $trajetObj->addTrajet();
+        header('Location: user-infosBis.php');
+        exit;
     }

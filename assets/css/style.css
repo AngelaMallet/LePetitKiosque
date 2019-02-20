@@ -321,11 +321,7 @@ modal1
     border-top: .3rem solid rgb(136, 136, 133);
 }
 
-/*
-#borderForm {
-    border: .2rem solid #8e919c;   
-}
-*/
+
 #form2 {
     margin-top: 0;
 }
@@ -479,6 +475,7 @@ h4 {
 
 th {
     color: rgb(71, 92, 102);
+  
 }
 
 /* carte de gauche sur l'index car image de plus petite taille */
@@ -504,6 +501,9 @@ th {
     margin: 0;
 }
 
+#paddingBtnAddOnUserInfosBis{
+    padding-bottom: 3rem;
+}
 
 .formTitle2 {
     margin: 2rem;
@@ -580,6 +580,23 @@ th {
     padding-bottom: inherit;
   }
 
+
+/* btn rond pour les btn des liste */
+
+.btn-floating.btn-small {
+    margin-left: .3rem;
+  }
+  
+  .btn-small {
+    font-size: 8px;
+  }
+  
+  .btn-small i {
+    font-size: 1rem;
+    margin-left: 1re;
+  }
+
+
 /* materialize.css */
 
 /* * Comme la dite marge est exprimée en pourcentage,
@@ -588,10 +605,17 @@ th {
 @media only screen and (min-width: 993px){
     .container {
         width: 85%;
+        
     }
-
-
 }
+
+/* materialize.min.css */
+
+@media only screen and (max-width: 992px) {
+    table.responsive-table thead {
+      margin-left: -2rem;
+    }
+  }
 
     hr {
         border: none;
@@ -601,3 +625,9 @@ th {
        margin-bottom: 1rem;
        background-color: rgb(189, 189, 188);  
     }
+/* Modif de la page liste-trajetsBis en responsive */
+    @media only screen and (max-width: 992px) {
+        table.responsive-table thead {
+          margin-left: 0rem;
+        }
+      }

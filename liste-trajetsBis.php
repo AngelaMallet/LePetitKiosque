@@ -37,51 +37,49 @@ require_once 'controllers/controllerListTrajets.php';
                 <div class="card-content">
                     <div class="row center-align">
                         <h1 class="center-align souligner">Liste des trajets</h1>
-                        <img class="responsive-img" id="imgDate" src="../LePetitKiosque/assets/liste.png">
+                        <img class="responsive-img" src="../LePetitKiosque/assets/liste.png" height="250" width="250">
                         <div class="col s12 m6 l12">
-                            <table class="highlight" id="backgroundColorListTrajets">
-                                <thead class="blue-grey-text text-blue-grey darken-3" id="borderForm">
+                            <table class="responsive-table highlight" id="backgroundColorListTrajets">
+                                <thead class="blue-grey-text text-blue-grey darken-3">
                                     <tr>
-                                        <th class="paddingListeTrajets">SERVICE</th>
-                                        <th></th>
+                                        <th>SERVICE</th>
+
                                         <th>DATE</th>
-                                        <th></th>
+
                                         <th>HEURE</th>
-                                        <th></th>
+
                                         <th>DÉPART</th>
-                                        <th></th>
+
                                         <th>ARRIVÉE</th>
-                                        <th></th>
+
                                         <th>CONTACT</th>
-                                        <th></th>
+
                                     </tr>
                                 </thead>
-                                <?php
-                    // On affiche chaque entrée une à une
-                    foreach ($listTrajetArray as $rowtrajets) {
-                        ?>
-
                                 <tbody class="blue-grey-text text-blue-grey darken-3">
+                                    <?php
+                                    // On affiche chaque entrée une à une
+                                    foreach ($listTrajetArray as $rowtrajets) {
+                                        ?>
                                     <tr>
-                                        <td class="paddingListeTrajets"><b><?=$rowtrajets->typesName; ?></b></td>
-                                        <td></td>
+                                        <td><b><?=$rowtrajets->typesName; ?></b></td>
+
                                         <td><?=$rowtrajets->date; ?></td>
-                                        <td></td>
+
                                         <td><?=$rowtrajets->hour; ?></td>
-                                        <td></td>
+
                                         <td><?=$rowtrajets->location_choice_name_aller; ?></td>
-                                        <td></td>
+
                                         <td><?=$rowtrajets->location_choice_name_retour; ?></td>
-                                        <td></td>
+
                                         <td><button><a href="contact-infos.php?id=<?=$rowtrajets->id_users; ?>"
                                                     class="waves-effect waves-light btn-small white-text blue-grey">Détails</a></button>
                                         </td>
-                                        <td></td>
                                     </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </tbody>
-                                <?php
-                    }
-                    ?>
                             </table>
                         </div>
 

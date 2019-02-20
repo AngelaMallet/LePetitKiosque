@@ -19,7 +19,7 @@
             <div class="col s12 m6">
 
                 <div class="cardImgFunnyFAce">
-                    <img src="assets/undraw_smiley_face_lmgm.png" alt="image d'un smiley">
+                    <img src="assets/map.png" alt="image d'un smiley">
                 </div>
 
             </div>

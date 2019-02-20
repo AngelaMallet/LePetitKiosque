@@ -28,12 +28,11 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
         <!-- header et navbar -->
         <?php include 'nav.php'; ?>
     </header>
-    <div class="container hide-on-med-and-down">
-        <div class="col s12 m12 l12">
+    <div class="container">
+
             <div class="card horizontal">
                 <div class="card-image">
-                    <img
-                        src="https://3ofvx46qtnlmlz7at9pt1ba-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2019/01/undraw_usability_testing_2xs4.png">
+                    <img class="responsive-img" src="assets/car.png" width="200" height="200">
                 </div>
                 <div class="card-stacked">
                 <div class="row  center-align">
@@ -42,16 +41,15 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                             </div>
                         </div>
                     <div class="card-content">
-                        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos informations :
-                        </h1>
+                        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos informations</h1>
                         <div class="col s12 m12 l12">
-                            <table>
+                            <table class="responsive-table"">
                                 <thead class="highlight blue-grey-text text-blue-grey darken-3">
                                     <tr>
                                         <th>PRÉNOM</th>
                                         <th>NOM</th>
                                         <th>ADRESSE MAIL</th>
-                                        <th></th>
+                                       
                                     </tr>
                                 </thead>
                                 <tbody class="highlight blue-grey-text text-blue-grey darken-3">
@@ -66,16 +64,14 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                                         <th>TÉLÉPHONE</th>
                                         <th>ADRESSE</th>
                                         <th>PROFIL</th>
-                                        <th></th>
+                                       
                                     </tr>
                                 </thead>
                                 <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                                     <tr>
                                         <td><?=isset($_SESSION['tel']) ? $_SESSION['tel'] : ''; ?></td>
                                         <td><?=isset($_SESSION['address']) ? $_SESSION['address'] : ''; ?></td>
-                                        <td><button><a href="accountuserModif.php"
-                                                    class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button>
-                                        </td>
+                                        <td><button><a href="accountuserModif.php" class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -84,15 +80,15 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                         </div>
                     </div>
                         </div>
-                        <div class="card horizontal" >
+                       
                             <div class="card-stacked">
                             <div class="row center-align">
                                
-                        <div class="col l12">
+                        <div class="col s12 m12 l12">
                         <span class="dotdotdot"></span>
                         </div>
-                        <div class="col l12">
-                        <img class="responsive-img" src="assets/car.png" width="200" height="200">
+                        <div class="col s12 m12 l12">
+                        <img class="responsive-img" src="assets/undraw_smiley_face_lmgm.png" width="300" height="300">
                         </div>
                  </div>
                        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos Trajets : </h1>
@@ -100,65 +96,66 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                         <?php
                         if (!empty($arraytrajetUser)) {
                             ?>
-                       <table>
+                       <table class="responsive-table">
                                             <thead class="highlight blue-grey-text text-blue-grey darken-3">
                                                 <tr>
-                                                    <th class="paddingListeTrajets">SERVICE</th>
-                                                    <th></th>
+                                                    <th>SERVICE</th>
+                                                    
                                                     <th>DATE</th>
-                                                    <th></th>
+                                                    
                                                     <th>HEURE</th>
-                                                    <th></th>
+                                                    
                                                     <th>DÉPART</th>
-                                                    <th></th>
+                                                    
                                                     <th>ARRIVÉE</th>
-                                                    <th></th>
+                                                    
                                                     <th class="center-align"><i class="small material-icons">delete_sweep</i></th>
-                                                    <th></th>
+                                                    
                                                     <th class="center-align"><i class="small material-icons">autorenew</i></th>
-                                                    <th></th>
+                                                    
                                                 </tr>
                                             </thead>
+                                            <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                                             <?php
 // On affiche chaque entrée une à une
 foreach ($arraytrajetUser as $rowUserTrajets) {
     ?>
 
-                                            <tbody class="highlight blue-grey-text text-blue-grey darken-3">
+                                           
                                                 <tr>
-                                                    <td class="paddingListeTrajets"><?=$rowUserTrajets->typesName; ?></td>
-                                                    <td></td>
+                                                    <td><?=$rowUserTrajets->typesName; ?></td>
+                                                    
                                                     <td><?=$rowUserTrajets->date; ?></td>
-                                                    <td></td>
+                                                    
                                                     <td><?=$rowUserTrajets->hour; ?></td>
-                                                    <td></td>
+                                                    
                                                     <td><?=$rowUserTrajets->location_choice_name_aller; ?></td>
-                                                    <td></td>
+                                                    
                                                     <td><?=$rowUserTrajets->location_choice_name_retour; ?></td>
-                                                    <td></td>
+                                                
                                                     <td class="center-align">
                                                         <form method="post" action="">
                                                             <button type="submit" name="deleteTrajet" value="<?= $rowUserTrajets->id_transports; ?>">Supprimer</button>
                                                         </form>
-                                                    <td></td>
+                                                   
                                                     <td class="center-align"><button><a href="TrajetFormModif.php?id_transports=<?= $rowUserTrajets->id_transports; ?>"
                                                                 class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button>
                                                     </td>
-                                                    <td></td>
+                                                   
                                                 </tr>
-                                            </tbody>
+                                            
                                             <?php
 } ?>
                                         </table>
 <?php
                         } ?>
+                        </tbody>
                                     </div>
- <div class="card-action center-align">
+ <div class="card-action center-align" id="paddingBtnAddOnUserInfosBis">
                                     <a id="btnHrefUserInfos" class="blue-grey-text text-blue-grey darken-3" href="TrajetForm.php">Ajouter un trajet</a>
                                 </div>
                             </div>
-                        </div>
-             </div>
+ 
         </div>
 
         <!-- Modal Structure -->
@@ -191,78 +188,6 @@ foreach ($arraytrajetUser as $rowUserTrajets) {
 </div>
 
 
-    <div class="container hide-on-med-and-up">
-        <div class="col s12 m12 l12">
-        <div class="card-image">
-                    <img class="responsive-img" src="https://3ofvx46qtnlmlz7at9pt1ba-wpengine.netdna-ssl.com/wp-content/uploads/sites/2/2019/01/undraw_usability_testing_2xs4.png">
-                </div>
-            <div class="card horizontal">
-               <div class="card-stacked">
-                    <div class="card-content blue-grey-text text-blue-grey darken-3 forecast2  center-align ">
-                        <h1 class="formTitle blue-grey-text text-blue-grey darken-3">Vos informations</h1>
-               <div class="row">
-                                        <p><mark>PRÉNOM</mark></p>
-                                        <p><?=isset($_SESSION['firstName']) ? $_SESSION['firstName'] : ''; ?></p>
-                                        <p><mark>NOM</mark></p>
-                                        <p><?=isset($_SESSION['lastName']) ? $_SESSION['lastName'] : ''; ?></p>
-                                        <p><mark>ADRESSE MAIL</mark></p>
-                                        <p><?=isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?></p>
-                                        <p><mark>TÉLÉPHONE</mark></p>
-                                        <p><?=isset($_SESSION['tel']) ? $_SESSION['tel'] : ''; ?></p>
-                                        <p><mark>ADRESSE</mark></p>
-                                        <p><?=isset($_SESSION['address']) ? $_SESSION['address'] : ''; ?></p>
-                        </div>
-                        <button><a href="accountuserModif.php"
-                                                    class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button>
-
-                    </div>
-                    <div class="row center-align">
-                               <div class="col s12 m12 l12">
-                               <span class="dotdotdot"></span>
-                               </div>
-                               <div class="col s12 m12 l12">
-                               <img class="responsive-img" src="assets/car.png" width="200" height="200">
-                               </div>
-                        </div>
-                              <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos Trajets : </h1>
-                    <div class="card-content blue-grey-text text-blue-grey darken-3 forecast3  center-align ">
-               <div class="row">
-                                            <?php
-// On affiche chaque entrée une à une
-foreach ($arraytrajetUser as $rowUserTrajets) {
-    ?>
-                                        <span>
-                                        <hr>
-                                                    <P><mark>SERVICE</mark></p>
-                                                    <p><?=$rowUserTrajets->typesName; ?></p>
-                                                    <p><mark>DATE</mark></p>
-                                                    <p><?=$rowUserTrajets->date; ?></p>
-                                                    <p><mark>HEURE</mark></p>
-                                                    <p><?=$rowUserTrajets->hour; ?></p>
-                                                    <p><mark>DÉPART</mark></p>
-                                                    <p><?=$rowUserTrajets->location_choice_name_aller; ?></p>
-                                                    <p><mark>ARRIVÉE</mark></p>
-                                                    <p><?=$rowUserTrajets->location_choice_name_retour; ?></p>
-                                                    <button><a
-                                                                href="contact-infos.php?id=<?=$rowUserTrajets->id_users; ?>"
-                                                                class="waves-effect waves-light btn-small white-text blue-grey lighten-2">Supprimer</a></button>
-                                                    <button><a
-                                                                href="contact-infos.php?id=<?=$rowUserTrajets->id_users; ?>"
-                                                                class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button>
-                                            </span>
-                                            <?php
-}?>
-                                    </div>
-                                    <div class="card-action center-align" id="btnHrefUserInfos2" >
-                                    <a class="blue-grey-text text-blue-grey darken-3"
-                                        href="TrajetForm.php">Ajouter un trajet</a>
-                                </div>
-                    </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
 
