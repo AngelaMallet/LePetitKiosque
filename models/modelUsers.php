@@ -20,6 +20,7 @@ class users extends database
     public $password;
     public $tel;
     public $address;
+    public $certified;
 
     public function checkfree()
     {
@@ -40,7 +41,7 @@ class users extends database
         //Insertion des données du users à l'aide de la requête préparée avec INSERT INTO et le nom des champs de la table
         //Insertion des valeurs des variables via les marqueurs nominatifs exemple :nomdumarqueur en gros c'est comme un alias
         // :marqueurs nominatifs
-        $queryResult = $this->database->prepare('INSERT INTO fluo_users(firstName, lastName, email, password, tel, address, certified, id_user_type) VALUES (:firstName, :lastName, :email, :password, :tel, :address, 0, 1)');
+        $queryResult = $this->database->prepare('INSERT INTO fluo_users(firstName, lastName, email, password, tel, address, certified, id_user_type) VALUES (:firstName, :lastName, :email, :password, :tel, :address, 0, 2)');
         $queryResult->bindValue(':firstName', $this->firstName, PDO::PARAM_STR);
         $queryResult->bindValue(':lastName', $this->lastName, PDO::PARAM_STR);
         $queryResult->bindValue(':email', $this->email, PDO::PARAM_STR);
@@ -127,5 +128,13 @@ class users extends database
         $arrayinfoUser = $resultTrajets->fetchAll(PDO::FETCH_OBJ);
 
         return  $arrayinfoUser;
+    }
+
+    public function updateCertifiedStatut()
+    {
+        $queryResult = $this->database->prepare('UPDATE fluo_users SET certified=:certified WHERE id_users=:id_users;');
+        $queryResult->bindValue(':certified', $this->certified, PDO::PARAM_INT);
+        $queryResult->bindValue(':id_users', $this->id_users, PDO::PARAM_INT);
+        $queryResult->execute();
     }
 }

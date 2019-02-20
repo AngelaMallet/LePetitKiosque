@@ -83,6 +83,11 @@ color: #ff8a65;
     border-radius: 50px; 
   }
 
+#certifiedListeUsers{
+    background-image: unset;
+}
+
+
 #cardList{
     margin-left: 50px;
 }
@@ -135,7 +140,7 @@ h2.h2account{
 }
 .modal h1 {
     font-size: 1.3em;
-    color: orange;
+    color: rgb(131, 130, 130);
 }
 #projetH1{
     font-size: 1.3em;
@@ -540,7 +545,9 @@ th {
     -o-transform: rotate(45deg); /* Opera */
   }
 
-
+#btnDeleteTrajet {
+    margin: 0;
+}
 
 #imgDate {
     max-width: 30rem;

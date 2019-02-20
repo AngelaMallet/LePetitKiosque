@@ -127,4 +127,12 @@ class transports extends database
 
         return $queryResult->fetch(PDO::FETCH_OBJ);
     }
+
+    public function deleteTrajet()
+    {
+        $queryResult = $this->database->prepare('DELETE FROM `fluo_transports` WHERE `id_transports` = :id_transports');
+        $queryResult->bindValue(':id_transports', $this->id_transports, PDO::PARAM_INT);
+
+        return $queryResult->execute();
+    }
 }

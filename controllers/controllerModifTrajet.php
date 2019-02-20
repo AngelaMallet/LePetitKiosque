@@ -61,5 +61,9 @@ if (count($formError) == 0 && isset($_POST['submitModifTrajet'])) {
     $trajetObj->id_location_choice_start = $id_location_choice_start;
     $trajetObj->id_location_choice_end = $id_location_choice_end;
     $trajetObj->modifTrajet();
-    echo $date.' '.$hour.' '.$id_types.' '.$id_location_choice_start.' '.$id_location_choice_end;
 }
+
+// if (isset($_POST['deleteTrajet'])) {
+    //$id_transportToDelete = $_GET['id_transports'];
+    //$trajetObj->id_transports = $id_transportToDelete;
+    //$trajetObj->deleteTrajet();

@@ -97,6 +97,9 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                  </div>
                        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos Trajets : </h1>
                               <div class="col s12 m12 l12 forecast3">
+                        <?php
+                        if (!empty($arraytrajetUser)) {
+                            ?>
                        <table>
                                             <thead class="highlight blue-grey-text text-blue-grey darken-3">
                                                 <tr>
@@ -133,10 +136,10 @@ foreach ($arraytrajetUser as $rowUserTrajets) {
                                                     <td></td>
                                                     <td><?=$rowUserTrajets->location_choice_name_retour; ?></td>
                                                     <td></td>
-                                                    <td class="center-align"><button><a
-                                                                href="contact-infos.php?id=<?=$rowUserTrajets->id_users; ?>"
-                                                                class="waves-effect waves-light btn-small white-text blue-grey lighten-2">Supprimer</a></button>
-                                                    </td>
+                                                    <td class="center-align">
+                                                        <form method="post" action="">
+                                                            <button type="submit" name="deleteTrajet" value="<?= $rowUserTrajets->id_transports; ?>">Supprimer</button>
+                                                        </form>
                                                     <td></td>
                                                     <td class="center-align"><button><a href="TrajetFormModif.php?id_transports=<?= $rowUserTrajets->id_transports; ?>"
                                                                 class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button>
@@ -145,18 +148,47 @@ foreach ($arraytrajetUser as $rowUserTrajets) {
                                                 </tr>
                                             </tbody>
                                             <?php
-}
-?>
+} ?>
                                         </table>
+<?php
+                        } ?>
                                     </div>
-
-                                <div class="card-action center-align">
+ <div class="card-action center-align">
                                     <a id="btnHrefUserInfos" class="blue-grey-text text-blue-grey darken-3" href="TrajetForm.php">Ajouter un trajet</a>
                                 </div>
                             </div>
                         </div>
              </div>
         </div>
+
+        <!-- Modal Structure -->
+    <div id="modal1" class="modal <?= isset($_POST['deleteTrajet']) ? 'modalError' : ''; ?>">
+    <div class="modal-content center-align blue-grey-text text-blue-grey darken-3">
+ <div class="col s12 m12 offset-l2 l8">
+        <img src="assets/trash.png" alt="image logOut" height="350" width="350" class="rignt-align">
+        <h1 class="headerDelete">Je valide la suppression de mon fichier</h1>    
+      </div>
+      <div class="modal-footer">
+          <div class=" row center-align">
+              <div class="col S12 m12 l12">
+                  
+         <!--- <button type="submit" name="deleteTrajet"><a id="btnDeleteTrajet" href="user-infosBis.php?id_transports=<// $rowUserTrajets->id_transports; ?>"class="waves-effect waves-light btn-small white-text blue-grey">Supprimer</a></button>-->
+         <form method="POST" class="col s12 m12 l12" action="">
+            <div class="row">
+                <div class="col s6 m12 l12 center-align">
+                <input type="hidden" name="id_transports" value="<?= isset($_POST['deleteTrajet']) ? $_POST['deleteTrajet'] : ''; ?>" />
+                <input type="submit" name="confirmDeleteTrajet" id="btnDeleteTrajet" class="waves-effect waves-light btn-small white-text blue-grey" value="Supprimer" />
+                </div>
+            </div>
+         </form>
+</div>
+<div class="col S12 m12 l12">
+          <a class="blue-grey-text text-blue-grey darken-3">Retour</a>
+</div>
+</div>
+ </div> 
+</div>
+</div>
 
 
     <div class="container hide-on-med-and-up">
