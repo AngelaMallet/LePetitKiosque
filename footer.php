@@ -1,5 +1,16 @@
-        <!-- debut du footer -->
+
+                    <?php if (!isset($_SESSION['id_users'])) {
+    ?>
         <footer class="page-footer">
+                <div class="container">
+                <a id="contact" class="grey-text text-lighten-4" href="mailto:angelamallet@gmail.com">© 2019 Copyright CAUX<i>libri</i></a>
+                </div>
+        </footer>
+        <!-- fin du footer -->
+		<?php
+} else {
+        ?>
+<footer class="page-footer">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -27,8 +38,12 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    <p>© 2019 Copyright CAUX<i>libri</i></p>
+                <a class="grey-text text-lighten-4" href="mailto:angelamallet@gmail.com">© 2019 Copyright CAUX<i>libri</i></a>
                 </div>
             </div>
         </footer>
         <!-- fin du footer -->
+
+
+<?php
+    } ?>

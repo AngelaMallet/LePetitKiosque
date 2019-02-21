@@ -1,6 +1,20 @@
 
-
+                    <?php if (!isset($_SESSION['id_users'])) {
+    ?>
 		<div class="fixed-action-btn">
+			<a class="btn-floating btn-large blue-grey">
+				<i class="large material-icons">add_circle</i>
+			</a>
+			<ul>
+                            <div data-tooltip="ACCUEIL"><li><a href="index.php" class="btn-floating  deep-orange lighten-4"><i class="material-icons">home</i></a></li></div>
+			</ul>
+		</div>
+
+		<?php
+} else {
+        ?>
+
+<div class="fixed-action-btn">
 			<a class="btn-floating btn-large blue-grey">
 				<i class="large material-icons">add_circle</i>
 			</a>
@@ -12,3 +26,5 @@
 			</ul>
 		</div>
 
+<?php
+    } ?>

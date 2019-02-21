@@ -114,13 +114,15 @@ session_start(); // On démarre la session AVANT toute chose
                 <?php include 'cards.php'; ?>
             </div>
  </div>
+
         <?php
     } ?>
     </div>
-
+    </div>
     <?php include 'actionBtn.php'; ?>
-
     <?php include 'footer.php'; ?>
+    </div>
+  
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>

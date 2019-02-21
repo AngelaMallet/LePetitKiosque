@@ -29,8 +29,8 @@ session_start(); // On démarre la session AVANT toute chose
      
     </header>
     <!--Fin du header et navbar -->
-    <div class="container">
-        <div class="row">
+    <div class="container center-align">
+    
     <div class="row">
     <div class=" col s12 l12">
         <h2 class="card-panel red accent-1 white-text text-white"><?= 'Vous êtes enregistré !'; ?></h2>
@@ -47,7 +47,7 @@ session_start(); // On démarre la session AVANT toute chose
     <a href="index.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Retour</a>
     
 </div>
-</div>
+
     </div>
 
   

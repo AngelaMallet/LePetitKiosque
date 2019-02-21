@@ -71,12 +71,9 @@ if (!isset($_SESSION)) {
                     </div>
                 </form>
             </div>
+            <?php include 'actionBtn.php'; ?>
         </div>
-<?php include 'actionBtn.php'; ?>
-    
-        <div class="whiteSapce200"></div>
-        <!-- debut du footer -->
-         <?php include 'footer.php'; ?>
+     
         <!-- fin du footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
         <script type="text/javascript" src="assets/js/materialize.min.js"></script>
