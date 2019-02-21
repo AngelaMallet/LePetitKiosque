@@ -32,7 +32,7 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
 
             <div class="card horizontal">
                 <div class="card-image">
-                    <img class="responsive-img" src="assets/car.png" width="200" height="200">
+                    <img class="responsive-img hide-on-small-only" src="assets/car.png" width="200" height="200">
                 </div>
                 <div class="card-stacked">
                 <div class="row  center-align">
@@ -49,7 +49,7 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                                         <th>PRÉNOM</th>
                                         <th>NOM</th>
                                         <th>ADRESSE MAIL</th>
-                                       
+
                                     </tr>
                                 </thead>
                                 <tbody class="highlight blue-grey-text text-blue-grey darken-3">
@@ -64,7 +64,7 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                                         <th>TÉLÉPHONE</th>
                                         <th>ADRESSE</th>
                                         <th>PROFIL</th>
-                                       
+
                                     </tr>
                                 </thead>
                                 <tbody class="highlight blue-grey-text text-blue-grey darken-3">
@@ -80,10 +80,10 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                         </div>
                     </div>
                         </div>
-                       
+
                             <div class="card-stacked">
                             <div class="row center-align">
-                               
+
                         <div class="col s12 m12 l12">
                         <span class="dotdotdot"></span>
                         </div>
@@ -94,96 +94,95 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                        <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos Trajets : </h1>
                               <div class="col s12 m12 l12 forecast3">
                         <?php
-                        if (!empty($arraytrajetUser)) {
-                            ?>
+if (!empty($arraytrajetUser)) {
+    ?>
                        <table class="responsive-table">
                                             <thead class="highlight blue-grey-text text-blue-grey darken-3">
                                                 <tr>
                                                     <th>SERVICE</th>
-                                                    
+
                                                     <th>DATE</th>
-                                                    
+
                                                     <th>HEURE</th>
-                                                    
+
                                                     <th>DÉPART</th>
-                                                    
+
                                                     <th>ARRIVÉE</th>
-                                                    
+
                                                     <th class="center-align"><i class="small material-icons">delete_sweep</i></th>
-                                                    
+
                                                     <th class="center-align"><i class="small material-icons">autorenew</i></th>
-                                                    
+
                                                 </tr>
                                             </thead>
                                             <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                                             <?php
 // On affiche chaque entrée une à une
-foreach ($arraytrajetUser as $rowUserTrajets) {
-    ?>
+    foreach ($arraytrajetUser as $rowUserTrajets) {
+        ?>
 
-                                           
+
                                                 <tr>
                                                     <td><?=$rowUserTrajets->typesName; ?></td>
-                                                    
+
                                                     <td><?=$rowUserTrajets->date; ?></td>
-                                                    
+
                                                     <td><?=$rowUserTrajets->hour; ?></td>
-                                                    
+
                                                     <td><?=$rowUserTrajets->location_choice_name_aller; ?></td>
-                                                    
+
                                                     <td><?=$rowUserTrajets->location_choice_name_retour; ?></td>
-                                                
+
                                                     <td class="center-align">
                                                         <form method="post" action="">
-                                                            <button type="submit" name="deleteTrajet" value="<?= $rowUserTrajets->id_transports; ?>">Supprimer</button>
+                                                            <button class="waves-effect waves-light btn-small white-text blue-grey" type="submit" name="deleteTrajet" value="<?=$rowUserTrajets->id_transports; ?>">Supprimer</button>
                                                         </form>
-                                                   
-                                                    <td class="center-align"><button><a href="TrajetFormModif.php?id_transports=<?= $rowUserTrajets->id_transports; ?>"
+
+                                                    <td class="center-align"><button><a href="TrajetFormModif.php?id_transports=<?=$rowUserTrajets->id_transports; ?>"
                                                                 class="waves-effect waves-light btn-small white-text blue-grey">Modifier</a></button>
                                                     </td>
-                                                   
+
                                                 </tr>
-                                            
+
                                             <?php
-} ?>
+    } ?>
                                         </table>
 <?php
-                        } ?>
+}?>
                         </tbody>
                                     </div>
  <div class="card-action center-align" id="paddingBtnAddOnUserInfosBis">
                                     <a id="btnHrefUserInfos" class="blue-grey-text text-blue-grey darken-3" href="TrajetForm.php">Ajouter un trajet</a>
                                 </div>
                             </div>
- 
+
         </div>
 
         <!-- Modal Structure -->
-    <div id="modal1" class="modal <?= isset($_POST['deleteTrajet']) ? 'modalError' : ''; ?>">
+    <div id="modal1" class="modal <?=isset($_POST['deleteTrajet']) ? 'modalError' : ''; ?>">
     <div class="modal-content center-align blue-grey-text text-blue-grey darken-3">
  <div class="col s12 m12 offset-l2 l8">
         <img src="assets/trash.png" alt="image logOut" height="350" width="350" class="rignt-align">
-        <h1 class="headerDelete">Je valide la suppression de mon fichier</h1>    
+        <h1 class="headerDelete">Je valide la suppression de mon fichier</h1>
       </div>
-      <div class="modal-footer">
-          <div class=" row center-align">
-              <div class="col S12 m12 l12">
-                  
+
+
+
+
          <!--- <button type="submit" name="deleteTrajet"><a id="btnDeleteTrajet" href="user-infosBis.php?id_transports=<// $rowUserTrajets->id_transports; ?>"class="waves-effect waves-light btn-small white-text blue-grey">Supprimer</a></button>-->
          <form method="POST" class="col s12 m12 l12" action="">
             <div class="row">
-                <div class="col s6 m12 l12 center-align">
-                <input type="hidden" name="id_transports" value="<?= isset($_POST['deleteTrajet']) ? $_POST['deleteTrajet'] : ''; ?>" />
-                <input type="submit" name="confirmDeleteTrajet" id="btnDeleteTrajet" class="waves-effect waves-light btn-small white-text blue-grey" value="Supprimer" />
+                <div class="col s12 m12 l12 center-align">
+                <input type="hidden" name="id_transports" value="<?=isset($_POST['deleteTrajet']) ? $_POST['deleteTrajet'] : ''; ?>" />
+                <input type="submit" name="confirmDeleteTrajet" id="btnDeleteTrajet" class="btn-waves-effect waves-light btn-small white-text blue-grey" value="Supprimer" />
                 </div>
             </div>
          </form>
+         <div class="row">
+<div class="modal-footer-center">
+  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Retour</a>
+    </div>
 </div>
-<div class="col S12 m12 l12">
-          <a class="blue-grey-text text-blue-grey darken-3">Retour</a>
-</div>
-</div>
- </div> 
 </div>
 </div>
 
@@ -191,10 +190,10 @@ foreach ($arraytrajetUser as $rowUserTrajets) {
 
 
 
-    <?php include 'actionBtn.php'; ?>
+    <?php include 'actionBtn.php';?>
     </div>
     <!-- debut du footer -->
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.php';?>
     <!-- fin du footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>

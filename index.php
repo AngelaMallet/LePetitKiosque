@@ -31,6 +31,8 @@ session_start(); // On démarre la session AVANT toute chose
     </header>
     <!--Fin du header et navbar -->
     <div class="container">
+    <?php if (!isset($_SESSION['id_users'])) {
+    ?>
         <div class="row">
             <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3 forecast">
                 <h1>CAUX<i>libri</i></h1>
@@ -62,18 +64,8 @@ session_start(); // On démarre la session AVANT toute chose
                         faire ses courses?<br><strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
                 </div>
             </div>
-        </div>
-
-
-        <div class="row">
-        <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3 forecast">
-            <div class="modal-content center-align">
-            </div>
-                <?php include 'cards.php'; ?>
-            </div>
-
-            <!-- Modal Structure inscription-->
-            <div id="modal1"
+                 <!-- Modal Structure inscription-->
+        <div id="modal1"
                 class="modal <?=isset($modalError) ? 'modalError' : ''; ?> <?=$addSuccess ? 'modalError' : ''; ?> modal-fixed-footer">
                 <div class="modal-content center-align">
                     <div class="col s12 l12 right-align">
@@ -85,6 +77,45 @@ session_start(); // On démarre la session AVANT toute chose
                 </div>
             </div>
         </div>
+        <?php
+} else {
+        ?>
+
+        <div class="row">
+        <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3 forecast">
+                <h1>CAUX<i>libri</i></h1>
+        <div class="row">
+                <div class="col s12 l12 hide-on-med-and-up">
+                        <img class="responsive-img" src="assets/navigationBis.png"
+                            alt="image haut de page" />
+                    </div>
+                    <div class="col s12 l12 hide-on-small-only">
+                        <img id="imgHead" src="assets/navigationBis.png"
+                            alt="image haut de page" />
+                    </div>
+                </div>
+
+                <div class="col s12 l12 blue-grey-text text-blue-grey darken-3" id="presentationText">
+                    <p>Nous pouvons tous rendre service d'une manière ou d'une autre.
+                        CAUX<i>libri</i> souhaite mettre les personnes en contact pour mutualiser les déplacements et
+                        rompre l'isolement des personnes non motorisées.
+                        Il est possible par exemple de prendre des voisins dans sa voiture lors des trajets quotidiens.
+                        D'accompagner d'autres enfants du même village quand nous allons chercher notre enfant au
+                        collège ou lycée.
+                        Et pourquoi ne pas prendre une personne agée avec nous pour nous rendre dans le village voisin
+                        faire ses courses?<br><strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong></p>
+                </div>
+                <div class="row">
+                      <a  href="user-infosBis.php" class=" waves-effect waves-grey btn-small blue-grey lighten-2 modal-trigger s12 m6">Votre espace</a>
+                </div>
+        <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3 forecast">
+            <div class="modal-content center-align">
+            </div>
+                <?php include 'cards.php'; ?>
+            </div>
+ </div>
+        <?php
+    } ?>
     </div>
 
     <?php include 'actionBtn.php'; ?>

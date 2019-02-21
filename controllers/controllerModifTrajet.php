@@ -61,6 +61,8 @@ if (count($formError) == 0 && isset($_POST['submitModifTrajet'])) {
     $trajetObj->id_location_choice_start = $id_location_choice_start;
     $trajetObj->id_location_choice_end = $id_location_choice_end;
     $trajetObj->modifTrajet();
+    header('Location: user-infosBis.php');
+    exit;
 }
 
 // if (isset($_POST['deleteTrajet'])) {

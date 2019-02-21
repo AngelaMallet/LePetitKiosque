@@ -21,7 +21,7 @@ object, embed, video {
 
 #presentationText {
     line-height: 2.3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     text-align: justify;
 }
 
@@ -302,7 +302,6 @@ modal1
 /* inline_style_edits.inline.css */
 
 [cz-shortcut-listen] [tabindex] .modal-content {
-    height: 1000px;
     padding-bottom: 0px;
 }
 /* inline_style_edits.inline.css */
@@ -323,7 +322,7 @@ modal1
 
 
 #form2 {
-    margin-top: 0;
+    margin-top: -33px;
 }
 
 .paddingListeTrajets {
@@ -455,6 +454,7 @@ h4 {
   }
 
 #btnHrefUserInfos {  
+    border-radius: 3rem;
     border: .2rem grey solid;   
     padding: .5rem 1rem 0.5rem 1rem;
     box-shadow: .5px 1px 3px rgb(90, 90, 85);
@@ -547,6 +547,7 @@ th {
 
 #btnDeleteTrajet {
     margin: 0;
+    color: white;
 }
 
 #imgDate {
@@ -585,10 +586,6 @@ th {
 
 .btn-floating.btn-small {
     margin-left: .3rem;
-  }
-  
-  .btn-small {
-    font-size: 8px;
   }
   
   .btn-small i {

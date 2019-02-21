@@ -29,9 +29,12 @@ if (isset($_POST['password'])) {
 
 if (count($formError) == 0 && isset($_POST['logBtn'])) {
     $infosUser = $user->verifUser($email);
-    $logSucces = true;
-    if (is_object($infosUser)) {
-        if (password_verify($password, $infosUser->password)) {
+    if (password_verify($password, $infosUser->password)) {
+        if (is_object($infosUser) && $infosUser->certified == 0) {
+            $extra = 'validation.php';
+            header("Location: http://localhost:8888/LePetitKiosque/$extra");
+            exit;
+        } else {
             $_SESSION['id_users'] = $infosUser->id_users;
             $_SESSION['firstName'] = $infosUser->firstName;
             $_SESSION['lastName'] = $infosUser->lastName;
@@ -43,6 +46,6 @@ if (count($formError) == 0 && isset($_POST['logBtn'])) {
             exit;
         }
     } else {
-        echo 'login ou mot de passe incorrect';
+        $logSucces = true;
     }
 }

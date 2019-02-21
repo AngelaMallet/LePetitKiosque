@@ -36,7 +36,7 @@ require_once 'controllers/controllerModifUsers.php';
                         <h1 class="header">Vous avez modifié vos informations</h1>
                     </div>
                     <div class="card-action">
-                        <a class="blue-grey-text text-blue-grey darken-3" href="index.php"><mark>Accueil</mark></a>
+                        <a class="blue-grey-text text-blue-grey darken-3" href="user-infosBis.php"><mark>Retour</mark></a>
                     </div>
                 </div>
             </div>

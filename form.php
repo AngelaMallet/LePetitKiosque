@@ -1,24 +1,22 @@
-
-
-
-
-
-        <?php if ($addSuccess) {
+<?php if ($addSuccess) {
     ?>
 <div class="row">
-    <div class="whiteSapce50"></div>
     <div class=" col s12 l12">
-        <h2 class="card-panel red accent-1 white-text text-white"><?= 'Vous êtes enregistré !'; ?></h2>
+        <h1>Vous êtes enregistré !</h1>
     </div>
 </div>
-<div class="whiteSapce100"></div>
+    <div class="row card-panel red accent-1 white-text text-white">
+    <h2>Pour pouvoir valider votre inscription,</h2> 
+    <h2>merci de vous rendre à la mairie avec votre carte d'identité.</h2>
+</div>
+
 <div class="row">
     <div class=" col s12 l12">
         <img  width="200" height="200" src="../LePetitKiosque/assets/merciColibri.png">
     </div>
 </div>
 <div class=" col s12 l12">
-    <a href="userLogin.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Votre compte</a>
+    <a href="index.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Retour</a>
     
 </div>
 
