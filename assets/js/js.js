@@ -10,5 +10,10 @@ $(document).ready(function () {
     $('.fixed-action-btn').floatingActionButton();
     $(".dropdown-trigger").dropdown();
     $('.timepicker').timepicker();
-    $('select').formSelect();
-});
+    $('select').formSelect();   
+
+    $('#subscribe').on('click', function() {
+          window.location.href = 'index.php';
+      $('#modal1').modal('open');
+      });
+  });

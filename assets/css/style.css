@@ -65,6 +65,14 @@ color: #ff8a65;
     margin-right: 1rem;
 }
 
+.souligner2 {
+    text-decoration: underline #FFFF00;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 .soulignerSansJaune {
     margin-top: -2rem;
     font-size: 1.2rem;
