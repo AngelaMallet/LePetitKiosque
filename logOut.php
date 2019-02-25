@@ -24,7 +24,7 @@ session_destroy();
         
         <title>Vos informations </title>
     </head>
-    <body>
+    <body class="indexBackground">
     <header>
         <!-- header et navbar -->
         <?php include 'nav.php'; ?>

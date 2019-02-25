@@ -27,7 +27,7 @@
 
                     <div class="col s12 M6 L6">
 
-                        <h1>Les trajets :</h1>
+                        <h1 class="souligner">Les trajets :</h1>
                         <div id="cardList" class="left-align">
                             <ul>
                                 <li>Dans le village voisin ?</li>

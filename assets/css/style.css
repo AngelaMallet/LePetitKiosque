@@ -3,7 +3,10 @@ body{
     background-color: #fcf8f7;
 }
 
-
+.indexBackground {
+background: url("../mapBackground.jpg");
+background-color: rgb(255, 245, 244);
+}
 
 img, table, td, blockquote, code, pre, textarea, input, iframe,
 object, embed, video {
@@ -11,7 +14,11 @@ object, embed, video {
 }
 
 #imgHead{
-    height: 419px;
+    height: 319px;
+}
+
+.ulBtnAction {
+    background-color: white;
 }
 
 #offerForm {
@@ -28,27 +35,11 @@ object, embed, video {
 #labelAddressModif{
     margin-top: -10px;
 }
-/* style.css */
-
-/*.modal-overlay {
-  background: url("../coco2.jpg") no-repeat;
- -webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 
-    filter: grayscale(100%);
-}*/
-/* materialize.css */
 
 blockquote {
     border-left: 5px solid #5f6a75;
 }
 
-/*a, a:visited {
-Les liens "au repos" et déjà visités antérieurement 
-color: grey; /* couleur gris 
-}
-a:hover, a:focus, a:active {
-Les liens au survol, au focus, et actifs : on leur donne la couleur corail 
-color: #ff8a65;
-}*/
 .spinner {
     text-decoration: underline overline rgb(245, 175, 173);
     padding-right: 2rem;
@@ -118,11 +109,6 @@ color: #ff8a65;
 .whiteSapce130{
     height: 130px;
 }
-/*
-.whiteSapce200{
-    height: 200px;
-}*/
-
 
 #selectDepartName{
     padding: 5rem;
@@ -196,9 +182,10 @@ nav {
 
 #navLogo{
     margin-left: 25px;
-    margin-top: 10px;
-    height: 40px;
-    width: 50px;
+    margin-top: -4px;
+    height: 77px;
+    width: 190px;
+  
 }
 #logoHead {
     width: 15%;
@@ -371,10 +358,17 @@ modal1
     color: #000;
 }
 
+#successCardTrajetForm {
+    width: 50%;
+    background-color: white;
+    padding-bottom: 3rem;
+    margin-left: 25%;
+    margin-top: 5rem;
+}
 
 .NotValid {
     color: coral;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 #pModalForm{
@@ -409,11 +403,18 @@ Zone css formulaire
 }
 
 .forecast {
-    margin: 3rem;
-    padding: .3rem;
+    margin-bottom: 4rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
     background-color: white;
     border-top: .3rem rgb(172, 172, 187) solid;
     font-size: 1rem;
+}
+
+.forecastBis {
+    margin-bottom: 4rem;
+    margin-right: 3rem;
+    margin-top: 10rem;
 }
 
 .forecast2 { /* Dans user-info en responsive*/

@@ -7,8 +7,8 @@
  */
 
 /**
- * Je  crée une classe users dont le parent est database donc users hérite de tous les attributs
- * La class users va permettre d'accéder à la table fluo_users de la database fluo_colibri.
+ * Je  crée une classe transports dont le parent est database donc transports hérite de tous les attributs
+ * La class transports va permettre d'accéder à la table fluo_transports de la database fluo_colibri.
  */
 class transports extends database
 {
@@ -44,21 +44,21 @@ class transports extends database
         return $queryResult->execute(); //@return exécute la requête pour ajouter un trajet.
     }
 
-    public function getLocation()
+    public function getLocation() //requête qui permet de récuperer toutes les destinations de départ.
     {
         $queryResult = $this->database->query('SELECT `location_choice_name`, `id_location_choice` FROM `fluo_location_choice`');
 
         return $queryResult->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function getLocationEnd()
+    public function getLocationEnd() //requête qui permet de récuperer toutes les destinations de d'arrivée'.
     {
-        $queryResult = $this->database->query('SELECT `location_choice_name`, `id_location_choice` FROM `fluo_location_choice`');
+        $queryResult = $this->database->query('SELECT `location_choice_name`, `id_location_choice` FROM `fluo_location_choice` ORDER BY location_choice_name');
 
         return $queryResult->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function getService()
+    public function getService() //requête qui permet de récuperer tous les services qui sont dans la table fluo_location_choice
     {
         $queryResult = $this->database->query('SELECT `typesName`, `id_types` FROM `fluo_types`');
 

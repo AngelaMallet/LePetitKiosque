@@ -34,16 +34,16 @@ session_start(); // On démarre la session AVANT toute chose
     <div class="row forecast">
     <div class=" col s12 l12">
         
-        <p>Vous n'avez pas encore les droits pour naviguer sur le site.</p>
-        <p>Merci de vous rendre à la mairie de Sandouville avec <b>une pièce d'identité</b> pour finaliser votre inscription.</p>
+        <p>L'adresse mail est déjà utilisé</p>
+        <p>Vous pouvez vous connecter à votre compte directement avec votre adresse mail et votre mot de passe</p>
     </div>
     <div class="row">
     <div class=" col s12 l12">
-        <img  width="200" height="200" src="../LePetitKiosque/assets/merciColibri.png">
+        <img  width="200" height="200" src="../LePetitKiosque/assets/navigationBis.png">
     </div>
 </div>
 <div class=" col s12 l12">
-    <a href="index.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Retour</a>
+    <a href="userLogin.php" id="registrationBtn" class=" waves-effect waves-red btn-large blue-grey lighten-2 modal-trigger s12 m6">Connexion à votre compte</a>
     
 </div>
 </div>

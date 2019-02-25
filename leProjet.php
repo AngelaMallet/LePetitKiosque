@@ -16,7 +16,6 @@ session_start(); // On démarre la session AVANT toute chose
 
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="animate.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
@@ -62,7 +61,13 @@ session_start(); // On démarre la session AVANT toute chose
                 </div>
                 <div class="row">
                 <div class="col s12 l12 center-align">
-                    <a href="index.php" class="modal-close waves-effect waves-light btn-large blue-grey" id="btnInscriptionProjet">Accueil</a>
+                    <a href="index.php?openRegistration" class="modal-close btn-large blue-grey lighten-2" id="btnInscriptionProjet">Inscription</a>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 l12 center-align">
+                <a class="blue-grey-text text-blue-grey darken-3" href="index.php">Retour</a>
                 </div>
             </div>
             </div>

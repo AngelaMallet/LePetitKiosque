@@ -19,17 +19,32 @@ require_once 'controllers/controllerAjoutTrajet.php';
     <meta charset="utf-8" />
     <title>services</title>
 </head>
-
-<body>
     <?php include 'nav.php'; ?>
+    <?php if ($addSuccess) {
+    ?>
+     <body class="indexBackground">
     <div class="container center-align">
-
-
+        <div class="row col s12 m12 l12">
+        <div class="card-content" id="successCardTrajetForm">
+        <div class="col s12 m12 l12">
+            <img class="responsive-img" src="assets/valide.png" width="200" height="200">
+        </div>
+            <div class=" col s12 l12 center-align">
+                <h2 class="errorMessageUserLogin"><mark><?='Merci ! Votre trajet est bien enregisté.'; ?></mark></h2>
+            </div>
+            <div class="row">
+                    <a href="user-infosBis.php" class=" waves-effect waves-grey btn-small blue-grey lighten-2 modal-trigger s12 m6">Votre espace</a>
+            </div>
+        </div>
+                <?php
+} else {
+        ?>
+        <body>
+    <div class="container center-align">
     <div class="col s12 m6 center-align">
                         <h1>Pour offrir une place dans votre voiture, il vous suffit de remplir le formulaire ci-dessous.</h1>
                         <p class="rotate"><mark>En trois étapes :</mark></p>
                 </div>
-
             <div class="row articleTrajetForm">
             <nav class="dot hide-on-small-only" id="services">
                 <div class="nav-wrapper white">
@@ -62,7 +77,6 @@ require_once 'controllers/controllerAjoutTrajet.php';
                         </div>
                     </div>
                 </div>
-
                 <form method="POST" class="col s12 m12 l12" action="TrajetForm.php">
                     <div class="row">
                         <div class="col s12 m4 l4 left-align">
@@ -73,7 +87,7 @@ require_once 'controllers/controllerAjoutTrajet.php';
                             <h1 class="souligner">SERVICES</h1>
                             <?php
 foreach ($arrayGetService as $rowService) {
-    ?>
+            ?>
                                 <span>
                          <label>
                                     <input class="with-gap" name="id_types" value="<?=$rowService->id_types; ?>" type="radio" />
@@ -81,11 +95,10 @@ foreach ($arrayGetService as $rowService) {
                                 </label>
                            </span>
                             <?php
-}?>
+        } ?>
                         </div>
                     </div>
             </div>
-
             <div class="row articleTrajetForm hide-on-med-and-up">
             <div class="row">
             <div class="col s12 m4 l4 left-align">
@@ -100,8 +113,7 @@ foreach ($arrayGetService as $rowService) {
                 <div class="row">
                         <div class="row input-field col s12 l6">
                             <input name="date" value="<?=(isset($trajetObj->date)) ? $trajetObj->date : ''; ?>" id ="date" type = "date" class = "datepicker" />
-                            <label>Veuillez choisir la date du trajet :</label>
-                            <p class="NotValid" id="dateNameField"><?=isset($formError['date']) ? $formError['date'] : ''; ?></p>
+                            <label>Veuillez choisir la date du trajet : <span class="NotValid" id="dateNameField"><?=isset($formError['date']) ? $formError['date'] : ''; ?></span></label>
                         </div>
                         <div class="row input-field col s12 l6">
                             <input name="hour" value="<?=(isset($trajetObj->hour)) ? $trajetObj->hour : ''; ?>" id="appt-time" type="time">
@@ -110,7 +122,6 @@ foreach ($arrayGetService as $rowService) {
                         </div>
                     </div>
             </div>
-
             <div class="row articleTrajetForm hide-on-small-only">
                     <nav class="dot" id="date">
                 <div class="nav-wrapper white">
@@ -127,10 +138,7 @@ foreach ($arrayGetService as $rowService) {
             <div class="col s12 m4 l4 left-align">
                             <h1 class="souligner"> DATES & HEURES</h1>
                             <h2>Merci de choisir la date & <br> l'heure de départ.</h2>
-                            
                         </div>
-                 
-                    
                 </div>
                 <div class="row">
                         <div class="col s12 offset-l3 l3">
@@ -155,7 +163,7 @@ foreach ($arrayGetService as $rowService) {
                         <a></a>
                     </div>
                 </div>
-            </nav>
+                    </nav>
                         <div class="col s12 m4 l4 left-align">
                             <h2>Merci de choisir votre point de départ et votre point d'arrivée.</h2>
                             <p>Voici une liste des trajets les plus fréquents.</p>
@@ -167,7 +175,7 @@ foreach ($arrayGetService as $rowService) {
                             <h1 class="souligner">DÉPART</h1>
                             <?php
 foreach ($arrayGetLocation as $rowStartLocation) {
-        ?>
+            ?>
                             <p>
                                 <label>
                                     <input class="with-gap" name="id_location_choice" value="<?=$rowStartLocation->id_location_choice; ?>" type="radio" />
@@ -175,14 +183,13 @@ foreach ($arrayGetLocation as $rowStartLocation) {
                                 </label>
                             </p>
                             <?php
-    }?>
-
-                        </div>
+        } ?>
+                     </div>
                         <div class="col s12 m4 l4 left-align">
                             <h1 class="souligner">ARRIVÉE</h1>
                             <?php
 foreach ($arrayGetLocationEnd as $rowArrivalLocation) {
-        ?>
+            ?>
                             <p>
                                 <label>
                                     <input class="with-gap" name="id_location_choice_fluo_location_choice" value="<?=$rowArrivalLocation->id_location_choice; ?>" type="radio" />
@@ -190,29 +197,24 @@ foreach ($arrayGetLocationEnd as $rowArrivalLocation) {
                                 </label>
                             </p>
                             <?php
-    }?>
-
+        } ?>
                         </div>
-
-
                     </div>
                     <div class="row input-field col s12 l12" id="submitFormTrajetBtn">
         <button class="waves-effect waves-light btn-large blue-grey lighten-3" type="submit" name="submitFormTrajet">VALIDER</button>
         <p><a class="colorLink" href="index.php">Annuler</a></p>
     </div>
-
      </form>
-
      <?php include 'actionBtn.php'; ?>
-                    </div>
+    </div>
                     <?php include 'footer.php'; ?>
-
-
-
+                    <?php
+    }?>
+    </div>
+    </div>
 </body>
 <!-- fin du footer -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="assets/js/materialize.min.js"></script>
 <script type="text/javascript" src="assets/js/js.js"></script>
-
 </html>

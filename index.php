@@ -10,8 +10,6 @@ session_start(); // On démarre la session AVANT toute chose
 <head>
     <!--Import Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,600,700,800" rel="stylesheet" />
-    <!-- Favicons-->
-    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
@@ -23,7 +21,7 @@ session_start(); // On démarre la session AVANT toute chose
     <title>CauxLibri</title>
 </head>
 
-<body>
+<body class="indexBackground">
 
     <header>
         <!-- header et navbar -->
@@ -45,16 +43,7 @@ session_start(); // On démarre la session AVANT toute chose
                         <img id="imgHead" src="assets/navigationBis.png" alt="image haut de page" />
                     </div>
                 </div>
-                <div class="row">
-                    <!-- Modal Trigger -->
-                    <a href="#modal1" id="registrationBtn"
-                        class=" waves-effect waves-grey btn-large blue-grey lighten-2 modal-trigger s12 m6">Inscription</a>
-                </div>
-                <div class="row">
-                    <p><a href="leProjet.php" class="grey-text souligner2">Le projet</a></p>
-                </div>
-
-                <div class="col s12 l12 blue-grey-text text-blue-grey darken-3" id="presentationText">
+ <div class="col s12 l12 blue-grey-text text-blue-grey darken-3" id="presentationText">
                     <p>Nous pouvons tous rendre service d'une manière ou d'une autre.
                         CAUX<i>libri</i> souhaite mettre les personnes en contact pour mutualiser les déplacements et
                         rompre l'isolement des personnes non motorisées.
@@ -64,6 +53,14 @@ session_start(); // On démarre la session AVANT toute chose
                         Et pourquoi ne pas prendre une personne agée avec nous pour nous rendre dans le village voisin
                         faire ses courses?<br><strong>Et vous comment pouvez-vous devenir CAUX<i>libri</i> ?</strong>
                     </p>
+                </div>
+                <div class="row">
+                    <!-- Modal Trigger -->
+                    <a href="#modal1" id="registrationBtn"
+                        class=" waves-effect waves-grey btn-large blue-grey lighten-2 modal-trigger s12 m6">Inscription</a>
+                </div>
+                <div class="row">
+                    <p><a href="leProjet.php" class="grey-text souligner2">Le projet</a></p>
                 </div>
             </div>
             <!-- Modal Structure inscription-->
@@ -111,7 +108,7 @@ session_start(); // On démarre la session AVANT toute chose
                         class=" waves-effect waves-grey btn-small blue-grey lighten-2 modal-trigger s12 m6">Votre
                         espace</a>
                 </div>
-                <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3 forecast">
+                <div class="col s12 m12 center-align blue-grey-text text-blue-grey darken-3 forecastBis">
                     <div class="modal-content center-align">
                     </div>
                     <?php include 'cards.php'; ?>

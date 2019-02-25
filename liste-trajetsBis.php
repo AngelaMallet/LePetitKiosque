@@ -14,7 +14,6 @@ require_once 'controllers/controllerListTrajets.php';
 
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="animate.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
@@ -29,10 +28,6 @@ require_once 'controllers/controllerListTrajets.php';
     </header>
     <div class="container">
         <div class="col s12 m12">
-
-            <!-- <div class="card-image  rightBorder hide-on-med-and-down">
-        <img src="https://i.pinimg.com/564x/12/60/a2/1260a28caf76080b22c4cb50b3803103.jpg?b=t" height="100%">
-      </div> -->
             <div class="card-stacked">
                 <div class="card-content">
                     <div class="row center-align">
@@ -73,7 +68,8 @@ require_once 'controllers/controllerListTrajets.php';
                                         <td><?=$rowtrajets->location_choice_name_retour; ?></td>
 
                                         <td><button><a href="contact-infos.php?id=<?=$rowtrajets->id_users; ?>"
-                                                    class="waves-effect waves-light btn-small white-text blue-grey">Détails</a></button>
+                                                    class="waves-effect waves-light btn-small white-text blue-grey">Prendre
+                                                    contact</a></button>
                                         </td>
                                     </tr>
                                     <?php

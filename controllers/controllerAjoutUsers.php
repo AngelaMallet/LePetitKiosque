@@ -54,6 +54,12 @@ if (isset($_POST['email'])) {
     if (empty($_POST['email'])) {
         $formError['email'] = 'Saisie vide';
     }
+    $usersObj->email = $email; // je vérifie si je récupère bien la valeur du mail
+    $count = $usersObj->checkfree(); //je vérifie que l'adresse mail n'est pas déjà prise grâce à la méthode checkfree
+    if ($count > 0) { // si $count est positif (plus grand que 0)
+        $usersObj->email = ''; // je vide la valeur
+        $formError['email'] = 'L\'adresse email est déjà utilisée.'; // et j'affiche un message pour indiquer que l'adresse est déjà prise
+    }
 }
 
 //password
@@ -101,7 +107,7 @@ if (!empty($formError)) {
 }
 
 // Je regarde s'il n'y a pas d'erreurs dans le formulaire
-// S'il n'y a pas d'erreurs et que je clique sur le bouton send alors
+// S'il n'y a pas d'erreurs et que je clique sur le bouton submitForm alors
 //j'envoie les nouvelles données dans ma table fluo_users
 if (count($formError) == 0 && isset($_POST['submitForm'])) {
     $usersObj->firstName = $firstName;
@@ -110,13 +116,6 @@ if (count($formError) == 0 && isset($_POST['submitForm'])) {
     $usersObj->password = $passwordConf;
     $usersObj->tel = $tel;
     $usersObj->address = $address;
-    $count = 0; //$usersObj->checkfree();
-    if ($count > 0) {
-        echo 'L\'adresse email est déjà utilisée.';
-    } else {
-        $usersObj->addUsers();
-        $addSuccess = true;
-    }
+    $usersObj->addUsers();
+    $addSuccess = true;
 }
-?>
-

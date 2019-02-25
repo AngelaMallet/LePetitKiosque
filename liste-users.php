@@ -21,7 +21,6 @@ require_once 'controllers/controllerListAllUsers.php';
 </head>
 
 <body>
-
     <header>
         <!-- header et navbar -->
         <?php include 'nav.php'; ?>
@@ -34,66 +33,50 @@ require_once 'controllers/controllerListAllUsers.php';
                     <thead class="blue-grey-text text-blue-grey darken-3">
                         <tr>
                             <th>NOM</th>
-                           
                             <th>PRÉNOM</th>
-                            
                             <th>E-MAIL</th>
-                            
                             <th>TÉLÉPHONE</th>
-                            
-                            <th>DÉTAILS</th>
-                            
                             <th>CERTIFIÉ</th>
-                            
                         </tr>
                     </thead>
                     <tbody class="highlight blue-grey-text text-blue-grey darken-3">
-                    <?php
+                        <?php
                     // On affiche chaque entrée une à une
                     foreach ($listUsersArray as $usersList) {
                         ?>
-
                         <tr>
                             <td><?=$usersList->firstName; ?></td>
-                            
                             <td><?=$usersList->lastName; ?></td>
-                            
                             <td><?=$usersList->email; ?></td>
-                           
                             <td><?=$usersList->tel; ?></td>
-                            
-                            <td><button><a href="user-InfosBis.php?id=<?=$usersList->id_users; ?>"
-                                        class="waves-effect waves-light btn-small white-text blue-grey">Informations</a></button>
-                            </td>
-                           
-                            <td id="certifiedListeUsers" >
+                            <td id="certifiedListeUsers">
                                 <form method="POST" action="">
                                     <label>
-                                        <input class="with-gap" name="certified<?=$usersList->id_users; ?>" type="radio" value="0" <?= $usersList->certified == 0 ? 'checked' : ''; ?> />
+                                        <input class="with-gap" name="certified<?=$usersList->id_users; ?>" type="radio"
+                                            value="0" <?=$usersList->certified == 0 ? 'checked' : ''; ?> />
                                         <span>Non</span>
                                     </label>
                                     <label>
-                                        <input class="with-gap" name="certified<?=$usersList->id_users; ?>" type="radio" value="1" <?= $usersList->certified == 1 ? 'checked' : ''; ?> />
+                                        <input class="with-gap" name="certified<?=$usersList->id_users; ?>" type="radio"
+                                            value="1" <?=$usersList->certified == 1 ? 'checked' : ''; ?> />
                                         <span>Oui</span>
                                     </label>
-                                    <button class="btn-floating btn-small waves-effect waves-light white-text blue-grey" type="submit" name="certifiedStatut" value="<?=$usersList->id_users; ?>"><i class="material-icons">beenhere</i></button>
+                                    <button class="btn-floating btn-small waves-effect waves-light white-text blue-grey"
+                                        type="submit" name="certifiedStatut" value="<?=$usersList->id_users; ?>"><i
+                                            class="material-icons">beenhere</i></button>
                                 </form>
                             </td>
-                           
                         </tr>
-                   
-                    <?php
+                        <?php
                     }
                     ?>
-                     </tbody>
+                    </tbody>
                 </table>
             </div>
-
         </div>
-
     </div>
     <?php include 'actionBtn.php'; ?>
-  <!-- debut du footer -->
+    <!-- debut du footer -->
     <?php include 'footer.php'; ?>
     <!-- fin du footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

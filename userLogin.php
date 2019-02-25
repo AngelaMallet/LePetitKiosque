@@ -69,7 +69,11 @@ if (!isset($_SESSION)) {
                     <div class="row input-field col s12 l12">
                         <button class="modal-close waves-effect waves-light btn red accent-1 modal-trigger" type="submit" name="logBtn">Valider</button>
                     </div>
+                    <div class="row">
+                    <p><a href="index.php" class="grey-text">Annuler</a></p>
+                </div>
                 </form>
+                
             </div>
             <?php include 'actionBtn.php'; ?>
         </div>
