@@ -19,11 +19,10 @@ require_once 'controllers/controllerModifUsers.php';
     <meta charset="utf-8" />
     <title>services</title>
 </head>
-
+<?php include 'nav.php'; ?>
 <body>
 <?php if ($addSuccess) {
     ?>
-    <?php include 'nav.php'; ?>
     <div class="container center-align blue-grey-text text-blue-grey darken-3">
         <div class="col s12 m12 l12">
             <div class="card horizontal">
@@ -46,20 +45,14 @@ require_once 'controllers/controllerModifUsers.php';
     <?php
 } else {
         ?>
-
-    <!-- header et navbar -->
-    <?php include 'nav.php'; ?>
     <div class="container center-align">
         <div class="card horizontal">
             <div class="card-stacked">
                 <div class="card-action">
                     <div class="row">
                         <div>
-                            <img class="col s12 m6 l6 hide-on-med-and-down responsive-img" src="assets/account.png">
-                        </div>
-                        <div>
-                            <img class="col s12 m6 l6 responsive-img hide-on-small-only src=" assets/account.png">
-                                </div> <form id="form" method="POST" class="col s12 l6" action="accountuserModif.php">
+                            <img class="col s12 m6 l6 responsive-img hide-on-small-only" src="assets/account.png" />
+                                </div> <form id="form" method="POST" class="col s6 offset-s1 l6" action="accountuserModif.php">
                             <div class="row input-field col s12 l6">
                                 <input name="firstName"
                                     value="<?=isset($firstName) ? $firstName : ($_SESSION['firstName']); ?>"

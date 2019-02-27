@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-/**
+/*
  * Je  crée une classe users dont le parent est database donc users hérite de tous les attributs
  * La class users va permettre d'accéder à la table fluo_users de la database fluo_colibri.
  */
@@ -48,8 +48,7 @@ class users extends database
         $queryResult->bindValue(':password', $this->password, PDO::PARAM_STR);
         $queryResult->bindValue(':tel', $this->tel, PDO::PARAM_STR);
         $queryResult->bindValue(':address', $this->address, PDO::PARAM_STR);
-//        $queryResult->bindValue(':certified',0, PDO::PARAM_INT);
-//        $queryResult->bindValue(':id_user_type',1, PDO::PARAM_INT);
+
         return $queryResult->execute(); //@return exécute la requête pour ajouter un user.
     }
 

@@ -2,30 +2,52 @@
 
 require_once 'models/modelDatabase.php';
 require_once 'models/modeltransports.php';
-$trajetObj = new transports(); //$trajetObj est un nouvel objet de la classe types. On dit que l'on instancie la classe types.
+//$trajetObj est un nouvel objet de la classe transports. On dit que l'on instancie la classe transports.
+$trajetObj = new transports();
 
+//Permet de recupérer le bon trajet à mofifier grâce à son id "id_transports"
 if (isset($_GET['id_transports'])) {
-    $_SESSION['id_transports'] = $_GET['id_transports'];
+    $trajetObj->id_transports = $_GET['id_transports'];
     $arrayUserTrajet = $trajetObj->displayUserTrajet();
+    //Si le trajet n'existe pas dans la table fluo_transports alors, redirection vers une
+    //alerte.(page avec retour possible sur le comte de l'utilisateur)
+    if ($arrayUserTrajet == false) {
+        header('location: notValidTrajet.php');
+        exit();
+    }
 }
 
+//méthode qui permet de récuperer toutes les destinations de départ pour les afficher
+//dans la Vue dans le formulaire sous forme de radio.
 $arrayGetLocation = $trajetObj->getLocation();
+//méthode qui permet de récuperer toutes les destinations
+//d'arrivée pour les afficher dans la Vue.
 $arrayGetLocationEnd = $trajetObj->getLocationEnd();
+//méthode qui permet de récuperer tous les services qui sont dans la
+//table fluo_location_choice pour les afficher dans la Vue.
 $arrayGetService = $trajetObj->getService();
 
-//Initialise $addSuccess en False pour afficher message
+// création de la variable $addSuccess que j'initialise en False.
+//Si les informations requises par l’utilisateur sont validées, $addSuccess=TRUE
+//et renvoi un message de confirmation de la création d'un trajet.
 $addSuccess = false;
-//Initialise $hideSuccess en true pour afficher inputform
-$hideSuccess = true;
 
-// Déclaration d'un tableau d'erreurs
+// Déclaration d'un tableau d'erreurs vide.
 $formError = [];
 
 ////date
+//On test si la valeur 'date' existe dans le tableau $_POST
 if (isset($_POST['date'])) {
     //Si: je récupère la valeur de date
+    //j’utilise la fonction htmlspecialchars() qui protège
+    //les variables et pour empêcher les injections de code Javascript ou HTML
     $date = htmlspecialchars($_POST['date']);
+    // Détermine si la variable est considérée comme étant vide.
+    //Une variable est considérée comme vide si elle n’existe pas ou si sa valeur est égale à FALSE.
+    //empty () ne génère pas d'avertissement si la variable n'existe pas.
     if (empty($_POST['date'])) {
+        // Le tableau d'erreurs affichera un message sur la Vue au niveau
+        //du champs de la date dans le formulaire
         $formError['date'] = 'Saisie vide';
     }
 }
@@ -54,6 +76,8 @@ if (isset($_POST['id_location_choice_end'])) {
     $id_location_choice_end = htmlspecialchars($_POST['id_location_choice_end']);
 }
 
+//si le tableau d'erreurs est vide et que le formulaire est envoyé alors
+//je modifie le trajet.
 if (count($formError) == 0 && isset($_POST['submitModifTrajet'])) {
     $trajetObj->date = $date;
     $trajetObj->hour = $hour;
@@ -64,8 +88,3 @@ if (count($formError) == 0 && isset($_POST['submitModifTrajet'])) {
     header('Location: user-infosBis.php');
     exit;
 }
-
-// if (isset($_POST['deleteTrajet'])) {
-    //$id_transportToDelete = $_GET['id_transports'];
-    //$trajetObj->id_transports = $id_transportToDelete;
-    //$trajetObj->deleteTrajet();

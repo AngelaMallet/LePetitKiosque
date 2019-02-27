@@ -1,5 +1,6 @@
 <?php
 require_once 'controllers/controllerContactTrajets.php';
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ require_once 'controllers/controllerContactTrajets.php';
     <title>Vos informations </title>
 </head>
 
-<body>
+<body class="indexBackground">
     <header>
         <!-- header et navbar -->
         <?php include 'nav.php'; ?>

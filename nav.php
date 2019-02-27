@@ -13,7 +13,7 @@
                 <li><a href="#contact" class="white-text">contact</a></li>
                 <!-- Dropdown Trigger -->
 
-                <a class='dropdown-trigger btn blue-grey accent-1  center-align' data-target='dropdown1'><i class="large material-icons">account_circle</i></a>
+                <a id="btnNameNavbar2" class='dropdown-trigger btn blue-grey accent-1  center-align' data-target='dropdown1'><i class="large material-icons">account_circle</i></a>
                 <!-- Dropdown Structure -->
                 <ul id='dropdown1' class='dropdown-content'>
                 <li><a class=" blue-grey-text accent-1 center-align" href="index.php?openRegistration">Inscription</a></li>
@@ -38,7 +38,7 @@
                 <li><a href="#contact" class="white-text">contact</a></li>
                 <!-- Dropdown Trigger -->
 
-                <a class='dropdown-trigger btn blue-grey accent-1  center-align' data-target='dropdown1'><?=isset($_SESSION['firstName']) ? $_SESSION['firstName'] : ''; ?></a>
+                <a id="btnNameNavbar" class="dropdown-trigger btn blue-grey accent-1 center-align" data-target= "dropdown1" ><?=isset($_SESSION['firstName']) ? $_SESSION['firstName'] : ''; ?></a>
                 <!-- Dropdown Structure -->
                 <ul id='dropdown1' class='dropdown-content'>
                     <li><i class="tiny material-icons  center-align blue-grey-text accent-1">account_circle</i></li>

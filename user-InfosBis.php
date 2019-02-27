@@ -19,7 +19,7 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
-
+    <link rel="icon" href="assets/logoOnglet.png" />
     <title>Vos informations </title>
 </head>
 
@@ -117,7 +117,7 @@ if (!empty($arraytrajetUser)) {
                                             </thead>
                                             <tbody class="highlight blue-grey-text text-blue-grey darken-3">
                                             <?php
-// On affiche chaque entrée une à une
+// On affiche chaque entrée une à une du tableau
     foreach ($arraytrajetUser as $rowUserTrajets) {
         ?>
 

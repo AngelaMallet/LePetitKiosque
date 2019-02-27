@@ -11,7 +11,6 @@ session_start(); // On démarre la session AVANT toute chose
     <!--Import Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,600,700,800" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="animate.min.css">
@@ -19,6 +18,7 @@ session_start(); // On démarre la session AVANT toute chose
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
     <title>CauxLibri</title>
+    <link rel="icon" href="assets/logoOnglet.png" />
 </head>
 
 <body class="indexBackground">

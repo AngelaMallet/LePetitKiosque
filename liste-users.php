@@ -17,6 +17,7 @@ require_once 'controllers/controllerListAllUsers.php';
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
+    <link rel="icon" href="assets/logoOnglet.png" />
     <title>CauxLibri</title>
 </head>
 
