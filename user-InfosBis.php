@@ -91,7 +91,7 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                         <img class="responsive-img" src="assets/undraw_smiley_face_lmgm.png" width="300" height="300">
                         </div>
                  </div>
-                       <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos Trajets : </h1>
+                       <h1 class="center-align blue-grey-text text-blue-grey darken-3">Vos Trajets : </h1>
                               <div class="col s12 m12 l12 forecast3">
                         <?php
 if (!empty($arraytrajetUser)) {
