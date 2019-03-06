@@ -14,6 +14,9 @@ if (isset($_GET['id_transports'])) {
     if ($arrayUserTrajet == false) {
         header('location: notValidTrajet.php');
         exit();
+    } else {
+        // Si id_transports existe alors je passe l'id_transports en session.
+        $_SESSION['id_transports'] = $_GET['id_transports'];
     }
 }
 

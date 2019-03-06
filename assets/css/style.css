@@ -449,6 +449,12 @@ mark {
     transform: rotate(-4deg);
  }
 
+ .legal {
+     font-size: 0.8rem;
+     margin-left: 2rem;
+ }
+
+
 h4 {
     padding: 3rem;
     font-size: 1.3rem;

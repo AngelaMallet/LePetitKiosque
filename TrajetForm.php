@@ -61,21 +61,21 @@ require_once 'controllers/controllerAjoutTrajet.php';
                                 </nav>
                                 <div class="col s12 m4 ">
                                     <div class="card">
-                                        <div class="card-image waves-effect waves-block waves-light">
+                                        <div class="card-image">
                                             <img class="responsive-img" src="assets/covoiturage.png">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col s12 m4 hide-on-small-only">
                                     <div class="card">
-                                        <div class="card-image waves-effect waves-block waves-light">
+                                        <div class="card-image">
                                             <img src="assets/mapShop.png">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col s12 m4 hide-on-small-only">
                                     <div class="card">
-                                        <div class="card-image waves-effect waves-block waves-light">
+                                        <div class="card-image">
                                             <img src="assets/school.png">
                                         </div>
                                     </div>

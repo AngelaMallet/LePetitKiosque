@@ -2,9 +2,12 @@
                     <?php if (!isset($_SESSION['id_users'])) {
     ?>
         <footer class="page-footer">
-                <div class="container">
-                <a id="contact" class="grey-text text-lighten-4" href="mailto:angelamallet@gmail.com">© 2019 Copyright CAUX<i>libri</i></a>
-                </div>
+              <div class="container">
+                <div class="col s12 m6 l6">
+                <a class="grey-text text-lighten-4" href="mailto:angelamallet@gmail.com">© 2019 Copyright CAUX<i>libri</i></a>
+                <a class="grey-text text-lighten-4 legal" href="https://www.generer-mentions-legales.com/monfichier-qt8xyjnx1b99weizb3wb1c0d5bfo0b.html">MENTIONS LEGALES</a>
+</div>
+               </div>
         </footer>
         <!-- fin du footer -->
 		<?php
@@ -31,14 +34,12 @@
                             <li><a class="white-text text-lighten-3" href="leProjet.php">Le projet</a></li>
                         </ul>
                     </div>
-                    <!--<div class="container-fluid p-0">
-                        <iframe src="http://www.openstreetmap.org/export/embed.html?bbox=0.19037246704101565%2C49.4363197912898%2C0.3757667541503906%2C49.52398262185174&amp;layer=mapnik" width="100%" height="300" frameborder="0" style="border:0"></iframe>
-                    </div>-->
                 </div>
             </div>
             <div class="footer-copyright">
                 <div class="container">
                 <a class="grey-text text-lighten-4" href="mailto:angelamallet@gmail.com">© 2019 Copyright CAUX<i>libri</i></a>
+                <a class="grey-text text-lighten-4 legal" href="https://www.generer-mentions-legales.com/monfichier-qt8xyjnx1b99weizb3wb1c0d5bfo0b.html">MENTIONS LEGALES</a>
                 </div>
             </div>
         </footer>
@@ -46,4 +47,4 @@
 
 
 <?php
-    } ?>
+    }?>

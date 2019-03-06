@@ -91,7 +91,7 @@ require_once 'controllers/controllerUserLoginTrajetBis.php';
                         <img class="responsive-img" src="assets/undraw_smiley_face_lmgm.png" width="300" height="300">
                         </div>
                  </div>
-                       <h1 class="center-align blue-grey-text text-blue-grey darken-3">Vos Trajets : </h1>
+                       <h1 class="formTitle center-align blue-grey-text text-blue-grey darken-3">Vos Trajets : </h1>
                               <div class="col s12 m12 l12 forecast3">
                         <?php
 if (!empty($arraytrajetUser)) {
@@ -169,7 +169,7 @@ if (!empty($arraytrajetUser)) {
 
 
 
-         <!--- <button type="submit" name="deleteTrajet"><a id="btnDeleteTrajet" href="user-infosBis.php?id_transports=<// $rowUserTrajets->id_transports; ?>"class="waves-effect waves-light btn-small white-text blue-grey">Supprimer</a></button>-->
+         <!--- <button type="submit" name="deleteTrajet"-->
          <form method="POST" class="col s12 m12 l12" action="">
             <div class="row">
                 <div class="col s12 m12 l12 center-align">

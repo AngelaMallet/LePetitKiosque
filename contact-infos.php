@@ -23,12 +23,12 @@ session_start();
     <title>Vos informations </title>
 </head>
 
-<body class="indexBackground">
+<body>
     <header>
         <!-- header et navbar -->
         <?php include 'nav.php'; ?>
     </header>
-    <div class="container hide-on-small-only">
+    <div class="container hide-on-small-only indexBackground">
         <div class="row blue-grey-text text-blue-grey darken-3">
             <div class="col s12 m12 l12" id="divContactInfos" >
                <div class="card-content"  id="contactInfosCard">

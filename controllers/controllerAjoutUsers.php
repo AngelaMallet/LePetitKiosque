@@ -94,12 +94,6 @@ if (isset($_POST['tel'])) {
 //address
 if (isset($_POST['address'])) {
     $address = htmlspecialchars($_POST['address']);
-//    if (!preg_match($usersObj->address)) {              // Pour le moment pas encore de regex
-//        $formError ['address'] = 'Saisie non valide';
-//    }
-//    if (empty($_POST['address'])) {
-//        $formError ['address'] = 'Saisie vide';
-//    }
 }
 
 if (!empty($formError)) {
