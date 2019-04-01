@@ -121,7 +121,7 @@ session_start(); // On démarre la session AVANT toute chose
     </div>
     <?php include 'actionBtn.php'; ?>
     <?php include 'footer.php'; ?>
-    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -133,3 +133,4 @@ session_start(); // On démarre la session AVANT toute chose
     <?php
     } ?>
 </body>
+</html>

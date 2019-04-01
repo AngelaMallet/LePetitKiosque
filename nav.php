@@ -1,5 +1,5 @@
 
-                                  
+
                   <?php if (!isset($_SESSION['id_users'])) {
     ?>
                        <div class="navbar-fixed hide-on-med-and-down">
@@ -49,13 +49,11 @@
     </nav>
 </div>
                     <?php
-    }?>
+    } ?>
                 </ul>
         </div>
     </nav>
 </div>
-
-
 
 
 

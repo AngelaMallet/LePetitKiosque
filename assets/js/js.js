@@ -16,4 +16,9 @@ $(document).ready(function () {
           window.location.href = 'index.php';
       $('#modal1').modal('open');
       });
+      
+      $('#subscribe').on('click', function() {
+        window.location.href = 'index.php';
+    $('#modal2').modal('open');
+    });
   });

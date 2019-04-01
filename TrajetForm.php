@@ -18,7 +18,7 @@ require_once 'controllers/controllerAjoutTrajet.php';
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
         <meta charset="utf-8" />
         <link rel="icon" href="assets/logoOnglet.png" />
-        <title>services</title>
+        <title>CAUXlibri</title>
     </head>
 
     <?php include 'nav.php'; ?>
@@ -27,12 +27,15 @@ require_once 'controllers/controllerAjoutTrajet.php';
     ?>
         <body class="indexBackground">
             <div class="container center-align">
+            <div class=" col s12 l12 m12 center-align hide-on-med-and-up">
+                            <h2 class="errorMessageUserLogin"><mark><?='Merci ! Votre trajet est bien enregisté.'; ?></mark></h2>
+                        </div>
                 <div class="row col s12 m12 l12">
                     <div class="card-content" id="successCardTrajetForm">
                         <div class="col s12 m12 l12">
                             <img class="responsive-img" src="assets/valide.png" width="200" height="200">
                         </div>
-                        <div class=" col s12 l12 center-align">
+                        <div class=" col s12 l12 m12 center-align hide-on-small-only">
                             <h2 class="errorMessageUserLogin"><mark><?='Merci ! Votre trajet est bien enregisté.'; ?></mark></h2>
                         </div>
                         <div class="row">
@@ -106,35 +109,8 @@ require_once 'controllers/controllerAjoutTrajet.php';
                                         </div>
                                     </div>
                             </div>
-                            <div class="row articleTrajetForm hide-on-med-and-up">
-                                <div class="row">
-                                    <div class="col s12 m4 l4 left-align">
-                                        <h1 class="souligner"> DATES & HEURES</h1>
-                                        <h2>Merci de choisir date & heure.</h2>
-                                        <p>Pour le départ de votre trajet</p>
-                                    </div>
-                                    <div>
-                                        <img class="responsive-img" src="../LePetitKiosque/assets/date.png">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="row input-field col s12 l6">
-                                         <!-- On vérifie que l'on récupère la valeur de date et on l'affiche sinon le champs reste vide-->
-                                         <input name="date" value="<?= (isset($_POST['date'])) ? $date : ''; ?>" id ="date" type = "date" class = "datepicker" />
-                                        <label>Veuillez choisir la date du trajet :</label>
-                                         <!-- S'il y a une erreur on indique le message d'erreur du controleur-->
-                                        <p class="NotValid" id="dateNameField"><?=isset($formError['date']) ? $formError['date'] : ''; ?></p>
-                                    </div>
-                                    <div class="row input-field col s12 l6">
-                                        <!-- On vérifie que l'on récupère la valeur de hour et on l'affiche sinon le champs reste vide-->
-                                        <input name="hour" value="<?=(isset($_POST['hour'])) ? $hour : ''; ?>" id="appt-time" type="time">
-                                        <label for="appt-time">Veuillez choisir l'heure du départ :</label>
-                                        <!-- S'il y a une erreur on indique le message d'erreur du controleur-->
-                                        <p class="NotValid" id="hourField"><?=isset($formError['hour']) ? $formError['hour'] : ''; ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row articleTrajetForm hide-on-small-only">
+                         
+                            <div class="row articleTrajetForm">
                                 <nav class="dot" id="date">
                                     <div class="nav-wrapper white">
                                         <div class="col s12">
@@ -146,7 +122,7 @@ require_once 'controllers/controllerAjoutTrajet.php';
                                     </div>
                                 </nav>
                                 <div class="row">
-                                    <img class="responsive-img" id="imgDate" src="../LePetitKiosque/assets/date.png">
+                                    <img class="responsive-img" id="imgDate" src="../LePetitKiosque/assets/date.png" width="300px" width="300px">
                                     <div class="col s12 m4 l4 left-align">
                                         <h1 class="souligner"> DATES & HEURES</h1>
                                         <h2>Merci de choisir la date & <br> l'heure de départ.</h2>

@@ -37,10 +37,11 @@ require_once 'controllers/controllerListAllUsers.php';
                             <th>PRÉNOM</th>
                             <th>E-MAIL</th>
                             <th>TÉLÉPHONE</th>
-                            <th>CERTIFIÉ</th>
+                            <th class="center-align">CERTIFIÉ</th>
+                            <th class="center-align">UTILISATEUR</th>
                         </tr>
                     </thead>
-                    <tbody class="highlight blue-grey-text text-blue-grey darken-3">
+                    <tbody class="blue-grey-text text-blue-grey darken-3">
                         <?php
                     // On affiche chaque entrée une à une
                     foreach ($listUsersArray as $usersList) {
@@ -62,11 +63,16 @@ require_once 'controllers/controllerListAllUsers.php';
                                             value="1" <?=$usersList->certified == 1 ? 'checked' : ''; ?> />
                                         <span>Oui</span>
                                     </label>
-                                    <button class="btn-floating btn-small waves-effect waves-light white-text blue-grey"
+                                    <button class="btn-floating btn-small waves-effect waves-light white-text teal lighten-2"
                                         type="submit" name="certifiedStatut" value="<?=$usersList->id_users; ?>"><i
                                             class="material-icons">beenhere</i></button>
                                 </form>
                             </td>
+                            <td class="center-align">
+                                                        <form method="post" action="">
+                                                            <button class="waves-effect waves-light btn-small white-text  red darken-2" type="submit" name="confirmDeleteUser" value="<?=$usersList->id_users; ?>">Supprimer</button>
+                                                        </form>
+                                                    </td>
                         </tr>
                         <?php
                     }
@@ -76,9 +82,38 @@ require_once 'controllers/controllerListAllUsers.php';
             </div>
         </div>
     </div>
+
+        <!-- Modal Structure -->
+        <div id="modal" class="modal <?=isset($_POST['confirmDeleteUser']) ? 'modalError' : ''; ?>">
+    <div class="modal-content center-align blue-grey-text text-blue-grey darken-3">
+ <div class="col s12 m12 offset-l2 l8">
+        <img src="assets/trash.png" alt="image logOut" height="350" width="350" class="rignt-align responsive-img">
+        <h1 class="headerDelete">Je valide la suppression de l'utilisateur</h1>
+      </div>
+
+
+
+
+         <!--- <button type="submit" name="confirmDeleteUser"-->
+         <form method="POST" class="col s12 m12 l12" action="">
+            <div class="row">
+                <div class="col s12 m12 l12 center-align">
+                <input type="hidden" name="id_users" value="<?=isset($_POST['confirmDeleteUser']) ? $_POST['confirmDeleteUser'] : ''; ?>" />
+                <input type="submit" name="confirmDeleteUser" id="confirmDeleteUser" class="btn-waves-effect waves-light btn-small white-text blue-grey" value="Supprimer" />
+                </div>
+            </div>
+         </form>
+         <div class="row">
+<div class="modal-footer-center">
+  <a href="#!" class="modal-close waves-effect waves-green btn-flat blue-grey-text text-blue-grey darken-3">Annuler</a>
+    </div>
+</div>
+</div>
+</div>
+
     <?php include 'actionBtn.php'; ?>
     <!-- debut du footer -->
-    <?php include 'footer.php'; ?>
+   
     <!-- fin du footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>

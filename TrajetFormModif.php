@@ -36,8 +36,8 @@ require_once 'controllers/controllerModifTrajet.php';
 
         <form method="POST" class="col s12 m12 l12" action="">
             <div class="row">
-                <div class="col s6 m12 l12 center-align">
-                    <h1 class="souligner">SERVICES</h1>
+            <h1 class="souligner">SERVICES</h1>
+                <div class="col s6 m12 offset-l4 left-align"> 
                     <?php
 foreach ($arrayGetService as $rowService) {
     ?>

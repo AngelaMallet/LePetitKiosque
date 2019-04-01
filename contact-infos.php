@@ -19,6 +19,7 @@ session_start();
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
+    <link rel="icon" href="assets/logoOnglet.png" />
 
     <title>Vos informations </title>
 </head>
@@ -54,10 +55,10 @@ session_start();
 
                                 </div>
                                 <div class="row input-field col s12 l8 offset-l2">
-                                    <label><i class="tiny material-icons">mail</i>Adresse mail</label>
-                                    <input name="email" disabled value="<?=$ArrayContact->email; ?>" id="email"
-                                        type="email" class="active">
-
+                                <i class="tiny material-icons" id="emailContact">mail</i>
+                                <a href="mailto:<?=$ArrayContact->email; ?>" name="email" id="email"
+                                        type="email" class="active"><?=$ArrayContact->email; ?></a> 
+                                <input disabled id="email" />
                                 </div>
                                 <div class="row input-field col s12 l8 offset-l2">
                                     <label><i class="tiny material-icons">local_phone</i>Téléphone</label>
@@ -105,10 +106,10 @@ session_start();
 
                                 </div>
                                 <div class="row input-field col s12 l8 offset-l2">
-                                    <label><i class="tiny material-icons">mail</i>Adresse mail</label>
-                                    <input name="email" disabled value="<?=$ArrayContact->email; ?>" id="email"
-                                        type="email" class="active">
-
+                                    <i class="tiny material-icons" id="emailContact">mail</i>
+                                <a href="mailto:<?=$ArrayContact->email; ?>" name="email" id="email"
+                                        type="email" class="active"><?=$ArrayContact->email; ?></a> 
+                                <input disabled id="email" />
                                 </div>
                                 <div class="row input-field col s12 l8 offset-l2">
                                     <label><i class="tiny material-icons">local_phone</i>Téléphone</label>
@@ -138,6 +139,7 @@ session_start();
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/js.js"></script>
+
 </body>
 
 </html>

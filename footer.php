@@ -1,7 +1,7 @@
 
                     <?php if (!isset($_SESSION['id_users'])) {
     ?>
-        <footer class="page-footer">
+        <footer class="page-footer" id="footer">
               <div class="container">
                 <div class="col s12 m6 l6">
                 <a class="grey-text text-lighten-4" href="mailto:angelamallet@gmail.com">© 2019 Copyright CAUX<i>libri</i></a>

@@ -41,13 +41,14 @@ class users extends database
         //Insertion des données du users à l'aide de la requête préparée avec INSERT INTO et le nom des champs de la table
         //Insertion des valeurs des variables via les marqueurs nominatifs exemple :nomdumarqueur en gros c'est comme un alias
         // :marqueurs nominatifs
-        $queryResult = $this->database->prepare('INSERT INTO fluo_users(firstName, lastName, email, password, tel, address, certified, id_user_type) VALUES (:firstName, :lastName, :email, :password, :tel, :address, 0, 2)');
+        $queryResult = $this->database->prepare('INSERT INTO fluo_users(firstName, lastName, email, password, tel, address, certified, id_user_type) VALUES (:firstName, :lastName, :email, :password, :tel, :address, 0, :id_user_type)');
         $queryResult->bindValue(':firstName', $this->firstName, PDO::PARAM_STR);
         $queryResult->bindValue(':lastName', $this->lastName, PDO::PARAM_STR);
         $queryResult->bindValue(':email', $this->email, PDO::PARAM_STR);
         $queryResult->bindValue(':password', $this->password, PDO::PARAM_STR);
         $queryResult->bindValue(':tel', $this->tel, PDO::PARAM_STR);
         $queryResult->bindValue(':address', $this->address, PDO::PARAM_STR);
+        $queryResult->bindValue(':id_user_type', 2, PDO::PARAM_INT);
 
         return $queryResult->execute(); //@return exécute la requête pour ajouter un user.
     }
@@ -135,5 +136,14 @@ class users extends database
         $queryResult->bindValue(':certified', $this->certified, PDO::PARAM_INT);
         $queryResult->bindValue(':id_users', $this->id_users, PDO::PARAM_INT);
         $queryResult->execute();
+    }
+
+    // Methode deleteUsers qui va supprimer le users selectionné via l'id_users de la table fluo_users.
+    public function deleteUsers()
+    {
+        $queryResult = $this->database->prepare('DELETE FROM `fluo_users` WHERE `id_users` = :id_users');
+        $queryResult->bindValue(':id_users', $this->id_users, PDO::PARAM_INT);
+
+        return $queryResult->execute();
     }
 }

@@ -3,6 +3,15 @@ body{
     background-color: #fcf8f7;
 }
 
+/* materialize.min.css  accountuserModif.php*/
+.card.horizontal {
+    margin-bottom: 12rem;
+}
+
+#footer {
+    margin-bottom: -10rem;
+}
+
 .indexBackground {
 background: url("../mapBackground.jpg");
 background-color: rgb(255, 245, 244);
@@ -16,6 +25,13 @@ object, embed, video {
 #imgHead{
     height: 319px;
 }
+
+/* materialize.min.css */
+
+[type="radio"]:not(:checked)+span,[type="radio"]:checked+span {
+    padding-left: 25px;
+    margin-right: .8rem;
+  }
 
 .ulBtnAction {
     background-color: white;
@@ -336,6 +352,10 @@ modal1
     font-weight: 400;
 }
 
+#emailContact {
+color: #000;
+}
+
 /* label color */
 .input-field label {
     color: #000;
@@ -534,6 +554,7 @@ th {
 .colorLink {
     color: #bbb;
 }
+
 .dotdot {
     height: 15px;
     width: 15px;
@@ -551,6 +572,12 @@ th {
     display: inline-block;
     box-shadow: 2px 2px 2px grey;
     margin-bottom:-1.5rem;
+  }
+
+
+  /* info users card des trajets */
+  [cz-shortcut-listen] .container:nth-child(2) > .card-stacked:nth-of-type(2) {
+    margin-top: -11rem;
   }
 
   .dotdot2 {
@@ -571,10 +598,6 @@ th {
     color: white;
 }
 
-#imgDate {
-    max-width: 30rem;
-    max-height: 30rem;
-}
 #submitFormTrajetBtn {
     margin: 3rem;
 }

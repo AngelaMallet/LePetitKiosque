@@ -22,6 +22,8 @@ if (!isset($_SESSION)) {
         <link rel="stylesheet" href="assets/css/style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
         <meta charset="utf-8" />
+        <link rel="icon" href="assets/logoOnglet.png" />
+
         <title>CauxLibri</title>
     </head>
     <body>
@@ -38,7 +40,7 @@ if (!isset($_SESSION)) {
     ?>
         <div class="row">
             <div class=" col s12 l12 center-align">
-                <h2 class="errorMessageUserLogin"><mark><?= 'Login ou mot de passe incorrect'; ?></mark></h2>
+                <h2 class="errorMessageUserLogin"><mark><?= 'Pas si vite ;)'; ?></mark><br><br><mark><?= 'Votre mot de passe ou votre email semble erroné.'; ?></mark></h2>
             </div>
   <?php
 }

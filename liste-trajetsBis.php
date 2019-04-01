@@ -22,8 +22,8 @@ require_once 'controllers/controllerListTrajets.php';
 </head>
 
 <body>
-
-    <header>
+    
+<header>
         <!-- header et navbar -->
         <?php include 'nav.php'; ?>
     </header>
@@ -79,28 +79,22 @@ require_once 'controllers/controllerListTrajets.php';
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
-                    </table>
                 </div>
                 <div class="card-action center-align" id="btnListe-trajetsBis">
                     <a href="index.php" class="waves-effect waves-light btn-small blue-grey lighten-3">Retour</a>
                 </div>
             </div>
-
         </div>
-
     </div>
-
+   
     <?php include 'actionBtn.php'; ?>
-
-    <div class="whiteSapce200"></div>
     <!-- debut du footer -->
     <?php include 'footer.php'; ?>
     <!-- fin du footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/js.js"></script>
-</body>
 
+</body>
 </html>

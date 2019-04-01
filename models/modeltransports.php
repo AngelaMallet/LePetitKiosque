@@ -97,7 +97,7 @@ class transports extends database
           ON `fluo_transports`.`id_location_choice_start` = `fluo_location_choice_aller`.`id_location_choice` 
           INNER JOIN `fluo_location_choice` AS `fluo_location_choice_retour` 
           ON `fluo_transports`.`id_location_choice_end` = `fluo_location_choice_retour`.`id_location_choice`  
-          WHERE id_users=:id_users;');
+          WHERE id_users=:id_users ORDER BY `fluo_transports`.`date`;');
 
         $resultTrajets = $this->database->prepare($query);
         $resultTrajets->bindValue(':id_users', $this->id_users, PDO::PARAM_INT);

@@ -17,7 +17,8 @@ require_once 'controllers/controllerModifUsers.php';
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
-    <title>services</title>
+    <link rel="icon" href="assets/logoOnglet.png" />
+    <title>CAUXlibri</title>
 </head>
 <?php include 'nav.php'; ?>
 <body>
@@ -108,13 +109,15 @@ require_once 'controllers/controllerModifUsers.php';
             </div>
         </div>
         <?php include 'actionBtn.php'; ?>
-    </div>
-    <?php include 'footer.php'; ?>
 
-</body>
+
+<!-- debut du footer -->
+<?php include 'footer.php'; ?>
 <!-- fin du footer -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="assets/js/materialize.min.js"></script>
 <script type="text/javascript" src="assets/js/js.js"></script>
+
+</body>
 
 </html>
